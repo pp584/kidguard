@@ -1,0 +1,944 @@
+<div class="text-left col-sm-12">
+	<label class="col-sm-12 control-label head_title" for="dpm_name">
+		<u><b>ตอนที่ 2  ปัจจัยภูมิคุ้มกัน</b></u>
+	</label>
+</div><div class="table-responsive">
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+				<th rowspan="2" class="text-center align-middle">หัวข้อแบบสอบถามความพึงพอใจ</th>
+				<th colspan="5" class="text-center">ระดับความพึงพอใจ</th>
+			</tr>
+			<tr>
+				<th class="text-center" width="65">ไม่เลย</th>
+				<th class="text-center" width="65">บางครั้ง</th>
+				<th class="text-center" width="65">บ่อยครั้ง</th>
+				<th class="text-center" width="65">เป็นประจำ</th>
+		
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="bg-light" colspan="6"><b>ด้านที่ 2.1 การบริหารจัดการตน </b></td>
+			</tr>
+			<tr>
+				<td class="text-left">1. ฉันเริ่มทำกิจกรรมหรืองานต่าง ๆ ได้ด้วยตนเอง</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_1" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_1" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_1" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_1" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_1" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">2. ฉันเริ่มทำกิจวัตรประจำวัน โดยไม่ต้องให้ใครมาบอก</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_2" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_2" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_2" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_2" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_2" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">3. ฉันมักผัดวันประกันพรุ่ง ในการเริ่มต้นกระทำกิจกรรมต่าง ๆ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_3" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_3" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_3" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_3" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_3" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">4. ฉันเริ่มคิดทำการบ้านหรืองานต่าง ๆ ในนาทีสุดท้าย</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_4" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_4" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_4" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_4" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_4" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">5. ฉันไม่รู้ว่าจะเริ่มต้นทำงานต่าง ๆ ด้วยตนเองได้อย่างไร</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_5" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_5" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_5" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_5" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_5" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">6. ฉันมีคนคอยเตือนให้ลงมือทำงานต่าง ๆ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_6" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_6" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_6" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_6" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_6" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">7. เมื่อได้รับการสั่งงานหลาย ๆ อย่าง ฉันจำได้เพียงบางอย่าง</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_7" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_7" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_7" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_7" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_7" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">8. ฉันจำรายละเอียดสำคัญในขณะนำเสนองานหน้าชั้นได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_8" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_8" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_8" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_8" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_8" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">9. ฉันสามารถเล่าเหตุการณ์ที่เกิดขึ้นเมื่อวานนี้ให้เพื่อนฟังได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_9" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_9" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_9" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_9" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_9" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">10. ฉันมีปัญหาการจำ แม้ในช่วงเวลาสั้น ๆ (เช่น ทิศทาง, เบอร์โทรศัพท์)</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_10" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_10" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_10" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_10" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_10" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">11. ฉันจำขั้นตอนการทำงานที่ซับซ้อนได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_11" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_11" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_11" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_11" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_11" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">12. ฉันตอบคำถามในหัวข้อที่อาจารย์เคยสอนได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_12" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_12" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_12" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_12" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_12" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">13. ฉันลืมสิ่งที่จะต้องทำในลำดับต่อไป</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_13" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_13" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_13" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_13" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_13" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">14. ฉันถูกเบี่ยงเบนความสนใจได้ง่าย  ในขณะทำกิจกรรม</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_14" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_14" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_14" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_14" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_14" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">15. ฉันจดจ่ออยู่กับกิจกรรมหรืองานที่ทำ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_15" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_15" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_15" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_15" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_15" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">16. ขณะทำกิจกรรม ฉันไม่วอกแวกไปตามสิ่งที่มารบกวน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_16" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_16" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_16" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_16" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_16" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">17. ฉันไม่สามารถจดจ่อกับงานที่ทำ แม้จะเป็นงานที่ชอบ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_17" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_17" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_17" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_17" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_17" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">18. ฉันเปลี่ยนไปคุยหัวข้อใหม่ ทั้ง ๆ ที่ยังคุยหัวข้อเดิมไม่เสร็จ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_18" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_18" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_18" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_18" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_18" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">19. ฉันมักหาสิ่งของที่ต้องการใช้ไม่เจอ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_19" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_19" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_19" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_19" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_19" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">20. ฉันกำหนดหัวข้อและเรียงลำดับความสำคัญของเนื้อหา ก่อนลงมือทำรายงาน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_20" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_20" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_20" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_20" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_20" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">21. ฉันจัดลำดับความสำคัญของงานที่จะทำได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_21" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_21" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_21" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_21" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_21" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">22. การกำหนดขั้นตอนการทำงานไว้ล่วงหน้า เป็นเรื่องที่ยากสำหรับฉัน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_22" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_22" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_22" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_22" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_22" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">23. ฉันกำหนดเป้าหมายการทำงานไว้อย่างชัดเจน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_23" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_23" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_23" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_23" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_23" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">24. ฉันตรวจทานความถูกต้องของงาน ก่อนนำส่งอาจารย์</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_24" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_24" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_24" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_24" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_24" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">25. ฉันรู้และปรับแก้ข้อผิดพลาดในงานของฉัน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_25" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_25" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_25" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_25" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_25" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">26. ฉันรู้ข้อผิดพลาดของงาน และปรับแก้ด้วยตนเอง</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_26" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_26" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_26" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_26" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_26" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">27. ฉันติดตามผลการปรับปรุงงานของตนเอง</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_27" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_27" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_27" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_27" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_27" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">28. ฉันตรวจสอบการปฏิบัติกิจกรรมให้เป็นไปตามแผนที่วางไว้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_28" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_28" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_28" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_28" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_28" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">29. ฉันรู้สึกหงุดหงิด หากต้องเปลี่ยนไปทำกิจกรรมอย่างอื่นที่ไม่ได้กำหนดไว้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_29" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_29" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_29" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_29" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_29" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">30. ฉันกังวลที่จะต้องทำกิจกรรมที่แปลกใหม่และท้าทาย</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_30" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_30" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_30" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_30" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_30" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">31. ฉันยอมรับการเปลี่ยนแปลงที่เกิดขึ้นในชีวิตประจำวันได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_31" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_31" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_31" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_31" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_31" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">32. ฉันยึดติดกับปัญหาใดปัญหาหนึ่งเป็นเวลานานมากเกินไป</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_32" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_32" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_32" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_32" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_32" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">33. ฉันรู้สึกรำคาญ เมื่อเพื่อนยืมใช้ของส่วนตัว</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_33" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_33" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_33" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_33" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_33" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">34. ฉันยินดีรับฟังข้อเสนอแนะในสิ่งที่ฉันทำผิดพลาด</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_34" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_34" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_34" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_34" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_34" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">35. เวลาประสบปัญหาเล็ก ๆ น้อย ๆ  ฉันแสดงออกทางอารมณ์มากเกินไป</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_35" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_35" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_35" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_35" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_35" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">36. ฉันปรับอารมณ์เข้ากับสถานการณ์ที่ไม่พึงประสงค์ได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_36" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_36" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_36" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_36" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_36" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">37. ฉันเอะอะ โวยวาย เมื่อไม่ได้ดั่งใจ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_37" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_37" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_37" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_37" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_37" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">38. ฉันใช้เวลาเล่นโทรศัพท์มือถือมากเกินไป โดยไม่ได้นึกถึงผลเสียที่จะเกิดตามมา</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_38" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_38" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_38" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_38" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_38" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">39. ฉันทำกิจกรรมที่เสี่ยงอันตราย แม้จะถูกตักเตือนแล้ว</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_39" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_39" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_39" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_39" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_39" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">40. ฉันปฏิเสธเมื่อเพื่อนชวนให้ลองดื่มเครื่องดื่มแอลกอฮอล์</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_40" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_40" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_40" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_40" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_40" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">41. ฉันคิดไตร่ตรองอย่างรอบคอบ ก่อนลงมือกระทำกิจกรรมต่าง ๆ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_41" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_41" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_41" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_41" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_41" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">42. ฉันไม่พูดคุยกับเพื่อนในระหว่างงานพิธีการของโรงเรียน/ชุมชน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_42" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_42" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_42" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_42" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_42" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">43. ก่อนลงมือทำกิจกรรม ฉันคิดถึงอันตรายที่อาจจะเกิดขึ้นได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_43" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_43" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_43" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_43" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_43" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">44. ฉันตั้งใจทำงานที่ได้รับมอบหมายจนเสร็จ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_44" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_44" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_44" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_44" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_44" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">45. ฉันไม่ย่อท้อในการทำงาน แม้จะมีปัญหาและอุปสรรค</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_45" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_45" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_45" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_45" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_45" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">46. ฉันตั้งใจและลงมือกระทำกิจกรรมหรืองานต่าง ๆ ด้วยความมุ่งมั่น อดทน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_46" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_46" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_46" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_46" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_46" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">47. ฉันพยายามหาข้อมูลมาสนับสนุนในการทำโครงงานจนประสบความสำเร็จ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_47" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_47" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_47" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_47" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_47" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">48. เมื่อประสบกับปัญหาและอุปสรรค ฉันจะยกเลิกการทำงานนั้นทันที</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_48" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_48" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_48" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_48" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_48" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="bg-light" colspan="6"><b>ด้านที่ 2.2 ทุนทางจิตวิทยา</b></td>
+			</tr>
+			<tr>
+				<td class="text-left">1. ฉันสามารถกำหนดเป้าหมายชีวิตของตนเองได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_1" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_1" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_1" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_1" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_1" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">2. ฉันหาความรู้จากแหล่งต่าง ๆ เพื่อทำงานที่ได้รับมอบหมายให้สำเร็จ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_2" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_2" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_2" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_2" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_2" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">3. ฉันเรียนแบบสบาย ๆ ไม่ได้วางแผนอะไรเลย</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_3" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_3" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_3" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_3" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_3" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">4. ทุกครั้งที่ได้รับมอบหมายงาน ฉันต้องทำให้เสร็จตามเวลาที่กำหนด</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_4" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_4" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_4" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_4" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_4" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">5. ฉันคิดหาวิธีการต่าง ๆ ที่ช่วยให้การเรียนบรรลุตามเป้าหมาย</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_5" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_5" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_5" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_5" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_5" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">6. เมื่อมีอุปสรรคในการเรียน ฉันสามารถหาทางออกได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_6" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_6" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_6" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_6" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_6" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">7. ฉันหวังว่าจะเรียนจบตามแผนที่วางไว้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_7" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_7" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_7" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_7" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_7" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">8. ฉันมุ่งมั่นในการเรียนเพื่อความสำเร็จในอนาคต</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_8" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_8" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_8" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_8" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_8" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">9. เมื่อเกิดสิ่งเลวร้าย ฉันคิดว่ามันจะผ่านพ้นไปได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_9" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_9" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_9" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_9" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_9" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">10. เมื่อเกิดข้อผิดพลาด ฉันจะให้อภัยและปรับปรุงตนเอง</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_10" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_10" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_10" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_10" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_10" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">11. ฉันมีสติเมื่อต้องเผชิญกับสถานการณ์คับขัน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_11" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_11" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_11" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_11" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_11" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">12. ฉันเชื่อว่าทุก ๆ ปัญหามีทางออก</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_12" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_12" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_12" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_12" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_12" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">13. ฉันมักตำหนิงานทุกอย่างที่คนอื่นทำ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_13" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_13" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_13" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_13" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_13" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">14. ฉันเชื่อว่าตนเองพร้อมที่จะดำเนินการต่าง ๆ เพื่อให้ชีวิตดีขึ้น</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_14" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_14" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_14" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_14" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_14" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">15. ฉันเชื่อว่าตนเองสามารถจัดการกับภาระรับผิดชอบได้ดี</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_15" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_15" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_15" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_15" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_15" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">16. ฉันเชื่อว่าผลการเรียนจะเป็นไปตามที่คาดหวัง</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_16" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_16" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_16" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_16" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_16" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">17. ฉันเชื่อว่าจะสามารถปรับปรุงผลการเรียน ให้ดีขึ้นตามที่คาดหวังได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_17" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_17" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_17" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_17" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_17" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">18. ฉันเชื่อว่าตนเองสามารถทำงานได้ทันตามเวลาที่กำหนด</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_18" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_18" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_18" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_18" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_18" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">19. ฉันไม่เชื่อว่าจะจัดการกับปัญหาของตนเองได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_19" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_19" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_19" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_19" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_19" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">20. เพื่อน ๆ ยอมรับในความสามารถของฉัน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_20" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_20" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_20" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_20" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_20" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">21. ถ้าเจอสถานการณ์เลวร้าย ฉันสามารถปรับตัวให้กลับสู่สภาพเดิมได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_21" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_21" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_21" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_21" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_21" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">22. ฉันรู้สึกเครียดในทุก ๆ เรื่องจนทำให้ตนเองไม่สามารถปรับตัวได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_22" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_22" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_22" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_22" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_22" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">23. ฉันสามารถจัดการกับอารมณ์ได้ดีเมื่อมีความทุกข์</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_23" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_23" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_23" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_23" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_23" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">24. ฉันเป็นคนโกรธง่ายหายเร็ว</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_24" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_24" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_24" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_24" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_24" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">25. ฉันสามารถผ่านสถานการณ์ที่ยากลำบากในชีวิตได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_25" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_25" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_25" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_25" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_25" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">26. ฉันรู้ว่าฉันสามารถที่จะเอาชนะอุปสรรคต่าง ๆ ที่ผ่านมาในชีวิตได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_26" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_26" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_26" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_26" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_26" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="bg-light" colspan="6"><b>ด้านที่ 2.3 การเห็นคุณค่าในตนเอง</b></td>
+			</tr>
+			<tr>
+				<td class="text-left">1. ฉันมีความสามารถในการช่วยเหลือคนอื่น</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_1" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_1" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_1" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_1" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_1" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">2. ฉันมีความสุขในการลงมือทำสิ่งต่าง ๆ ด้วยตัวเอง</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_2" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_2" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_2" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_2" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_2" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">3. ฉันคิดว่าตนเองมีคุณค่า</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_3" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_3" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_3" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_3" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_3" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">4. ฉันรู้สึกว่าตนเองสามารถทำประโยชน์เพื่อผู้อื่นได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_4" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_4" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_4" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_4" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_4" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">5. ฉันเป็นคนไม่เอาไหน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_5" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_5" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_5" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_5" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_5" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">6. ฉันรู้สึกว่าเป็นส่วนเกินของสังคม</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_6" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_6" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_6" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_6" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_6" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">7. ฉันรู้สึกว่าฉันเป็นที่รักของคนรอบข้าง</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_7" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_7" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_7" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_7" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_7" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">8. ฉันมั่นใจในการแสดงความคิดเห็นกับกลุ่มคนที่มีความเห็นแตกต่างจากฉันได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_8" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_8" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_8" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_8" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_8" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">9. ฉันกล้าพูดคุยทักทายกับคนที่ไม่เคยรู้จักมาก่อนได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_9" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_9" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_9" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_9" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_9" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">10. ฉันกล้าบอกกับเพื่อนตรง ๆ เมื่อฉันไม่เห็นด้วยกับความคิดเห็นของเพื่อน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_10" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_10" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_10" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_10" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_10" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">11. ฉันมั่นใจว่าสามารถทำงานที่ท้าทายให้สำเร็จได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_11" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_11" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_11" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_11" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_11" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">12. ฉันให้ความสำคัญในการดูแลสุขภาพของตนเอง</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_12" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_12" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_12" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_12" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_12" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">13. เวลาฉันโกรธ ไม่พอใจ ฉันก็ไม่เคยคิดทำร้ายตนเอง</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_13" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_13" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_13" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_13" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_13" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">14. ฉันคิดว่าตนเองมีสิทธิเสรีภาพเท่าเทียมกับคนอื่น</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_14" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_14" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_14" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_14" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_14" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">15. ฉันเลือกสิ่งดี ๆ ให้กับตนเอง</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_15" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_15" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_15" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_15" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_15" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">16. ฉันเลือกทำในสิ่งที่ถูกต้องและมีผลดีกับชีวิตของตนเอง</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_16" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_16" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_16" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_16" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_16" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">17. ฉันปฏิบัติตนเป็นลูกที่ดีของพ่อแม่</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_17" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_17" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_17" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_17" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_17" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">18. การได้ช่วยเหลือคนอื่น เป็นสิ่งที่ฉันมีความสุข</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_18" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_18" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_18" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_18" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_18" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">19. ฉันช่วยเพื่อนทำงานกลุ่มอย่างเต็มความสามารถ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_19" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_19" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_19" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_19" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_19" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">20. ฉันไม่เคยบกพร่องในงานที่ได้รับมอบหมาย</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_20" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_20" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_20" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_20" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_20" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">21. ฉันยอมรับข้อผิดพลาดของตนเองแล้วนำมาปรับปรุงแก้ไข</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_21" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_21" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_21" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_21" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_21" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">22. ไม่ว่าผลของการทำงานจะออกมาเป็นอย่างไร ฉันก็ยอมรับผลที่เกิดได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_22" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_22" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_22" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_22" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_22" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">23. ฉันพร้อมที่จะเปลี่ยนแปลงตนเอง เมื่อพบว่ามีข้อบกพร่อง</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_23" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_23" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_23" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_23" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_23" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">24. ฉันยอมรับจุดดีและจุดด้อยของตนเองได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_24" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_24" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_24" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_24" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_24" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">25. ฉันคิดว่าทุกคนสามารถผิดพลาดกันได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_25" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_25" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_25" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_25" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_25" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="bg-light" colspan="6"><b>ด้านที่ 2.4 พลังตัวตน</b></td>
+			</tr>
+			<tr>
+				<td class="text-left">1. การได้ช่วยเหลือคนอื่นเป็นสิ่งที่มีคุณค่าอย่างมาก</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_1" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_1" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_1" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_1" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_1" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">2. การให้ความสำคัญและส่งเสริมให้เกิดความเท่าเทียมในสังคม เช่น  ผู้พิการ ผู้สูงอายุ เพศชาย/เพศหญิง/เพศทางเลือก</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_2" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_2" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_2" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_2" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_2" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">3. การกล้ายืนหยัดในสิ่งที่ฉันเชื่อ และกล้าที่จะเสนอความคิดเห็นหรือข้อเสนอแนะต่าง ๆ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_3" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_3" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_3" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_3" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_3" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">4. การพูดความจริง ไม่พูดโกหกหรือหลอกลวงผู้อื่น</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_4" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_4" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_4" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_4" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_4" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">5. การรับผิดชอบในสิ่งที่ตนเองทำ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_5" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_5" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_5" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_5" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_5" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">6. การยึดมั่นในพฤติกรรมที่ดี</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_6" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_6" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_6" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_6" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_6" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">7. การมีการวางแผนและการตัดสินใจก่อนลงมือทำเสมอ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_7" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_7" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_7" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_7" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_7" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">8. การเห็นอกเห็นใจ และใส่ใจในความรู้สึกผู้อื่น</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_8" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_8" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_8" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_8" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_8" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">9. การที่สามารถเรียนรู้ และปรับตัวให้อยู่ร่วมกับคนที่มีความคิดเห็นหรือการดำเนินชีวิตแตกต่างกันได้เป็นอย่างดี</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_9" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_9" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_9" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_9" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_9" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">10. การกล้าปฏิเสธพฤติกรรมเสี่ยง (เช่น เพศสัมพันธ์ ยาเสพติด ความรุนแรง และสื่อที่ไม่ดี)</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_10" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_10" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_10" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_10" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_10" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">11. ความพยายามแก้ปัญหาข้อขัดแย้งด้วยสติปัญญามากกว่าอารมณ์                        (ไม่ใช่ความรุนแรง)</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_11" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_11" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_11" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_11" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_11" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">12. ความสามารถควบคุมสถานการณ์ที่เกิดขึ้นกับตนเองได้ เช่น ควบคุมอารมณ์เวลาโกรธได้ดี เมื่อเกิดการโต้เถียงหรือขัดแย้ง</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_12" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_12" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_12" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_12" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_12" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">13. ความรู้สึกว่าตนเองมีคุณค่า</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_13" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_13" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_13" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_13" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_13" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">14. การมีเป้าหมายชัดเจน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_14" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_14" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_14" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_14" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_14" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">15. ความรู้สึกพึงพอใจในชีวิตความเป็นอยู่ของตนเอง</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_15" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_15" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_15" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_15" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_2_15" value="1" /></td>
+			</tr>

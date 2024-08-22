@@ -1,0 +1,986 @@
+<div class="text-left col-sm-12">
+	<label class="col-sm-12 control-label head_title" for="dpm_name">
+		<u><b>ตอนที่ 3 ปัจจัยบริบท</b></u>
+	</label>
+</div><div class="table-responsive">
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+				<th rowspan="2" class="text-center align-middle">หัวข้อแบบสอบถามความพึงพอใจ</th>
+				<th colspan="5" class="text-center">ระดับความพึงพอใจ</th>
+			</tr>
+			<tr>
+				<th class="text-center" width="65">ไม่เลย</th>
+				<th class="text-center" width="65">บางครั้ง</th>
+				<th class="text-center" width="65">บ่อยครั้ง</th>
+				<th class="text-center" width="65">เป็นประจำ</th>
+		
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="bg-light" colspan="6"><b>ด้านที่ 3.1 การคล้อยตาม</b></td>
+			</tr>
+			<tr>
+				<td class="text-left">1. ฉันพยายามทำทุกอย่าง เพราะต้องการเป็นที่ยอมรับในกลุ่มเพื่อนที่ใช้สารเสพติด</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">2. ฉันคิดว่าการที่ใช้สารเสพติดในกลุ่มเพื่อนเป็นเรื่องปกติธรรมดา</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">3. ถ้าฉันใช้สารเสพติด ฉันจะได้เป็นส่วนหนึ่งของกลุ่มเพื่อน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">4. ฉันไม่ยอมเชื่อเพื่อน เมื่อเพื่อนชักจูงให้เห็นถึงความท้าทายของสารเสพติด</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">5. การที่ฉันใช้ชีวิตร่วมกับกลุ่มเพื่อนที่ใช้สารเสพติดและได้เพื่อนแท้ที่เข้าใจกัน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">6. ถ้าการลองสูบบุหรี่จะทำให้เพื่อน ๆ ยอมรับฉันเข้ากลุ่ม ฉันยินดีที่จะทำ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">7. การที่ฉันใช้ชีวิตร่วมกับผู้ที่ใช้สารเสพติด ทำให้รู้สารเสพติดทำให้ได้เพื่อนแท้ที่เข้าใจกัน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">8. ฉันจะไม่ยุ่งเกี่ยวกับกลุ่มเพื่อนที่ใช้สารเสพติดโดยเด็ดขาด</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="1" /></td>
+			</tr>
+<div class="table-responsive">
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+				<th rowspan="2" class="text-center align-middle">หัวข้อแบบสอบถามความพึงพอใจ</th>
+				<th colspan="5" class="text-center">ระดับความพึงพอใจ</th>
+			</tr>
+			<tr>
+				<th class="text-center" width="65">มากที่สุด</th>
+				<th class="text-center" width="65">มาก</th>
+				<th class="text-center" width="65">ปาน กลาง</th>
+				<th class="text-center" width="65">น้อย</th>
+				<th class="text-center" width="65">ควรปรับปรุง</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="bg-light" colspan="6"><b>ด้านที่ 3.2 ครอบครัว</b></td>
+			</tr>
+			<tr>
+				<td class="text-left">1. ฉันถูกทำร้ายร่างกายจากคนในครอบครัว</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">2. ฉันรับรู้/เห็นคนในครอบครัวทำร้ายร่างกายกันจนได้รับบาดเจ็บ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">3. ฉันรู้สึกไม่พอใจที่ถูกคนในครอบครัวบังคับให้ทำในสิ่งที่ฉันไม่ชอบ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">4. ฉันรู้สึกเสียใจที่ถูกคนในครอบครัวต่อว่าด้วยถ้อยคำที่รุนแรงและหยาบคาย</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">5. ฉันถูกคนในครอบครัวนำไปเปรียบเทียบกับคนอื่น จนทำให้ฉันรู้สึกกดดันหรืออับอาย</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">6. ฉันรู้สึกสบายใจที่ได้รับการดูแลเอาใจใส่จากคนในครอบครัว</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">7. ฉันรับรู้/เห็นคนในครอบครัวต้องเสียใจเพราะการกระทำของคนในบ้าน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">8. ฉันถูกห้ามไม่ให้คบเพื่อนบางคน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">9. ฉันถูกกีดกันจากครอบครัวไม่ให้ติดต่อกับญาติพี่น้อง และ/หรือเพื่อนบ้าน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_9" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_9" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_9" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_9" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_9" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">10. ฉันถูกห้ามไม่ให้ออกนอกบ้าน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_10" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_10" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_10" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_10" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_10" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">11. ฉันต้องช่วยที่บ้านทำงาน จนทำให้ฉันไม่มีเวลาทำในสิ่งที่ฉันต้องการ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_11" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_11" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_11" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_11" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_11" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">12. คนในครอบครัวของฉันถูกกีดกันไม่ให้คบหรือติดต่อกับคนอื่น</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_12" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_12" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_12" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_12" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_12" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">13. คนในครอบครัวของฉันถูกบังคับไม่ให้ออกนอกบ้าน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_13" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_13" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_13" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_13" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_13" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">14. ฉันได้รับสิ่งจำเป็นพื้นฐานในการดำรงชีวิตจากครอบครัวอย่างเพียงพอ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_14" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_14" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_14" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_14" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_14" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">15. ฉันได้รับเงินจากผู้ปกครองไม่เพียงพอต่อการใช้ในชีวิตประจำวัน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_15" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_15" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_15" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_15" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_15" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">16. เมื่อฉันไม่สบายหรือเจ็บป่วย ครอบครัวไม่มีเงินพาฉันไปรักษา</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_16" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_16" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_16" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_16" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_16" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">17. คนในครอบครัวของฉันทะเลาะกันเพราะเงินไม่พอใช้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_17" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_17" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_17" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_17" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_17" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">18. คนในครอบครัวมักพูดจาลามกต่อหน้าฉัน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_18" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_18" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_18" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_18" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_18" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">19. ฉันถูกคนในครอบครัวจับเนื้อต้องตัวจนทำให้ฉันรู้สึกอึดอัดหรือไม่สบายใจ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_19" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_19" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_19" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_19" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_19" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">20. ฉันถูกคนในครอบครัวบังคับให้มีเพศสัมพันธ์กับผู้อื่น</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_20" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_20" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_20" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_20" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_20" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">21. ฉันถูกคนในครอบครัวบังคับให้ขายบริการทางเพศเพื่อแลกเงิน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_21" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_21" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_21" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_21" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_21" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">22. ฉันรับรู้/เห็นคนในครอบครัวถูกบังคับให้มีเพศสัมพันธ์</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_22" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_22" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_22" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_22" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_22" value="1" /></td>
+			</tr>
+<div class="table-responsive">
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+				<th rowspan="2" class="text-center align-middle">หัวข้อแบบสอบถามความพึงพอใจ</th>
+				<th colspan="5" class="text-center">ระดับความพึงพอใจ</th>
+			</tr>
+			<tr>
+				<th class="text-center" width="65">มากที่สุด</th>
+				<th class="text-center" width="65">มาก</th>
+				<th class="text-center" width="65">ปาน กลาง</th>
+				<th class="text-center" width="65">น้อย</th>
+				<th class="text-center" width="65">ควรปรับปรุง</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="bg-light" colspan="6"><b>ด้านที่ 3.3 การเป็นแบบอย่าง</b></td>
+			</tr>
+			<tr>
+				<td class="text-left">1. ฉันเห็นคนในครอบครัวสูบบุหรี่ หรือดื่มเครื่องดื่มแอลกอฮอล์</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">2. ฉันเห็นคนในครอบครัวใช้สารเสพติดที่ผิดกฎหมาย เช่น ยาบ้า ยาไอซ์ กระท่อม ฝิ่น</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">3. ฉันเห็นเพื่อน/รุ่นพี่ในโรงเรียนสูบบุหรี่ หรือดื่มเครื่องดื่มแอลกอฮอล์</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">4. ฉันเห็นเพื่อน/รุ่นพี่ใช้สารเสพติดที่ผิดกฎหมาย เช่น ยาบ้า ยาไอซ์ กระท่อม ฝิ่น</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">5. ฉันเห็นคนในชุมชนสูบบุหรี่ หรือดื่มเครื่องดื่มแอลกอฮอล์</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">6. ฉันเห็นคนในชุมชนใช้สารเสพติดที่ผิดกฎหมาย เช่น ยาบ้า ยาไอซ์ กระท่อม ฝิ่น</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">7. ฉันเห็นดาราหรือนักร้องที่ฉันชื่นชอบสูบบุหรี่ หรือดื่มเครื่องดื่มแอลกอฮอล์</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">8. คนในครอบครัวชักชวนให้ฉันใช้สารเสพติด</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">9. เพื่อน/รุ่นพี่ในโรงเรียนชักชวนให้ฉันใช้สารเสพติด</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_9" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_9" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_9" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_9" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_9" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">10. คนในชุมชนชักชวนให้ฉันใช้สารเสพติด</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_10" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_10" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_10" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_10" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_10" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">11. ฉันพบเจอสารเสพติดหรืออุปกรณ์ที่ใช้ในการเสพสารเสพติด</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_11" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_11" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_11" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_11" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_11" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">12. ฉันสนิทกับคนในครอบครัวที่ใช้สารเสพติด</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_12" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_12" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_12" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_12" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_12" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">13. ฉันมีกิจกรรมหรือความเกี่ยวข้องกับเพื่อน/รุ่นพี่ในโรงเรียนที่ใช้สารเสพติด</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_13" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_13" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_13" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_13" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_13" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">14.  ฉันมีกิจกรรมหรือความเกี่ยวข้องกับคนในชุมชนที่ใช้สารเสพติด</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_14" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_14" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_14" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_14" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_14" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">15. ผู้ที่ใช้สารเสพติดที่ฉันพบเป็นคนที่ฉันเกรงกลัว</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_15" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_15" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_15" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_15" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_15" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">16. ผู้ที่ใช้สารเสพติดที่ฉันพบเป็นคนที่ฉันนับถือหรือชื่นชอบ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_16" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_16" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_16" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_16" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_16" value="1" /></td>
+			</tr>
+<div class="table-responsive">
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+				<th rowspan="2" class="text-center align-middle">หัวข้อแบบสอบถามความพึงพอใจ</th>
+				<th colspan="5" class="text-center">ระดับความพึงพอใจ</th>
+			</tr>
+			<tr>
+				<th class="text-center" width="65">มากที่สุด</th>
+				<th class="text-center" width="65">มาก</th>
+				<th class="text-center" width="65">ปาน กลาง</th>
+				<th class="text-center" width="65">น้อย</th>
+				<th class="text-center" width="65">ควรปรับปรุง</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="bg-light" colspan="6"><b>ด้านที่ 3.4 การเปิดรับสื่อ</b></td>
+			</tr>
+			<tr>
+				<td class="text-left">1. ฉันติดตามการใช้สารเสพติดจากสื่อต่าง ๆ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">2. ฉันหาข้อมูลเกี่ยวกับวิธีการใช้สารเสพติดจากสื่อต่าง ๆ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">3. ฉันติดตามข้อมูลเกี่ยวกับการซื้อขายสารเสพติดจากสื่อต่าง ๆ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">4. ฉันพูดคุยกับเพื่อนเกี่ยวกับการเสพหรือการขายสารเสพติดตามที่พบในสื่อต่าง ๆ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="1" /></td>
+			</tr>
+<div class="table-responsive">
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+				<th rowspan="2" class="text-center align-middle">หัวข้อแบบสอบถามความพึงพอใจ</th>
+				<th colspan="5" class="text-center">ระดับความพึงพอใจ</th>
+			</tr>
+			<tr>
+				<th class="text-center" width="65">มากที่สุด</th>
+				<th class="text-center" width="65">มาก</th>
+				<th class="text-center" width="65">ปาน กลาง</th>
+				<th class="text-center" width="65">น้อย</th>
+				<th class="text-center" width="65">ควรปรับปรุง</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="bg-light" colspan="6"><b>ด้านที่ 3.5 พลังด้านต่าง ๆ</b></td>
+			</tr>
+<div class="table-responsive">
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+				<th rowspan="2" class="text-center align-middle">หัวข้อแบบสอบถามความพึงพอใจ</th>
+				<th colspan="5" class="text-center">ระดับความพึงพอใจ</th>
+			</tr>
+			<tr>
+				<th class="text-center" width="65">มากที่สุด</th>
+				<th class="text-center" width="65">มาก</th>
+				<th class="text-center" width="65">ปาน กลาง</th>
+				<th class="text-center" width="65">น้อย</th>
+				<th class="text-center" width="65">ควรปรับปรุง</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="bg-light" colspan="6"><b>พลังครอบครัว</b></td>
+			</tr>
+			<tr>
+				<td class="text-left">1. การได้รับความรัก ความอบอุ่น เอาใจใส่ และการสนับสนุนในทางที่ดีจากครอบครัว</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">2. การที่จะสามารถปรึกษาหารือ และขอคำแนะนำจากผู้ปกครองได้อย่างสบายใจไม่ว่าเรื่องเล็กหรือเรื่องใหญ่</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">3. การมีผู้ปกครองที่ส่งเสริม สนับสนุน ช่วยเหลือด้านการเรียนรู้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">4. ความรู้สึกปลอดภัย อบอุ่น และมีความสุขเมื่ออยู่ในครอบครัวตัวเอง</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">5. การที่ตนเองอยู่ในครอบครัวที่มีระเบียบกฎเกณฑ์ชัดเจน มีเหตุผล และมีการดูแลให้ปฏิบัติตาม</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">6. การที่มีผู้ปกครองเป็นแบบอย่างที่ดีให้ทำตาม</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">7. การมีผู้ปกครองที่สนับสนุนให้ทำในสิ่งที่ชอบหรืออยากทำ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">8. การที่จะสามารถพูดคุย แลกเปลี่ยนเรียนรู้เรื่องราวเกี่ยวกับสื่อ เช่น วิทยุ ทีวี สื่อประเภทอื่น ๆ ภายในครอบครัว</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="1" /></td>
+			</tr>
+<div class="table-responsive">
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+				<th rowspan="2" class="text-center align-middle">หัวข้อแบบสอบถามความพึงพอใจ</th>
+				<th colspan="5" class="text-center">ระดับความพึงพอใจ</th>
+			</tr>
+			<tr>
+				<th class="text-center" width="65">มากที่สุด</th>
+				<th class="text-center" width="65">มาก</th>
+				<th class="text-center" width="65">ปาน กลาง</th>
+				<th class="text-center" width="65">น้อย</th>
+				<th class="text-center" width="65">ควรปรับปรุง</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="bg-light" colspan="6"><b>พลังสร้างปัญญา</b></td>
+			</tr>
+			<tr>
+				<td class="text-left">1. การอยู่ในสถาบันการศึกษาที่เอาใจใส่ สนับสนุนและช่วยเหลือผู้เรียนได้ดี</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">2. ความรู้สึกปลอดภัยเมื่ออยู่ในสถาบันการศึกษา</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">3. การอยู่ในสถาบันการศึกษาที่มีระเบียบกฎเกณฑ์ชัดเจน มีเหตุผล</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">และมีการดูแลให้ปฏิบัติตาม</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_70" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_70" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_70" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_70" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_70" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">4. การที่มีครูสนับสนุนให้ทำในสิ่งที่ชอบหรืออยากทำ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">5. ความพยายามและอยากเรียนให้ได้ดี ไม่เอาเปรียบและรู้จักแบ่งปันผู้อื่น</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">6. การเอาใจใส่ในการเรียนอย่างสม่ำเสมอ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">7. การทำการบ้านหรือทบทวนบทเรียน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">8. การมีความรักและผูกพันกับสถาบันการศึกษา</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">9. การอ่านหนังสือด้วยความเพลิดเพลิน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_9" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_9" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_9" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_9" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_9" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">10. การใฝ่รู้ภูมิปัญญา และวัฒนธรรมของชุมชน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_10" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_10" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_10" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_10" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_10" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">11. การที่จะสามารถพูดคุย แลกเปลี่ยนเรียนรู้เรื่องราวเกี่ยวกับสื่อ เช่น วิทยุ ทีวี สื่อประเภทอื่น ๆ กับครูเป็นประจำ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_11" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_11" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_11" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_11" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_11" value="1" /></td>
+			</tr>
+<div class="table-responsive">
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+				<th rowspan="2" class="text-center align-middle">หัวข้อแบบสอบถามความพึงพอใจ</th>
+				<th colspan="5" class="text-center">ระดับความพึงพอใจ</th>
+			</tr>
+			<tr>
+				<th class="text-center" width="65">มากที่สุด</th>
+				<th class="text-center" width="65">มาก</th>
+				<th class="text-center" width="65">ปาน กลาง</th>
+				<th class="text-center" width="65">น้อย</th>
+				<th class="text-center" width="65">ควรปรับปรุง</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="bg-light" colspan="6"><b>พลังเพื่อนและกิจกรรม</b></td>
+			</tr>
+			<tr>
+				<td class="text-left">1. การมีเพื่อนสนิทที่เป็นแบบอย่างที่ดีและชักนำให้ทำดี</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">2. การทำกิจกรรมสร้างสรรค์ตามความชอบและพึงพอใจ เช่น ทำงานศิลปะ เล่นดนตรี วาดรูป เป็นต้น</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">3. การได้เล่นกีฬาหรือออกกำลังกายเป็นประจำ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">4. การเข้าร่วมกิจกรรมทางศาสนาหรือประกอบพิธีกรรม</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">5. การที่ได้ชวนกันทำกิจกรรมที่ดีเป็นประจำร่วมกับเพื่อนๆ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">6. การมีโอกาสเข้าร่วมกิจกรรมเกี่ยวกับสื่อที่สร้างสรรค์กับเพื่อน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="1" /></td>
+			</tr>
+<div class="table-responsive">
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+				<th rowspan="2" class="text-center align-middle">หัวข้อแบบสอบถามความพึงพอใจ</th>
+				<th colspan="5" class="text-center">ระดับความพึงพอใจ</th>
+			</tr>
+			<tr>
+				<th class="text-center" width="65">มากที่สุด</th>
+				<th class="text-center" width="65">มาก</th>
+				<th class="text-center" width="65">ปาน กลาง</th>
+				<th class="text-center" width="65">น้อย</th>
+				<th class="text-center" width="65">ควรปรับปรุง</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="bg-light" colspan="6"><b>พลังชุมชน</b></td>
+			</tr>
+			<tr>
+				<td class="text-left">1. การที่มีญาติหรือผู้ใหญ่ นอกเหนือจากผู้ปกครองที่สามารถปรึกษาหารือและขอความช่วยเหลือได้อย่างสบายใจ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">2. การมีเพื่อนบ้านที่สนใจและให้กำลังใจ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">3. ความรู้สึกว่าคนในชุมชนให้ความสำคัญและเห็นคุณค่าของเด็กและเยาวชน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">4. การได้รับมอบหมายบทบาทหน้าที่ที่มีคุณค่าและเป็นประโยชน์ต่อชุมชน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">5. การเข้าร่วมทำกิจกรรมบำเพ็ญประโยชน์ในชุมชน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">6. ความรู้สึกอบอุ่น มีความสุข และภูมิใจในวิถีชีวิตเมื่ออยู่ในชุมชนของฉัน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">7. การมีเพื่อนบ้านคอยสอดส่อง และดูแลพฤติกรรมของเด็กและเยาวชนให้อยู่ในกรอบที่เหมาะสม</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">8. การที่มีผู้ใหญ่อื่นนอกจากผู้ปกครองที่เป็นแบบอย่างที่ดีให้ทำตาม</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="1" /></td>
+			</tr>
+<div class="table-responsive">
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+				<th rowspan="2" class="text-center align-middle">หัวข้อแบบสอบถามความพึงพอใจ</th>
+				<th colspan="5" class="text-center">ระดับความพึงพอใจ</th>
+			</tr>
+			<tr>
+				<th class="text-center" width="65">มากที่สุด</th>
+				<th class="text-center" width="65">มาก</th>
+				<th class="text-center" width="65">ปาน กลาง</th>
+				<th class="text-center" width="65">น้อย</th>
+				<th class="text-center" width="65">ควรปรับปรุง</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="bg-light" colspan="6"><b>ด้านที่ 3.6 เจตคติและการรับรู้แหล่ง</b></td>
+			</tr>
+			<tr>
+				<td class="text-left">1. ฉันรู้สึกว่า ผู้ที่ใช้สารเสพติดเป็นบุคคลที่สังคมรังเกียจ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_1" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">2. ฉันเชื่อว่าการใช้สารเสพติดช่วยให้ลืมความเครียดและปัญหาที่เกิดขึ้นได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_2" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">3. ฉันเชื่อว่าสารเสพติดจะช่วยให้ฉันคลายความทุกข์</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_3" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">4. ฉันเชื่อว่าการใช้สารเสพติดไม่มีผลเสียต่อร่างกาย</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_4" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">5. ฉันคิดว่าการใช้สารเสพติดเป็นสาเหตุที่ทำให้เกิดปัญหาสังคม</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_5" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">6. ฉันคิดว่าการใช้สารเสพติดในปริมาณมาก ๆ และเป็นเวลานาน ๆ              อาจทำให้ตายได้</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_6" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">7. ฉันรู้สึกว่าคนที่ใช้สารเสพติดเป็นคนโก้เก๋</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_7" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">8. ฉันคิดว่าการทดลองสารเสพติดเพียงครั้งเดียวเพื่อหาประสบการณ์          เป็นเรื่องปกติ</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_8" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">9. ฉันเคยเห็นคนรู้จัก ซื้อสารเสพติดจากร้านค้าในชุมชน</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_9" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_9" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_9" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_9" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_9" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">10. ฉันรู้ว่าจะซื้อสารเสพติดได้จากที่ไหนบ้าง</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_10" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_10" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_10" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_10" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_10" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">11. เวลาเพื่อนของฉันซื้อสารเสพติด เขาไม่เคยถูกถามเรื่องอายุจากคนขาย</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_11" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_11" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_11" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_11" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_11" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">12. ฉันเคยเห็นเพื่อนซื้อสารเสพติดจากแหล่งผู้ขาย</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_12" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_12" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_12" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_12" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_12" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">13. ฉันเห็นว่าชุมชนของฉันเป็นแหล่งหาซื้อสารเสพติดได้ง่าย</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_13" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_13" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_13" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_13" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_13" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">14. เพื่อนของฉันไม่เคยถูกปฏิเสธในการซื้อสารเสพติดจากร้านค้า</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_14" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_14" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_14" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_14" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_14" value="1" /></td>
+			</tr>
+			<tr>
+				<td class="text-left">15. ฉันเคยเห็นคนรู้จัก ซื้อสารเสพติดมาจากหมู่บ้านอื่น</td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_15" value="5"/></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_15" value="4" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_15" value="3" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_15" value="2" /></td>
+				<td class="text-center td_choice"><input type="radio" name="ques_3_15" value="1" /></td>
+			</tr>
