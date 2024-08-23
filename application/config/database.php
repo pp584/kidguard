@@ -73,11 +73,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
-
-$db_host = '202.162.79.55';
+// PROD:
+$db_host = 'localhost';
 $db_name = 'oncbdb';
-$db_user = 'oncbdb';
-$db_pass = 'U!9jjm287';
+$db_user = 'oncb';
+$db_pass = 'O@kid2024';
 $port = 3306;
 
 $db['default'] = array(
