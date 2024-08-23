@@ -131,7 +131,7 @@ class EvaluationExplanation extends CRUD_Controller
 		$this->num_links = 6;
 		$this->uri_segment = 4;
 		//$this->load->model('users/Users_model', 'Users');
-		$this->load->model('evaluation_form/Evaluation_model', 'EvaluationExplanation');
+		$this->load->model('evaluation_form/evaluation_model', 'EvaluationExplanation');
 		$this->EvaluationExplanation->session_name = 'EvaluationExplanation';
 		$this->data['page_url'] = site_url('evaluation/evaluation');
 

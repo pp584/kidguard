@@ -25,7 +25,7 @@ class HomeV2 extends CRUD_Controller
 
 		$this->load->model('Globalmodel', 'modeldb');
 
-		$this->load->model('home_v2/Home_model', 'HomeV2');
+		$this->load->model('home_v2/home_model', 'HomeV2');
 		$this->HomeV2->session_name = 'HomeV2';
 		// HomeV2_model
 		// $js_url = 'assets/js_modules/home_v2/home_v2.js?ft=' . filemtime('assets/js_modules/home_v2/home_v2.js');
