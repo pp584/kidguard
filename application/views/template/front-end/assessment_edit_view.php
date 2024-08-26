@@ -187,21 +187,22 @@
                                             <div class="col-lg-12 col-sm-12">
 
                                                 <div class="col-md-12">
-                                                    <h5 class="font-weight-bold">1. เพศ 
+                                                    <h5 class="font-weight-bold">1. เพศ
 
-                                                        
-                                                    <span style="color:red;">*</span></h5>
+
+                                                        <span style="color:red;">*</span>
+                                                    </h5>
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-check">
                                                                 <input class="form-check-input" type="radio" name="question_1" value="1" id="question_1" data-record-value="{record_question_1}" style="width:auto;" required>
-                                                                <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;"  >1. ชาย</label>
+                                                                <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">1. ชาย</label>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_1" value="2" id="question_1"  data-record-value="{record_question_1}" style="width:auto;">
-                                                                <label class="form-check-label" for="flexRadioDefault2" style="position:relative;color:black;top:-3px;" >2. หญิง</label>
+                                                                <input class="form-check-input" type="radio" name="question_1" value="2" id="question_1" data-record-value="{record_question_1}" style="width:auto;">
+                                                                <label class="form-check-label" for="flexRadioDefault2" style="position:relative;color:black;top:-3px;">2. หญิง</label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -227,13 +228,13 @@
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_3"  data-record-value="{record_question_3}"  value="1" id="quest_1_1-1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_3" data-record-value="{record_question_3}" value="1" id="quest_1_1-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">1. ศึกษาอยู่ </label>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_3"   data-record-value="{record_question_3}"  value="2" id="quest_1_1-2" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_3" data-record-value="{record_question_3}" value="2" id="quest_1_1-2" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault2" style="position:relative;color:black;top:-3px;"> 2. ไม่ได้ศึกษา </label>
                                                             </div>
                                                         </div>
@@ -248,7 +249,7 @@
 
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <input type="text" id="question_4"  type="number" maxlength="2" name="question_4"  value="{record_question_4}"  required="" fdprocessedid="m15qll" placeholder="กรุณากรอก">
+                                                        <input type="text" id="question_4" type="number" maxlength="2" name="question_4" value="{record_question_4}" required="" fdprocessedid="m15qll" placeholder="กรุณากรอก">
                                                     </div>
                                                 </div>
 
@@ -257,16 +258,16 @@
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_5" data-record-value="{record_question_5}"   value="1" id="quest_1_1-1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_5" data-record-value="{record_question_5}" value="1" id="quest_1_1-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">1. เป็นลูกคนเดียว </label>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_5"  data-record-value="{record_question_5}"  value="2" id="quest_1_1-2" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_5" data-record-value="{record_question_5}" value="2" id="quest_1_1-2" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault2" style="position:relative;color:black;top:-3px;">2. มีพี่น้องรวมทั้งหมด </label>
                                                             </div>
-                                                            <input type="number" maxlength="2"  id="question_6" name="question_6" value="{record_question_6}" required="" fdprocessedid="m15qll" placeholder="กรุณากรอก">
+                                                            <input type="number" maxlength="2" id="question_6" name="question_6" value="{record_question_6}" required="" fdprocessedid="m15qll" placeholder="กรุณากรอก">
                                                         </div>
                                                     </div>
 
@@ -278,25 +279,25 @@
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_7"  data-record-value="{record_question_7}"  value="1" id="quest_1_1-1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_7" data-record-value="{record_question_7}" value="1" id="quest_1_1-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">1. บิดามารดาอยู่ด้วยกัน </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_7" value="2"  data-record-value="{record_question_7}"  id="quest_1_1-2" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_7" value="2" data-record-value="{record_question_7}" id="quest_1_1-2" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault2" style="position:relative;color:black;top:-3px;">2. บิดามารดาแยกกันอยู่ </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_7"  data-record-value="{record_question_7}" value="3" id="quest_1_1-1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_7" data-record-value="{record_question_7}" value="3" id="quest_1_1-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">3. บิดาเสียชีวิตแล้ว </label>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_7"  data-record-value="{record_question_7}" value="4" id="quest_1_1-1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_7" data-record-value="{record_question_7}" value="4" id="quest_1_1-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">4. มารดาเสียชีวิตแล้ว </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_7"  data-record-value="{record_question_7}" value="5" id="quest_1_1-1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_7" data-record-value="{record_question_7}" value="5" id="quest_1_1-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">5. บิดาและมารดาเสียชีวิตแล้ว </label>
                                                             </div>
                                                         </div>
@@ -308,33 +309,33 @@
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_8"  data-record-value="{record_question_8}" value="1" id="quest_1_1-1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_8" data-record-value="{record_question_8}" value="1" id="quest_1_1-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;"> 1. เกษตร (ทำไร่,ทำนา,ทำสวน,ประมง,ปศุสัตว์) </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_8" data-record-value="{record_question_8}"  value="2" id="quest_1_1-2" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_8" data-record-value="{record_question_8}" value="2" id="quest_1_1-2" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault2" style="position:relative;color:black;top:-3px;">2. รับราชการ / พนักงานราชการ </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_8" data-record-value="{record_question_8}"  value="3" id="quest_1_1-1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_8" data-record-value="{record_question_8}" value="3" id="quest_1_1-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">3. พนักงานเอกชน </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_8" data-record-value="{record_question_8}"  value="4" id="quest_1_1-1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_8" data-record-value="{record_question_8}" value="4" id="quest_1_1-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">4. รัฐวิสาหกิจ </label>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_8" data-record-value="{record_question_8}"  value="5" id="quest_1_1-1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_8" data-record-value="{record_question_8}" value="5" id="quest_1_1-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">5. รับจ้างทั่วไป </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_8" data-record-value="{record_question_8}"  value="6" id="quest_1_1-1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_8" data-record-value="{record_question_8}" value="6" id="quest_1_1-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">6. ธุรกิจส่วนตัว/อิสระ </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_8" data-record-value="{record_question_8}"  value="7" id="quest_1_1-1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_8" data-record-value="{record_question_8}" value="7" id="quest_1_1-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">7. อื่น ๆ</label>
                                                             </div>
                                                             <input type="text" id="question_8" name="question_9" value="{record_question_9}" fdprocessedid="m15qll" placeholder="กรุณากรอก ">
@@ -351,33 +352,33 @@
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_10" data-record-value="{record_question_10}"  value="1" id="quest_1_1-1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_10" data-record-value="{record_question_10}" value="1" id="quest_1_1-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">1. เกษตร (ทำไร่,ทำนา,ทำสวน,ประมง,ปศุสัตว์) </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_10" data-record-value="{record_question_10}"  value="2" id="quest_1_1-2" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_10" data-record-value="{record_question_10}" value="2" id="quest_1_1-2" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault2" style="position:relative;color:black;top:-3px;">2. รับราชการ / พนักงานราชการ </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_10" data-record-value="{record_question_10}"  value="3" id="quest_1_1-1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_10" data-record-value="{record_question_10}" value="3" id="quest_1_1-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">3. พนักงานเอกชน </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_10" data-record-value="{record_question_10}"  value="4" id="quest_1_1-1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_10" data-record-value="{record_question_10}" value="4" id="quest_1_1-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">4. รัฐวิสาหกิจ </label>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_10" data-record-value="{record_question_10}"  value="4" id="quest_1_1-1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_10" data-record-value="{record_question_10}" value="4" id="quest_1_1-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">5. รับจ้างทั่วไป </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_10" data-record-value="{record_question_10}"  value="5" id="quest_1_1-1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_10" data-record-value="{record_question_10}" value="5" id="quest_1_1-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">6. ธุรกิจส่วนตัว/อิสระ </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_10" data-record-value="{record_question_10}"  value="6" id="quest_1_1-1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_10" data-record-value="{record_question_10}" value="6" id="quest_1_1-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">7. อื่น ๆ </label>
                                                             </div>
                                                             <input type="text" id="question_10" name="question_11" value="{record_question_11}" fdprocessedid="m15qll" placeholder="กรุณากรอก ">
@@ -394,21 +395,21 @@
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_12" data-record-value="{record_question_12}"  id="quest_1_9-1" value="1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_12" data-record-value="{record_question_12}" id="quest_1_9-1" value="1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">1. ต่ำกว่า 15,000 บาท</label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_12"  data-record-value="{record_question_12}"  id="quest_1_9-2" value="2" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_12" data-record-value="{record_question_12}" id="quest_1_9-2" value="2" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault2" style="position:relative;color:black;top:-3px;">2. 15,000 - 30,000 บาท </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_12"  data-record-value="{record_question_12}"  id="quest_1_9-1" value="1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_12" data-record-value="{record_question_12}" id="quest_1_9-1" value="1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">3. 30,001 - 40,000 บาท</label>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="question_12" data-record-value="{record_question_12}"  id="quest_1_9-1" value="1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" name="question_12" data-record-value="{record_question_12}" id="quest_1_9-1" value="1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">4. 40,001 - 50,000 บาท </label>
                                                             </div>
                                                             <div class="form-check">
@@ -429,29 +430,29 @@
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">1. บิดา </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_13}"  name="question_13[]" value="2" id="quest_1_2-2" style="width:auto;">
+                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_13}" name="question_13[]" value="2" id="quest_1_2-2" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault2" style="position:relative;color:black;top:-3px;">2. มารดา </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_13}"  name="question_13[]" value="3" id="quest_1_2-1" style="width:auto;">
+                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_13}" name="question_13[]" value="3" id="quest_1_2-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">3. ญาติ </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox"  data-record-value="{record_question_13}"  name="question_13[]" value="4" id="quest_1_2-1" style="width:auto;">
+                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_13}" name="question_13[]" value="4" id="quest_1_2-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">4. เพื่อน</label>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_13}"  name="question_13[]" value="5" id="quest_1_2-1" style="width:auto;">
+                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_13}" name="question_13[]" value="5" id="quest_1_2-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">5. ครู </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_13}"  name="question_13[]" value="6" id="quest_1_2-1" style="width:auto;">
+                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_13}" name="question_13[]" value="6" id="quest_1_2-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">6. คนรัก </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_13}"  name="question_13[]" value="7" id="quest_1_2-1" style="width:auto;">
+                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_13}" name="question_13[]" value="7" id="quest_1_2-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">7. อื่น ๆ (ระบุ)</label>
                                                             </div>
                                                             <input type="text" id="subject" name="question_14" value="{record_question_14}" required="" fdprocessedid="m15qll" placeholder="กรุณากรอก ">
@@ -466,13 +467,13 @@
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio" data-record-value="{record_question_15}"   name="question_15" value="1" id="quest_1_1-1" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" data-record-value="{record_question_15}" name="question_15" value="1" id="quest_1_1-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">1. เคย </label>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="radio"  data-record-value="{record_question_15}"  name="question_15" value="2" id="quest_1_1-2" style="width:auto;">
+                                                                <input class="form-check-input" type="radio" data-record-value="{record_question_15}" name="question_15" value="2" id="quest_1_1-2" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault2" style="position:relative;color:black;top:-3px;">2. ไม่เคย </label>
                                                             </div>
                                                         </div>
@@ -485,53 +486,53 @@
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox"  data-record-value="{record_question_16}"   name="question_16[]" value="1" id="quest_1_2-1" style="width:auto;">
+                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}" name="question_16[]" value="1" id="quest_1_2-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">1. ยาบ้า </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}"  name="question_16[]" value="2" id="quest_1_2-1" style="width:auto;">
+                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}" name="question_16[]" value="2" id="quest_1_2-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">2. ยาอี </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}"  name="question_16[]" value="3" id="quest_1_2-1" style="width:auto;">
+                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}" name="question_16[]" value="3" id="quest_1_2-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">3. ยาเค </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}"  name="question_16[]" value="4" id="quest_1_2-1" style="width:auto;">
+                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}" name="question_16[]" value="4" id="quest_1_2-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">4. ฝิ่น </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}"  name="question_16[]" value="5" id="quest_1_2-1" style="width:auto;">
+                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}" name="question_16[]" value="5" id="quest_1_2-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">5. เฮโรอีน </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}"  name="question_16[]" value="6" id="quest_1_2-1" style="width:auto;">
+                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}" name="question_16[]" value="6" id="quest_1_2-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">6. กัญชา </label>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}"  name="question_16[]" value="7" id="quest_1_2-2" style="width:auto;">
+                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}" name="question_16[]" value="7" id="quest_1_2-2" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault2" style="position:relative;color:black;top:-3px;">7. ใบกระท่อม </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}"  name="question_16[]" value="8" id="quest_1_2-1" style="width:auto;">
+                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}" name="question_16[]" value="8" id="quest_1_2-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">8. ทินเนอร์/กาว </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}"  name="question_16[]" value="9" id="quest_1_2-1" style="width:auto;">
+                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}" name="question_16[]" value="9" id="quest_1_2-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">9. ยาไอซ์ </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}"  name="question_16[]" value="10" id="quest_1_2-1" style="width:auto;">
+                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}" name="question_16[]" value="10" id="quest_1_2-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">10. บุหรี่ </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}"  name="question_16[]" value="11" id="quest_1_2-1" style="width:auto;">
+                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}" name="question_16[]" value="11" id="quest_1_2-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">11. สุรา </label>
                                                             </div>
                                                             <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}"  name="question_16[]" value="12" id="quest_1_2-1" style="width:auto;">
+                                                                <input class="form-check-input" type="checkbox" data-record-value="{record_question_16}" name="question_16[]" value="12" id="quest_1_2-1" style="width:auto;">
                                                                 <label class="form-check-label" for="flexRadioDefault1" style="position:relative;color:black;top:-3px;">12. อื่น ๆ โปรดระบุ </label>
                                                             </div>
                                                             <input type="text" id="subject" name="question_17" value="{record_question_17}" required="" fdprocessedid="m15qll" placeholder="กรุณากรอก ">
@@ -615,69 +616,69 @@
 
     <!-- Footer Section -->
     <footer id="footer-home-three" class="pad-100">
-            <div class="container">
-                <div class="row text-center text-md-left">
-                    <div class="col-md-3 col-lg-2 mt-md-5 ms-border-right mb-4 mb-md-0">
-                        <img src="https://upload.wikimedia.org/wikipedia/th/thumb/2/20/Office_of_the_Narcotics_Control_Board_Logo.png/220px-Office_of_the_Narcotics_Control_Board_Logo.png" style="height: 100px;" class="img-fluid" alt="Logo">
-                        <h6 class="footer-nav-heading mt-3">&copy; 2022 - ONCB</h6>
-                    </div>
-                    <div class="col-md-3 col-lg-3 mb-4 mb-md-0">
-                        <h6 class="footer-nav-heading mb-3">Navigation</h6>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p><a href="{site_url}home">หน้าหลัก </a></p>
-                                <p><a href="{site_url}about">เกี่ยวกับเรา </a></p>
-                                <p><a href="{site_url}news_research_info">โครงการวิจัย </a></p>
-                                <p><a href="{site_url}announcement">ข่าวสาร</a></p>
-                                <p><a href="{site_url}asked_questions">FAQ</a></p>
-                                <p><a href="{site_url}contactus">ติดต่อเรา</a></p>
-                            </div>
+        <div class="container">
+            <div class="row text-center text-md-left">
+                <div class="col-md-3 col-lg-2 mt-md-5 ms-border-right mb-4 mb-md-0">
+                    <img src="https://upload.wikimedia.org/wikipedia/th/thumb/2/20/Office_of_the_Narcotics_Control_Board_Logo.png/220px-Office_of_the_Narcotics_Control_Board_Logo.png" style="height: 100px;" class="img-fluid" alt="Logo">
+                    <h6 class="footer-nav-heading mt-3">&copy; 2022 - ONCB</h6>
+                </div>
+                <div class="col-md-3 col-lg-3 mb-4 mb-md-0">
+                    <h6 class="footer-nav-heading mb-3">Navigation</h6>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p><a href="{site_url}home">หน้าหลัก </a></p>
+                            <p><a href="{site_url}about">เกี่ยวกับเรา </a></p>
+                            <p><a href="{site_url}news_research_info">โครงการวิจัย </a></p>
+                            <p><a href="{site_url}announcement">ข่าวสาร</a></p>
+                            <p><a href="{site_url}asked_questions">FAQ</a></p>
+                            <p><a href="{site_url}contactus">ติดต่อเรา</a></p>
                         </div>
                     </div>
-                    <div class="d-none d-lg-block col-lg-1"></div>
-                    <div class="col-md-3 col-lg-3 mb-4 mb-md-0">
-                        <h6 class="footer-nav-heading mb-3">สำนักงานคณะกรรมการป้องกันและปราบปรามยาเสพติด</h6>
-                        <p>เลขที่ 5 ถนนดินแดง แขวงสามเสนใน เขตพญาไท กรุงเทพมหานคร 104000</p>
-                        <h6 class="footer-nav-heading mb-3">โทรศัพท์ติดต่อ</h6>
-                        <p><a href="tel:+12345671313">โทรศัพท์ 02-247-0901-19</a></p>
-                        <h6 class="footer-nav-heading mb-3">นโยบายการใช้งาน</h6>
-                        <p><a  target="_blank" href="https://www.oncb.go.th/Documents/%E0%B8%99%E0%B9%82%E0%B8%A2%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A1%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%84%E0%B8%87%E0%B8%9B%E0%B8%A5%E0%B8%AD%E0%B8%94%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2%E0%B8%B5%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%A8%20(%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%9C%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%88%E0%B8%B2%E0%B8%81%20%E0%B8%84%E0%B8%98%E0%B8%AD).pdf">นโยบายการใช้งานเว็บไซต์</a></p>
-                        <p><a  target="_blank" href="https://www.oncb.go.th/Documents/%E0%B8%99%E0%B9%82%E0%B8%A2%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%B8%E0%B9%89%E0%B8%A1%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%84%E0%B8%84%E0%B8%A5.pdf">นโยบายการคุ้มครองข้อมูลส่วนบุคคล</a></p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="col-md-3 col-lg-3 mb-4 mb-md-0">
+                    <h6 class="footer-nav-heading mb-3">สำนักงานคณะกรรมการป้องกันและปราบปรามยาเสพติด</h6>
+                    <p>เลขที่ 5 ถนนดินแดง แขวงสามเสนใน เขตพญาไท กรุงเทพมหานคร 104000</p>
+                    <h6 class="footer-nav-heading mb-3">โทรศัพท์ติดต่อ</h6>
+                    <p><a href="tel:+12345671313">โทรศัพท์ 02-247-0901-19</a></p>
+                    <h6 class="footer-nav-heading mb-3">นโยบายการใช้งาน</h6>
+                    <p><a target="_blank" href="https://www.oncb.go.th/Documents/%E0%B8%99%E0%B9%82%E0%B8%A2%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A1%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%84%E0%B8%87%E0%B8%9B%E0%B8%A5%E0%B8%AD%E0%B8%94%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2%E0%B8%B5%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%A8%20(%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%9C%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%88%E0%B8%B2%E0%B8%81%20%E0%B8%84%E0%B8%98%E0%B8%AD).pdf">นโยบายการใช้งานเว็บไซต์</a></p>
+                    <p><a target="_blank" href="https://www.oncb.go.th/Documents/%E0%B8%99%E0%B9%82%E0%B8%A2%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%B8%E0%B9%89%E0%B8%A1%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%84%E0%B8%84%E0%B8%A5.pdf">นโยบายการคุ้มครองข้อมูลส่วนบุคคล</a></p>
 
-                    </div>
-                    <div class="col-md-3 col-lg-3">
-                        <h6 class="footer-nav-heading mb-3">email</h6>
-                        <p><a href="mailto:contact@coroso.com">contact@oncb.go.th</a></p>
-                        <h6 class="footer-nav-heading mb-3">แหล่งทุนวิจัย</h6>
-                        <p>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                    <h6 class="footer-nav-heading mb-3">email</h6>
+                    <p><a href="mailto:contact@coroso.com">contact@oncb.go.th</a></p>
+                    <h6 class="footer-nav-heading mb-3">แหล่งทุนวิจัย</h6>
+                    <p>
 
-                            <span class="mr-3"><a href="https://www.nrct.go.th/" target="_blank" data-toggle="tooltip" data-placement="top" title="สำนักงานการวิจัยแห่งชาติ (วช.)"><img style="height: 45px;width: 45px;" src="https://www.job-108.com/icon/1575089961.jpg?v=1"></a></span>
-                            <span class="mr-3"><a href="https://www.tsri.or.th/" target="_blank" data-toggle="tooltip" data-placement="top" title="สำนักงานคณะกรรมการส่งเสริมวิทยาศาสตร์ วิจัยและนวัตกรรม (สกสว.)"><img style="height: 45px;width: 45px;" src="https://riie.wu.ac.th/wp-content/uploads/2021/04/%E0%B8%81%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%99%E0%B8%AA%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C-%E0%B8%A7%E0%B8%B4%E0%B8%88%E0%B8%B1%E0%B8%A2-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%99%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1-%E0%B8%81%E0%B8%AA%E0%B8%A7.-230x300.png"></a></span>
-                            <span class="mr-3"><a href="https://www.hsri.or.th/researcher" target="_blank" data-toggle="tooltip" data-placement="top" title="สถาบันวิจัยระบบสาธารณสุข"><img style="height: 45px;width: 45px;" src="https://www.hitap.net/wp-content/uploads/2019/11/%E0%B8%AA%E0%B8%A7%E0%B8%A3%E0%B8%AA_1-300x300.png"></a></span>
-                        </p>
-                        <div class="ms-spacer-30"></div>
-                        <h6 class="footer-nav-heading mb-3">ภาคีเครือข่าย</h6>
-                        <p>
-                            <span class="mr-3"><a href="https://www.oncb.go.th/Pages/main.aspx" target="_blank" data-toggle="tooltip" data-placement="top" title="ปปส "><img style="height: 45px;width: 45px;" src="https://upload.wikimedia.org/wikipedia/th/thumb/2/20/Office_of_the_Narcotics_Control_Board_Logo.png/220px-Office_of_the_Narcotics_Control_Board_Logo.png"></a></span>
-                            <span class="mr-3"><a href="https://www.nhso.go.th/" target="_blank" data-toggle="tooltip" data-placement="top" title="สปสช"><img style="height: 45px;width: 45px;" src="https://www.nhso.go.th/storage/uploads/news/20220517180205212.png"></a></span>
-                            <span class="mr-3"><a href="https://www.moj.go.th/index.php" target="_blank" data-toggle="tooltip" data-placement="top" title="กระทรวงยุติธรรม"><img style="height: 45px;width: 45px;" src="https://www.moj.go.th/img/all_logo/00.png"></a></span>
-                        </p>
+                        <span class="mr-3"><a href="https://www.nrct.go.th/" target="_blank" data-toggle="tooltip" data-placement="top" title="สำนักงานการวิจัยแห่งชาติ (วช.)"><img style="height: 45px;width: 45px;" src="{base_url}/assets/images/logo_วช_NRCT_re.png"></a></span>
+                        <span class="mr-3"><a href="https://www.tsri.or.th/" target="_blank" data-toggle="tooltip" data-placement="top" title="สำนักงานคณะกรรมการส่งเสริมวิทยาศาสตร์ วิจัยและนวัตกรรม (สกสว.)"><img style="height: 45px;width: 45px;" src="https://riie.wu.ac.th/wp-content/uploads/2021/04/%E0%B8%81%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%99%E0%B8%AA%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C-%E0%B8%A7%E0%B8%B4%E0%B8%88%E0%B8%B1%E0%B8%A2-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%99%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1-%E0%B8%81%E0%B8%AA%E0%B8%A7.-230x300.png"></a></span>
+                        <span class="mr-3"><a href="https://www.hsri.or.th/researcher" target="_blank" data-toggle="tooltip" data-placement="top" title="สถาบันวิจัยระบบสาธารณสุข"><img style="height: 45px;width: 45px;" src="https://www.hitap.net/wp-content/uploads/2019/11/%E0%B8%AA%E0%B8%A7%E0%B8%A3%E0%B8%AA_1-300x300.png"></a></span>
+                    </p>
+                    <div class="ms-spacer-30"></div>
+                    <h6 class="footer-nav-heading mb-3">ภาคีเครือข่าย</h6>
+                    <p>
+                        <span class="mr-3"><a href="https://www.oncb.go.th/Pages/main.aspx" target="_blank" data-toggle="tooltip" data-placement="top" title="ปปส "><img style="height: 45px;width: 45px;" src="https://upload.wikimedia.org/wikipedia/th/thumb/2/20/Office_of_the_Narcotics_Control_Board_Logo.png/220px-Office_of_the_Narcotics_Control_Board_Logo.png"></a></span>
+                        <span class="mr-3"><a href="https://www.nhso.go.th/" target="_blank" data-toggle="tooltip" data-placement="top" title="สปสช"><img style="height: 45px;width: 45px;" src="https://www.nhso.go.th/storage/uploads/news/20220517180205212.png"></a></span>
+                        <span class="mr-3"><a href="https://www.moj.go.th/index.php" target="_blank" data-toggle="tooltip" data-placement="top" title="กระทรวงยุติธรรม"><img style="height: 45px;width: 45px;" src="https://www.moj.go.th/img/all_logo/00.png"></a></span>
+                    </p>
 
-                        <div class="ms-spacer-30"></div>
-                        <h6 class="footer-nav-heading mb-3">Open data </h6>
-                        <p>
-                            <span class="mr-3"><a href="https://www.oncb.go.th/Pages/main.aspx"
-                             target="_blank" data-toggle="tooltip"
-                              data-placement="top" title="ปปส ">
-                              <img 
-                               src="{base_url}/assets/images/creative_common.png">
+                    <div class="ms-spacer-30"></div>
+                    <h6 class="footer-nav-heading mb-3">Open data </h6>
+                    <p>
+                        <span class="mr-3"><a href="https://www.oncb.go.th/Pages/main.aspx"
+                                target="_blank" data-toggle="tooltip"
+                                data-placement="top" title="ปปส ">
+                                <img
+                                    src="{base_url}/assets/images/creative_common.png">
                             </a></span>
-                            
-                        </p>
-                    </div>
+
+                    </p>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
     </div> <!-- Body Wrapper Ends -->
 
     <!-- Preloader -->

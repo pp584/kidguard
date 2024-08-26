@@ -63,96 +63,99 @@
         </section>
 
         <!-- Contact Form Area -->
-            <div class="contact-bnr pad-100 d-flex">
-                <br />
-                <div class="col-12" style="align-content: center;" id="printableArea">
-                    <div class="row justify-content-center">
-                        <!-- [ View File name : preview_view.php ] -->
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        <div class="contact-bnr pad-100 d-flex">
+            <br />
+            <div class="col-12" style="align-content: center;" id="printableArea">
+                <div class="row justify-content-center">
+                    <!-- [ View File name : preview_view.php ] -->
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
-                        <style>
-                            td {
-                                font: 0.8em sans-serif;
-                            }
+                    <style>
+                        td {
+                            font: 0.8em sans-serif;
+                        }
 
-                            th {
-                                font: 1em sans-serif;
-                                font-style: normal;
+                        th {
+                            font: 1em sans-serif;
+                            font-style: normal;
 
-                            }
+                        }
+
+                        .table {
+                            max-width: 100%;
+                            width: auto;
+                        }
+
+                        .table th,
+                        .table td {
+                            max-width: 200px;
+                            text-overflow: ellipsis;
+                        }
+
+                        @media screen and (max-width: 768px) {
                             .table {
-                                max-width: 100%;
-                                width: auto;
+                                width: 100%;
+                                display: block;
+                                overflow-x: auto;
                             }
-                            .table th, .table td {
-                                max-width: 200px;
-                                text-overflow: ellipsis;             
-                            }
-                            @media screen and (max-width: 768px) {
-                                .table {
-                                    width: 100%;
-                                    display: block;
-                                    overflow-x: auto;
-                                }
-                            }
-                            
-                        </style>
-                        <div class="card border">
-                            <div class="card-body">
-                                <?php $query_result = $this->db->query("select * from assessment_form where id = '" . $_SESSION["assessment_id"] . "'  ")->row(); ?>
+                        }
+                    </style>
+                    <div class="card border">
+                        <div class="card-body">
+                            <?php $query_result = $this->db->query("select * from assessment_form where id = '" . $_SESSION["assessment_id"] . "'  ")->row(); ?>
 
-                                <table width="100%" border="0">
-                                    <tr>
-                                        <th>ผลการประเมินปัจจัยภูมิคุ้มกัน ปัจจัยบริบทและพฤติกรรมเสี่ยงต่อการใช้สารเสพติด</th>
-                                        <th></th>
-                                        <th> </th>
-                                        <th style="text-align:right;"> <img style="height: 105px;" src="{base_url}/assets/images/oncbTh_png.png"> <img style="height: 90px; width:90px" src="{base_url}/assets/images/Picture2.png"> </th>
-                                    </tr>
-                                    <tr>
-                                        <th><b>รหัสผู้ประเมิน: <?php echo $province_code . '' . $query_result->assessment_code; ?></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th style="text-align:right;">วันเวลาเข้าประเมิน: <?= setDateToThai(date($query_result->create_date), 'full_month'); ?> </th>
-                                    </tr>
-                                </table>
-                                <hr />
+                            <table width="100%" border="0">
+                                <tr>
+                                    <th>ผลการประเมินปัจจัยภูมิคุ้มกัน ปัจจัยบริบทและพฤติกรรมเสี่ยงต่อการใช้สารเสพติด</th>
+                                    <th></th>
+                                    <th> </th>
+                                    <th style="text-align:right;"> <img style="height: 105px;" src="{base_url}/assets/images/oncbTh_png.png"> <img style="height: 90px; width:90px" src="{base_url}/assets/images/Picture2.png"> </th>
+                                </tr>
+                                <tr>
+                                    <th><b>รหัสผู้ประเมิน: <?php echo $province_code . '' . $query_result->assessment_code; ?></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th style="text-align:right;">วันเวลาเข้าประเมิน: <?= setDateToThai(date($query_result->create_date), 'full_month'); ?> </th>
+                                </tr>
+                            </table>
+                            <hr />
 
-                                <div class="justify-content-center">
-                                    <div class="card-body">
-                                        <canvas id="myChart1" style="height:400px; max-width:100%"></canvas>
-                                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-                                        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.0.2"></script>
-                                        <script>
-                                            var barColors = {
-                                                'ผู้ประเมิน': "#FFA07A",
-                                            };
-                                            
-                                            const xValues = ['การบริหารจัดการตน', 'ทุนทางจิตวิทยา', 'การเห็นคุณค่าในตนเอง', 'พลังตัวตน'];
+                            <div class="justify-content-center">
+                                <div class="card-body">
+                                    <canvas id="myChart1" style="height:400px; max-width:100%"></canvas>
+                                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                                    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.0.2"></script>
+                                    <script>
+                                        var barColors = {
+                                            'ผู้ประเมิน': "#FFA07A",
+                                        };
 
-                                            new Chart("myChart1", {
-                                                type: "bar",
-                                                data: {
-                                                    labels: xValues,
-                                                    datasets: [
-                                                        {
-                                                            data: [<?= $self_management_net_sum_score3 ?>, <?= $psychological_capital_score3 ?>, <?= $self_esteem_score3 ?>, <?= $identity_power_score3 ?>],
-                                                            backgroundColor: barColors['ผู้ประเมิน'],
-                                                            label: 'ผู้ประเมิน',
-                                                            fill: false
-                                                        }
-                                                    ]
+                                        const xValues = ['การบริหารจัดการตน', 'ทุนทางจิตวิทยา', 'การเห็นคุณค่าในตนเอง', 'พลังตัวตน'];
+
+                                        new Chart("myChart1", {
+                                            type: "bar",
+                                            data: {
+                                                labels: xValues,
+                                                datasets: [{
+                                                    data: [<?= $self_management_net_sum_score3 ?>, <?= $psychological_capital_score3 ?>, <?= $self_esteem_score3 ?>, <?= $identity_power_score3 ?>],
+                                                    backgroundColor: barColors['ผู้ประเมิน'],
+                                                    label: 'ผู้ประเมิน',
+                                                    fill: false
+                                                }]
+                                            },
+                                            options: {
+                                                responsive: true,
+                                                interaction: {
+                                                    mode: 'index',
+                                                    intersect: false,
                                                 },
-                                                options: {
-                                                    responsive: true,
-                                                    interaction: {
-                                                        mode: 'index',
-                                                        intersect: false,
-                                                    },
-                                                    plugins: {
-                                                        title: {
-                                                            display: true,
-                                                            text: 'ผลการประเมินของนักเรียนเทียบกับมาตรฐานระดับชาติด้านปัจจัยภูมิค้มกัน',
-                                                            font: { size: 18 }
+                                                plugins: {
+                                                    title: {
+                                                        display: true,
+                                                        text: 'ผลการประเมินของนักเรียนเทียบกับมาตรฐานระดับชาติด้านปัจจัยภูมิค้มกัน',
+                                                        font: {
+                                                            size: 18
+                                                        }
                                                     },
                                                     legend: {
                                                         position: 'top',
@@ -189,8 +192,8 @@
                                                                 type: 'line',
                                                                 xMax: -0.5,
                                                                 xMin: 0.5,
-                                                                yMin: 2.74,  
-                                                                yMax: 2.74, 
+                                                                yMin: 2.74,
+                                                                yMax: 2.74,
                                                                 borderColor: 'green',
                                                                 borderWidth: 2,
                                                                 label: {
@@ -326,83 +329,83 @@
                                                 }
                                             }
                                         });
-                                        </script>
-                                        
-                                        <table class="table table-borderless" style="width:100%;max-width:800px">
-                                            <thead>
-                                                <tr>
-                                                    <th></th>
-                                                    <th class="text-center emphasized-header">การบริหารจัดการตน</th>
-                                                    <th class="text-center emphasized-header">ทุนทางจิตวิทยา</th>
-                                                    <th class="text-center emphasized-header">การเห็นคุณค่าในตนเอง</th>
-                                                    <th class="text-center emphasized-header">พลังตัวตน</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><i class='fas fa-user' style="color: #FFA07A;"></i> ผู้ประเมิน </td>
-                                                    <?php $values = [$self_management_net_sum_score3, $psychological_capital_score3, $self_esteem_score3, $identity_power_score3]; ?>
-                                                    <?php foreach ($values as $value): ?>
+                                    </script>
+
+                                    <table class="table table-borderless" style="width:100%;max-width:800px">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th class="text-center emphasized-header">การบริหารจัดการตน</th>
+                                                <th class="text-center emphasized-header">ทุนทางจิตวิทยา</th>
+                                                <th class="text-center emphasized-header">การเห็นคุณค่าในตนเอง</th>
+                                                <th class="text-center emphasized-header">พลังตัวตน</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><i class='fas fa-user' style="color: #FFA07A;"></i> ผู้ประเมิน </td>
+                                                <?php $values = [$self_management_net_sum_score3, $psychological_capital_score3, $self_esteem_score3, $identity_power_score3]; ?>
+                                                <?php foreach ($values as $value): ?>
                                                     <td class="text-center">
                                                         <span class="rounded" style="background-color:<?php echo ($value >= 3.50 && $value <= 4.00) ? '#00ced1' : (($value >= 3.00 && $value < 3.50) ? '#4CBB17' : (($value >= 2.00 && $value < 3.00) ? '#FFC000' : '#DC143C')); ?>;color:<?php echo ($value >= 2.00 && $value < 3.00) ? 'black' : 'white'; ?>;padding: 4px;"><?php echo number_format($value, 2, '.', ''); ?></span>
                                                     </td>
-                                                    <?php endforeach; ?>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class='fas fa-smoking-ban' style="color: green;"></i> PR50 กลุ่มไม่เคยลอง</td>
-                                                    <?php $values = [2.74, 3.04, 3.20, 3.07]; ?>
-                                                    <?php foreach ($values as $value): ?>
+                                                <?php endforeach; ?>
+                                            </tr>
+                                            <tr>
+                                                <td><i class='fas fa-smoking-ban' style="color: green;"></i> PR50 กลุ่มไม่เคยลอง</td>
+                                                <?php $values = [2.74, 3.04, 3.20, 3.07]; ?>
+                                                <?php foreach ($values as $value): ?>
                                                     <td class="text-center">
                                                         <span class="rounded" style="background-color:<?php echo ($value >= 3.50 && $value <= 4.00) ? '#00ced1' : (($value >= 3.00 && $value < 3.50) ? '#4CBB17' : (($value >= 2.00 && $value < 3.00) ? '#FFC000' : '#DC143C')); ?>;color:<?php echo ($value >= 2.00 && $value < 3.00) ? 'black' : 'white'; ?>;padding: 4px;"><?php echo number_format($value, 2, '.', ''); ?></span>
                                                     </td>
-                                                    <?php endforeach; ?>
-                                                </tr>
-                                                <tr>
-                                                    <td><i class='fas fa-pills' style="color: red;"></i> PR50 กลุ่มเคยลอง</td>
-                                                    <?php $values = [2.58, 2.88, 3.00, 2.87]; ?>
-                                                    <?php foreach ($values as $value): ?>
+                                                <?php endforeach; ?>
+                                            </tr>
+                                            <tr>
+                                                <td><i class='fas fa-pills' style="color: red;"></i> PR50 กลุ่มเคยลอง</td>
+                                                <?php $values = [2.58, 2.88, 3.00, 2.87]; ?>
+                                                <?php foreach ($values as $value): ?>
                                                     <td class="text-center">
                                                         <span class="rounded" style="background-color:<?php echo ($value >= 3.50 && $value <= 4.00) ? '#00ced1' : (($value >= 3.00 && $value < 3.50) ? '#4CBB17' : (($value >= 2.00 && $value < 3.00) ? '#FFC000' : '#DC143C')); ?>;color:<?php echo ($value >= 2.00 && $value < 3.00) ? 'black' : 'white'; ?>;padding: 4px;"><?php echo number_format($value, 2, '.', ''); ?></span>
                                                     </td>
-                                                    <?php endforeach; ?>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                                <?php endforeach; ?>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
 
-                                    <div class="card-body">
-                                        <canvas id="myChart2" style="height:400px; max-width:100%"></canvas>
-                                        <script>
-                                            var barColors = {
-                                                'ผู้ประเมิน': "#FFA07A",
-                                            };
+                                <div class="card-body">
+                                    <canvas id="myChart2" style="height:400px; max-width:100%"></canvas>
+                                    <script>
+                                        var barColors = {
+                                            'ผู้ประเมิน': "#FFA07A",
+                                        };
 
-                                            const xValues2 = ['การคล้อยตาม', 'ความรุนแรง', 'การเป็นแบบอย่าง', 'การเปิดรับ', 'เจตคติทางบวก', 'การรับรู้แหล่ง'];
+                                        const xValues2 = ['การคล้อยตาม', 'ความรุนแรง', 'การเป็นแบบอย่าง', 'การเปิดรับ', 'เจตคติทางบวก', 'การรับรู้แหล่ง'];
 
-                                            new Chart("myChart2", {
-                                                type: "bar",
-                                                data: {
-                                                    labels: xValues2,
-                                                    datasets: [
-                                                        {
-                                                            data: [<?= $compliance_score3; ?>, <?= $domestic_violence_score3 ?>, <?= $exemplary_score3 ?>, <?= $media_exposure_score3 ?>, <?= $attitude_score3 ?>, <?= $source_purchase_score3 ?>],
-                                                            backgroundColor: barColors['ผู้ประเมิน'],
-                                                            label: 'ผู้ประเมิน',
-                                                            fill: false
-                                                        }
-                                                    ]
+                                        new Chart("myChart2", {
+                                            type: "bar",
+                                            data: {
+                                                labels: xValues2,
+                                                datasets: [{
+                                                    data: [<?= $compliance_score3; ?>, <?= $domestic_violence_score3 ?>, <?= $exemplary_score3 ?>, <?= $media_exposure_score3 ?>, <?= $attitude_score3 ?>, <?= $source_purchase_score3 ?>],
+                                                    backgroundColor: barColors['ผู้ประเมิน'],
+                                                    label: 'ผู้ประเมิน',
+                                                    fill: false
+                                                }]
+                                            },
+                                            options: {
+                                                responsive: true,
+                                                interaction: {
+                                                    mode: 'index',
+                                                    intersect: false,
                                                 },
-                                                options: {
-                                                    responsive: true,
-                                                    interaction: {
-                                                        mode: 'index',
-                                                        intersect: false,
-                                                    },
-                                                    plugins: {
-                                                        title: {
-                                                            display: true,
-                                                            text: 'ผลการประเมินของนักเรียนเทียบกับมาตรฐานระดับชาติด้านบริบทเชิงลบ',
-                                                            font: { size: 18 }
+                                                plugins: {
+                                                    title: {
+                                                        display: true,
+                                                        text: 'ผลการประเมินของนักเรียนเทียบกับมาตรฐานระดับชาติด้านบริบทเชิงลบ',
+                                                        font: {
+                                                            size: 18
+                                                        }
                                                     },
                                                     legend: {
                                                         position: 'top',
@@ -439,8 +442,8 @@
                                                                 type: 'line',
                                                                 xMax: -0.5,
                                                                 xMin: 0.5,
-                                                                yMin: 1.38,  
-                                                                yMax: 1.38, 
+                                                                yMin: 1.38,
+                                                                yMax: 1.38,
                                                                 borderColor: 'green',
                                                                 borderWidth: 2,
                                                                 label: {
@@ -637,7 +640,7 @@
                                                                     backgroundColor: 'red',
                                                                     color: 'white',
                                                                     yAdjust: 6,
-                                                            
+
                                                                 }
                                                             }
                                                         }
@@ -645,80 +648,81 @@
                                                 }
                                             }
                                         });
-                                        </script>
+                                    </script>
 
-                                        <table class="table table-borderless" style="width:100%;max-width:800px">
-                                            <tr>
-                                                <th></th>
-                                                <th class="text-center emphasized-header">การคล้อยตามกลุ่มคนใช้สารเสพติด</th>
-                                                <th class="text-center emphasized-header">ความรุนแรงในครอบครัว</th>
-                                                <th class="text-center emphasized-header">การเป็นแบบอย่างในการใช้สารเสพติด</th>
-                                                <th class="text-center emphasized-header">การเปิดรับเกี่ยวกับสื่อสารเสพติด</th>
-                                                <th class="text-center emphasized-header">เจตคติทางบวกต่อการใช้สารเสพติด</th>
-                                                <th class="text-center emphasized-header">การรับรู้แหล่งซื้อสารเสพติด</th>
-                                            </tr>
-                                            <tr>
-                                                <td><i class='fas fa-user' style="color: #FFA07A;"></i> ผู้ประเมิน</td>
-                                                <?php $values = [$compliance_score3, $domestic_violence_score3, $exemplary_score3, $media_exposure_score3,$attitude_score3,$source_purchase_score3]; ?>
-                                                <?php foreach ($values as $value): ?>
+                                    <table class="table table-borderless" style="width:100%;max-width:800px">
+                                        <tr>
+                                            <th></th>
+                                            <th class="text-center emphasized-header">การคล้อยตามกลุ่มคนใช้สารเสพติด</th>
+                                            <th class="text-center emphasized-header">ความรุนแรงในครอบครัว</th>
+                                            <th class="text-center emphasized-header">การเป็นแบบอย่างในการใช้สารเสพติด</th>
+                                            <th class="text-center emphasized-header">การเปิดรับเกี่ยวกับสื่อสารเสพติด</th>
+                                            <th class="text-center emphasized-header">เจตคติทางบวกต่อการใช้สารเสพติด</th>
+                                            <th class="text-center emphasized-header">การรับรู้แหล่งซื้อสารเสพติด</th>
+                                        </tr>
+                                        <tr>
+                                            <td><i class='fas fa-user' style="color: #FFA07A;"></i> ผู้ประเมิน</td>
+                                            <?php $values = [$compliance_score3, $domestic_violence_score3, $exemplary_score3, $media_exposure_score3, $attitude_score3, $source_purchase_score3]; ?>
+                                            <?php foreach ($values as $value): ?>
                                                 <td class="text-center">
                                                     <span class="rounded" style="background-color:<?php echo ($value >= 3.50 && $value <= 4.00) ? '#00ced1' : (($value >= 3.00 && $value < 3.50) ? '#4CBB17' : (($value >= 2.00 && $value < 3.00) ? '#FFC000' : '#DC143C')); ?>;color:<?php echo ($value >= 2.00 && $value < 3.00) ? 'black' : 'white'; ?>;padding: 4px;"><?php echo number_format($value, 2, '.', ''); ?></span>
                                                 </td>
-                                                <?php endforeach; ?>
-                                            </tr>
-                                            <tr>
-                                                <td><i class='fas fa-smoking-ban' style="color: green;"></i> PR50 กลุ่มไม่เคยลอง</td>
-                                                <?php $values = [1.38, 1.45, 1.31, 1.00, 1.63, 1.29]; ?>
-                                                <?php foreach ($values as $value): ?>
+                                            <?php endforeach; ?>
+                                        </tr>
+                                        <tr>
+                                            <td><i class='fas fa-smoking-ban' style="color: green;"></i> PR50 กลุ่มไม่เคยลอง</td>
+                                            <?php $values = [1.38, 1.45, 1.31, 1.00, 1.63, 1.29]; ?>
+                                            <?php foreach ($values as $value): ?>
                                                 <td class="text-center">
                                                     <span class="rounded" style="background-color:<?php echo ($value >= 3.50 && $value <= 4.00) ? '#00ced1' : (($value >= 3.00 && $value < 3.50) ? '#4CBB17' : (($value >= 2.00 && $value < 3.00) ? '#FFC000' : '#DC143C')); ?>;color:<?php echo ($value >= 2.00 && $value < 3.00) ? 'black' : 'white'; ?>;padding: 4px;"><?php echo number_format($value, 2, '.', ''); ?></span>
                                                 </td>
-                                                <?php endforeach; ?>
-                                            </tr>
-                                            <tr>
-                                                <td><i class='fas fa-pills' style="color: red;"></i> PR50 กลุ่มเคยลอง</td>
-                                                <?php $values = [1.75, 1.64, 1.56, 1.25, 2.00, 1.86]; ?>
-                                                <?php foreach ($values as $value): ?>
+                                            <?php endforeach; ?>
+                                        </tr>
+                                        <tr>
+                                            <td><i class='fas fa-pills' style="color: red;"></i> PR50 กลุ่มเคยลอง</td>
+                                            <?php $values = [1.75, 1.64, 1.56, 1.25, 2.00, 1.86]; ?>
+                                            <?php foreach ($values as $value): ?>
                                                 <td class="text-center">
                                                     <span class="rounded" style="background-color:<?php echo ($value >= 3.50 && $value <= 4.00) ? '#00ced1' : (($value >= 3.00 && $value < 3.50) ? '#4CBB17' : (($value >= 2.00 && $value < 3.00) ? '#FFC000' : '#DC143C')); ?>;color:<?php echo ($value >= 2.00 && $value < 3.00) ? 'black' : 'white'; ?>;padding: 4px;"><?php echo number_format($value, 2, '.', ''); ?></span>
                                                 </td>
-                                                <?php endforeach; ?>
-                                            </tr>
-                                        </table>
-                                    </div>
+                                            <?php endforeach; ?>
+                                        </tr>
+                                    </table>
+                                </div>
 
-                                    <div class="card-body">
-                                        <canvas id="myChart3" style="height:400px; max-width:100%"></canvas>
-                                        <script>
-                                            var barColors = {
-                                                'ผู้ประเมิน': "#FFA07A",
-                                            };
+                                <div class="card-body">
+                                    <canvas id="myChart3" style="height:400px; max-width:100%"></canvas>
+                                    <script>
+                                        var barColors = {
+                                            'ผู้ประเมิน': "#FFA07A",
+                                        };
 
-                                            const xValues3 = ['พลังครอบครัว', 'พลังสถานศึกษา ', 'พลังเพื่อนและกิจกรรม ', 'พลังชุมชน'];
+                                        const xValues3 = ['พลังครอบครัว', 'พลังสถานศึกษา ', 'พลังเพื่อนและกิจกรรม ', 'พลังชุมชน'];
 
-                                            new Chart("myChart3", {
-                                                type: "bar",
-                                                data: {
-                                                    labels: xValues3,
-                                                    datasets: [
-                                                    {
-                                                        data: [<?= $family_power_score3 ?>, <?= $school_power_score3 ?>, <?= $friend_power_score3 ?>, <?= $community_power_score3 ?>],
-                                                        backgroundColor: barColors['ผู้ประเมิน'],
-                                                        label: 'ผู้ประเมิน',
-                                                        fill: false
-                                                    }]
+                                        new Chart("myChart3", {
+                                            type: "bar",
+                                            data: {
+                                                labels: xValues3,
+                                                datasets: [{
+                                                    data: [<?= $family_power_score3 ?>, <?= $school_power_score3 ?>, <?= $friend_power_score3 ?>, <?= $community_power_score3 ?>],
+                                                    backgroundColor: barColors['ผู้ประเมิน'],
+                                                    label: 'ผู้ประเมิน',
+                                                    fill: false
+                                                }]
+                                            },
+                                            options: {
+                                                responsive: true,
+                                                interaction: {
+                                                    mode: 'index',
+                                                    intersect: false,
                                                 },
-                                                options: {
-                                                    responsive: true,
-                                                    interaction: {
-                                                        mode: 'index',
-                                                        intersect: false,
-                                                    },
-                                                    plugins: {
-                                                        title: {
-                                                            display: true,
-                                                            text: 'ผลประเมินระดับภาคทั่วประเทศ เมื่อเทียบกับเกณฑ์มาตรฐานปัจจัยบวก',
-                                                            font: { size: 18 }
+                                                plugins: {
+                                                    title: {
+                                                        display: true,
+                                                        text: 'ผลประเมินระดับภาคทั่วประเทศ เมื่อเทียบกับเกณฑ์มาตรฐานปัจจัยบวก',
+                                                        font: {
+                                                            size: 18
+                                                        }
                                                     },
                                                     legend: {
                                                         position: 'top',
@@ -754,8 +758,8 @@
                                                                 type: 'line',
                                                                 xMax: -0.5,
                                                                 xMin: 0.5,
-                                                                yMin: 2.74,  
-                                                                yMax: 2.74, 
+                                                                yMin: 2.74,
+                                                                yMax: 2.74,
                                                                 borderColor: 'green',
                                                                 borderWidth: 2,
                                                                 label: {
@@ -890,75 +894,75 @@
                                                     }
                                                 }
                                             }
-                                        });    
-                                        </script>
-                                        <table class="table table-borderless" style="width:100%;max-width:800px">
-                                            <tr>
-                                                <th></th>
-                                                <th class="text-center emphasized-header">พลังครอบครัว</th>
-                                                <th class="text-center emphasized-header">พลังสถานศึกษา</th>
-                                                <th class="text-center emphasized-header">พลังเพื่อนและกิจกรรม</th>
-                                                <th class="text-center emphasized-header">พลังชุมชน</th>
-                                            </tr>
-                                            <tr>
-                                                <td><i class='fas fa-user' style="color: #FFA07A;"></i> ผู้ประเมิน</td>
-                                                <?php $values = [$family_power_score3, $school_power_score3, $friend_power_score3, $community_power_score3]; ?>
-                                                <?php foreach ($values as $value): ?>
+                                        });
+                                    </script>
+                                    <table class="table table-borderless" style="width:100%;max-width:800px">
+                                        <tr>
+                                            <th></th>
+                                            <th class="text-center emphasized-header">พลังครอบครัว</th>
+                                            <th class="text-center emphasized-header">พลังสถานศึกษา</th>
+                                            <th class="text-center emphasized-header">พลังเพื่อนและกิจกรรม</th>
+                                            <th class="text-center emphasized-header">พลังชุมชน</th>
+                                        </tr>
+                                        <tr>
+                                            <td><i class='fas fa-user' style="color: #FFA07A;"></i> ผู้ประเมิน</td>
+                                            <?php $values = [$family_power_score3, $school_power_score3, $friend_power_score3, $community_power_score3]; ?>
+                                            <?php foreach ($values as $value): ?>
                                                 <td class="text-center">
                                                     <span class="rounded" style="background-color:<?php echo ($value >= 3.50 && $value <= 4.00) ? '#00ced1' : (($value >= 3.00 && $value < 3.50) ? '#4CBB17' : (($value >= 2.00 && $value < 3.00) ? '#FFC000' : '#DC143C')); ?>;color:<?php echo ($value >= 2.00 && $value < 3.00) ? 'black' : 'white'; ?>;padding: 4px;"><?php echo number_format($value, 2, '.', ''); ?></span>
                                                 </td>
-                                                <?php endforeach; ?>
-                                            </tr>
-                                            <tr>
-                                                <td><i class='fas fa-smoking-ban' style="color: green;"></i> PR50 กลุ่มไม่เคยลอง</td>
-                                                <?php $values = [3.38, 3.00, 3.00, 2.75]; ?>
-                                                <?php foreach ($values as $value): ?>
+                                            <?php endforeach; ?>
+                                        </tr>
+                                        <tr>
+                                            <td><i class='fas fa-smoking-ban' style="color: green;"></i> PR50 กลุ่มไม่เคยลอง</td>
+                                            <?php $values = [3.38, 3.00, 3.00, 2.75]; ?>
+                                            <?php foreach ($values as $value): ?>
                                                 <td class="text-center">
                                                     <span class="rounded" style="background-color:<?php echo ($value >= 3.50 && $value <= 4.00) ? '#00ced1' : (($value >= 3.00 && $value < 3.50) ? '#4CBB17' : (($value >= 2.00 && $value < 3.00) ? '#FFC000' : '#DC143C')); ?>;color:<?php echo ($value >= 2.00 && $value < 3.00) ? 'black' : 'white'; ?>;padding: 4px;"><?php echo number_format($value, 2, '.', ''); ?></span>
                                                 </td>
-                                                <?php endforeach; ?>
-                                            </tr>
-                                            <tr>
-                                                <td><i class='fas fa-pills' style="color: red;"></i> PR50 กลุ่มเคยลอง</td>
-                                                <?php $values = [3.00, 2.73, 2.83, 2.50]; ?>
-                                                <?php foreach ($values as $value): ?>
+                                            <?php endforeach; ?>
+                                        </tr>
+                                        <tr>
+                                            <td><i class='fas fa-pills' style="color: red;"></i> PR50 กลุ่มเคยลอง</td>
+                                            <?php $values = [3.00, 2.73, 2.83, 2.50]; ?>
+                                            <?php foreach ($values as $value): ?>
                                                 <td class="text-center">
                                                     <span class="rounded" style="background-color:<?php echo ($value >= 3.50 && $value <= 4.00) ? '#00ced1' : (($value >= 3.00 && $value < 3.50) ? '#4CBB17' : (($value >= 2.00 && $value < 3.00) ? '#FFC000' : '#DC143C')); ?>;color:<?php echo ($value >= 2.00 && $value < 3.00) ? 'black' : 'white'; ?>;padding: 4px;"><?php echo number_format($value, 2, '.', ''); ?></span>
                                                 </td>
-                                                <?php endforeach; ?>
-                                            </tr>
-                                        </table>
-                                        <br>
-                                    </div>
+                                            <?php endforeach; ?>
+                                        </tr>
+                                    </table>
+                                    <br>
+                                </div>
 
-                                    <div class="col-md-12">
-                                        <br />
-                                        <br />
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div align="left">
-                                                    <a href="{site_url}home" class="btn btn-danger btn-lg" fdprocessedid="de4wdk">
-                                                        <i class="fa fa-times"></i> ออกจากแบบฟอร์ม
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div align="right">
-                                                    <a href="{site_url}assessment/Preview_view_pdf" target="_blank" class="btn btn-info btn-lg" fdprocessedid="de4wdk">
-                                                        <i class="fa fa-print"></i> Print
-                                                    </a>
-                                                    <!-- <button type="submit" onclick="printDiv('printableArea')" class="btn btn-info btn-lg noPrint" fdprocessedid="de4wdk"><i class='fas fa-print'></i> Print</button> -->
-                                                </div>
+                                <div class="col-md-12">
+                                    <br />
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div align="left">
+                                                <a href="{site_url}home" class="btn btn-danger btn-lg" fdprocessedid="de4wdk">
+                                                    <i class="fa fa-times"></i> ออกจากแบบฟอร์ม
+                                                </a>
                                             </div>
                                         </div>
-                                        <br/><br/>
+                                        <div class="col-6">
+                                            <div align="right">
+                                                <a href="{site_url}assessment/Preview_view_pdf" target="_blank" class="btn btn-info btn-lg" fdprocessedid="de4wdk">
+                                                    <i class="fa fa-print"></i> Print
+                                                </a>
+                                                <!-- <button type="submit" onclick="printDiv('printableArea')" class="btn btn-info btn-lg noPrint" fdprocessedid="de4wdk"><i class='fas fa-print'></i> Print</button> -->
+                                            </div>
+                                        </div>
                                     </div>
+                                    <br /><br />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>                               
+            </div>
+        </div>
         <!-- Get In Touch Section -->
 
 
@@ -990,8 +994,8 @@
                         <h6 class="footer-nav-heading mb-3">โทรศัพท์ติดต่อ</h6>
                         <p><a href="tel:+12345671313">โทรศัพท์ 02-247-0901-19</a></p>
                         <h6 class="footer-nav-heading mb-3">นโยบายการใช้งาน</h6>
-                        <p><a  target="_blank" href="https://www.oncb.go.th/Documents/%E0%B8%99%E0%B9%82%E0%B8%A2%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A1%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%84%E0%B8%87%E0%B8%9B%E0%B8%A5%E0%B8%AD%E0%B8%94%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2%E0%B8%B5%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%A8%20(%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%9C%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%88%E0%B8%B2%E0%B8%81%20%E0%B8%84%E0%B8%98%E0%B8%AD).pdf">นโยบายการใช้งานเว็บไซต์</a></p>
-                        <p><a  target="_blank" href="https://www.oncb.go.th/Documents/%E0%B8%99%E0%B9%82%E0%B8%A2%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%B8%E0%B9%89%E0%B8%A1%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%84%E0%B8%84%E0%B8%A5.pdf">นโยบายการคุ้มครองข้อมูลส่วนบุคคล</a></p>
+                        <p><a target="_blank" href="https://www.oncb.go.th/Documents/%E0%B8%99%E0%B9%82%E0%B8%A2%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A1%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%84%E0%B8%87%E0%B8%9B%E0%B8%A5%E0%B8%AD%E0%B8%94%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2%E0%B8%B5%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%A8%20(%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%9C%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%88%E0%B8%B2%E0%B8%81%20%E0%B8%84%E0%B8%98%E0%B8%AD).pdf">นโยบายการใช้งานเว็บไซต์</a></p>
+                        <p><a target="_blank" href="https://www.oncb.go.th/Documents/%E0%B8%99%E0%B9%82%E0%B8%A2%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%B8%E0%B9%89%E0%B8%A1%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%84%E0%B8%84%E0%B8%A5.pdf">นโยบายการคุ้มครองข้อมูลส่วนบุคคล</a></p>
 
                     </div>
                     <div class="col-md-3 col-lg-3">
@@ -1000,7 +1004,7 @@
                         <h6 class="footer-nav-heading mb-3">แหล่งทุนวิจัย</h6>
                         <p>
 
-                            <span class="mr-3"><a href="https://www.nrct.go.th/" target="_blank" data-toggle="tooltip" data-placement="top" title="สำนักงานการวิจัยแห่งชาติ (วช.)"><img style="height: 45px;width: 45px;" src="https://www.job-108.com/icon/1575089961.jpg?v=1"></a></span>
+                            <span class="mr-3"><a href="https://www.nrct.go.th/" target="_blank" data-toggle="tooltip" data-placement="top" title="สำนักงานการวิจัยแห่งชาติ (วช.)"><img style="height: 45px;width: 45px;" src="{base_url}/assets/images/logo_วช_NRCT_re.png"></a></span>
                             <span class="mr-3"><a href="https://www.tsri.or.th/" target="_blank" data-toggle="tooltip" data-placement="top" title="สำนักงานคณะกรรมการส่งเสริมวิทยาศาสตร์ วิจัยและนวัตกรรม (สกสว.)"><img style="height: 45px;width: 45px;" src="https://riie.wu.ac.th/wp-content/uploads/2021/04/%E0%B8%81%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%99%E0%B8%AA%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C-%E0%B8%A7%E0%B8%B4%E0%B8%88%E0%B8%B1%E0%B8%A2-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%99%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1-%E0%B8%81%E0%B8%AA%E0%B8%A7.-230x300.png"></a></span>
                             <span class="mr-3"><a href="https://www.hsri.or.th/researcher" target="_blank" data-toggle="tooltip" data-placement="top" title="สถาบันวิจัยระบบสาธารณสุข"><img style="height: 45px;width: 45px;" src="https://www.hitap.net/wp-content/uploads/2019/11/%E0%B8%AA%E0%B8%A7%E0%B8%A3%E0%B8%AA_1-300x300.png"></a></span>
                         </p>
@@ -1016,11 +1020,11 @@
                         <h6 class="footer-nav-heading mb-3">Open data </h6>
                         <p>
                             <span class="mr-3"><a href="https://www.oncb.go.th/Pages/main.aspx"
-                             target="_blank" data-toggle="tooltip"
-                              data-placement="top" title="ปปส ">
-                              <img 
-                               src="{base_url}/assets/images/creative_common.png">
-                            </a></span>
+                                    target="_blank" data-toggle="tooltip"
+                                    data-placement="top" title="ปปส ">
+                                    <img
+                                        src="{base_url}/assets/images/creative_common.png">
+                                </a></span>
                         </p>
                     </div>
                 </div>
@@ -1041,7 +1045,7 @@
             </div>
         </div>
     </div>
-                    
+
     <!-- General Js -->
     <script src="{base_url}assets/themes/front-end/js/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap Js -->

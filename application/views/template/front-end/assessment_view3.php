@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>สำนักงานคณะกรรมการป้องกันและปราบปรามยาเสพติด</title>
     <link href='https://fonts.googleapis.com/css?family=Kanit:400,300&subset=thai,latin' rel='stylesheet' type='text/css'>
-   <!-- Favicon -->
-   <link rel="shortcut icon" href="logooncb-onweb_png.png" type="image/x-icon">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="logooncb-onweb_png.png" type="image/x-icon">
     <!-- Custom Fonts Css -->
     <link rel="stylesheet" href="{base_url}assets/themes/front-end/vendor/custom_fonts/fonts.css">
     <!-- Bootstrap Css -->
@@ -119,8 +119,8 @@
 
         <section id="ms-disease-sec">
             <div class="container">
-            <div class="row">
-                    
+                <div class="row">
+
                     <div class="col-lg-3 col-sm-3" style="text-align:center;">
                         <a href="{site_url}assessment/assessment1/add">
                             <img src="{base_url}assets/images/icon/form1_gray.png" style="width: 150px;height: 150px;">
@@ -1072,7 +1072,7 @@
                                                 <div align="right">
 
                                                     <input type="hidden" id="add_encrypt_id" />
-                                                   
+
 
 
                                                     <a href="{site_url}assessment/assessment2/add" class="btn btn-success btn-lg" fdprocessedid="de4wdk"><i class='fas fa-angle-double-left'></i> ย้อนกลับ</a>
@@ -1132,69 +1132,69 @@
 
     <!-- Footer Section -->
     <footer id="footer-home-three" class="pad-100">
-            <div class="container">
-                <div class="row text-center text-md-left">
-                    <div class="col-md-3 col-lg-2 mt-md-5 ms-border-right mb-4 mb-md-0">
-                        <img src="https://upload.wikimedia.org/wikipedia/th/thumb/2/20/Office_of_the_Narcotics_Control_Board_Logo.png/220px-Office_of_the_Narcotics_Control_Board_Logo.png" style="height: 100px;" class="img-fluid" alt="Logo">
-                        <h6 class="footer-nav-heading mt-3">&copy; 2022 - ONCB</h6>
-                    </div>
-                    <div class="col-md-3 col-lg-3 mb-4 mb-md-0">
-                        <h6 class="footer-nav-heading mb-3">Navigation</h6>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p><a href="{site_url}home">หน้าหลัก </a></p>
-                                <p><a href="{site_url}about">เกี่ยวกับเรา </a></p>
-                                <p><a href="{site_url}news_research_info">โครงการวิจัย </a></p>
-                                <p><a href="{site_url}announcement">ข่าวสาร</a></p>
-                                <p><a href="{site_url}asked_questions">FAQ</a></p>
-                                <p><a href="{site_url}contactus">ติดต่อเรา</a></p>
-                            </div>
+        <div class="container">
+            <div class="row text-center text-md-left">
+                <div class="col-md-3 col-lg-2 mt-md-5 ms-border-right mb-4 mb-md-0">
+                    <img src="https://upload.wikimedia.org/wikipedia/th/thumb/2/20/Office_of_the_Narcotics_Control_Board_Logo.png/220px-Office_of_the_Narcotics_Control_Board_Logo.png" style="height: 100px;" class="img-fluid" alt="Logo">
+                    <h6 class="footer-nav-heading mt-3">&copy; 2022 - ONCB</h6>
+                </div>
+                <div class="col-md-3 col-lg-3 mb-4 mb-md-0">
+                    <h6 class="footer-nav-heading mb-3">Navigation</h6>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p><a href="{site_url}home">หน้าหลัก </a></p>
+                            <p><a href="{site_url}about">เกี่ยวกับเรา </a></p>
+                            <p><a href="{site_url}news_research_info">โครงการวิจัย </a></p>
+                            <p><a href="{site_url}announcement">ข่าวสาร</a></p>
+                            <p><a href="{site_url}asked_questions">FAQ</a></p>
+                            <p><a href="{site_url}contactus">ติดต่อเรา</a></p>
                         </div>
                     </div>
-                    <div class="d-none d-lg-block col-lg-1"></div>
-                    <div class="col-md-3 col-lg-3 mb-4 mb-md-0">
-                        <h6 class="footer-nav-heading mb-3">สำนักงานคณะกรรมการป้องกันและปราบปรามยาเสพติด</h6>
-                        <p>เลขที่ 5 ถนนดินแดง แขวงสามเสนใน เขตพญาไท กรุงเทพมหานคร 104000</p>
-                        <h6 class="footer-nav-heading mb-3">โทรศัพท์ติดต่อ</h6>
-                        <p><a href="tel:+12345671313">โทรศัพท์ 02-247-0901-19</a></p>
-                        <h6 class="footer-nav-heading mb-3">นโยบายการใช้งาน</h6>
-                        <p><a  target="_blank" href="https://www.oncb.go.th/Documents/%E0%B8%99%E0%B9%82%E0%B8%A2%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A1%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%84%E0%B8%87%E0%B8%9B%E0%B8%A5%E0%B8%AD%E0%B8%94%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2%E0%B8%B5%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%A8%20(%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%9C%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%88%E0%B8%B2%E0%B8%81%20%E0%B8%84%E0%B8%98%E0%B8%AD).pdf">นโยบายการใช้งานเว็บไซต์</a></p>
-                        <p><a  target="_blank" href="https://www.oncb.go.th/Documents/%E0%B8%99%E0%B9%82%E0%B8%A2%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%B8%E0%B9%89%E0%B8%A1%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%84%E0%B8%84%E0%B8%A5.pdf">นโยบายการคุ้มครองข้อมูลส่วนบุคคล</a></p>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="col-md-3 col-lg-3 mb-4 mb-md-0">
+                    <h6 class="footer-nav-heading mb-3">สำนักงานคณะกรรมการป้องกันและปราบปรามยาเสพติด</h6>
+                    <p>เลขที่ 5 ถนนดินแดง แขวงสามเสนใน เขตพญาไท กรุงเทพมหานคร 104000</p>
+                    <h6 class="footer-nav-heading mb-3">โทรศัพท์ติดต่อ</h6>
+                    <p><a href="tel:+12345671313">โทรศัพท์ 02-247-0901-19</a></p>
+                    <h6 class="footer-nav-heading mb-3">นโยบายการใช้งาน</h6>
+                    <p><a target="_blank" href="https://www.oncb.go.th/Documents/%E0%B8%99%E0%B9%82%E0%B8%A2%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A1%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%84%E0%B8%87%E0%B8%9B%E0%B8%A5%E0%B8%AD%E0%B8%94%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2%E0%B8%B5%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%A8%20(%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%9C%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%88%E0%B8%B2%E0%B8%81%20%E0%B8%84%E0%B8%98%E0%B8%AD).pdf">นโยบายการใช้งานเว็บไซต์</a></p>
+                    <p><a target="_blank" href="https://www.oncb.go.th/Documents/%E0%B8%99%E0%B9%82%E0%B8%A2%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%B8%E0%B9%89%E0%B8%A1%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%84%E0%B8%84%E0%B8%A5.pdf">นโยบายการคุ้มครองข้อมูลส่วนบุคคล</a></p>
 
-                    </div>
-                    <div class="col-md-3 col-lg-3">
-                        <h6 class="footer-nav-heading mb-3">email</h6>
-                        <p><a href="mailto:contact@coroso.com">contact@oncb.go.th</a></p>
-                        <h6 class="footer-nav-heading mb-3">แหล่งทุนวิจัย</h6>
-                        <p>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                    <h6 class="footer-nav-heading mb-3">email</h6>
+                    <p><a href="mailto:contact@coroso.com">contact@oncb.go.th</a></p>
+                    <h6 class="footer-nav-heading mb-3">แหล่งทุนวิจัย</h6>
+                    <p>
 
-                            <span class="mr-3"><a href="https://www.nrct.go.th/" target="_blank" data-toggle="tooltip" data-placement="top" title="สำนักงานการวิจัยแห่งชาติ (วช.)"><img style="height: 45px;width: 45px;" src="https://www.job-108.com/icon/1575089961.jpg?v=1"></a></span>
-                            <span class="mr-3"><a href="https://www.tsri.or.th/" target="_blank" data-toggle="tooltip" data-placement="top" title="สำนักงานคณะกรรมการส่งเสริมวิทยาศาสตร์ วิจัยและนวัตกรรม (สกสว.)"><img style="height: 45px;width: 45px;" src="https://riie.wu.ac.th/wp-content/uploads/2021/04/%E0%B8%81%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%99%E0%B8%AA%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C-%E0%B8%A7%E0%B8%B4%E0%B8%88%E0%B8%B1%E0%B8%A2-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%99%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1-%E0%B8%81%E0%B8%AA%E0%B8%A7.-230x300.png"></a></span>
-                            <span class="mr-3"><a href="https://www.hsri.or.th/researcher" target="_blank" data-toggle="tooltip" data-placement="top" title="สถาบันวิจัยระบบสาธารณสุข"><img style="height: 45px;width: 45px;" src="https://www.hitap.net/wp-content/uploads/2019/11/%E0%B8%AA%E0%B8%A7%E0%B8%A3%E0%B8%AA_1-300x300.png"></a></span>
-                        </p>
-                        <div class="ms-spacer-30"></div>
-                        <h6 class="footer-nav-heading mb-3">ภาคีเครือข่าย</h6>
-                        <p>
-                            <span class="mr-3"><a href="https://www.oncb.go.th/Pages/main.aspx" target="_blank" data-toggle="tooltip" data-placement="top" title="ปปส "><img style="height: 45px;width: 45px;" src="https://upload.wikimedia.org/wikipedia/th/thumb/2/20/Office_of_the_Narcotics_Control_Board_Logo.png/220px-Office_of_the_Narcotics_Control_Board_Logo.png"></a></span>
-                            <span class="mr-3"><a href="https://www.nhso.go.th/" target="_blank" data-toggle="tooltip" data-placement="top" title="สปสช"><img style="height: 45px;width: 45px;" src="https://www.nhso.go.th/storage/uploads/news/20220517180205212.png"></a></span>
-                            <span class="mr-3"><a href="https://www.moj.go.th/index.php" target="_blank" data-toggle="tooltip" data-placement="top" title="กระทรวงยุติธรรม"><img style="height: 45px;width: 45px;" src="https://www.moj.go.th/img/all_logo/00.png"></a></span>
-                        </p>
+                        <span class="mr-3"><a href="https://www.nrct.go.th/" target="_blank" data-toggle="tooltip" data-placement="top" title="สำนักงานการวิจัยแห่งชาติ (วช.)"><img style="height: 45px;width: 45px;" src="{base_url}/assets/images/logo_วช_NRCT_re.png"></a></span>
+                        <span class="mr-3"><a href="https://www.tsri.or.th/" target="_blank" data-toggle="tooltip" data-placement="top" title="สำนักงานคณะกรรมการส่งเสริมวิทยาศาสตร์ วิจัยและนวัตกรรม (สกสว.)"><img style="height: 45px;width: 45px;" src="https://riie.wu.ac.th/wp-content/uploads/2021/04/%E0%B8%81%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%99%E0%B8%AA%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C-%E0%B8%A7%E0%B8%B4%E0%B8%88%E0%B8%B1%E0%B8%A2-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%99%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1-%E0%B8%81%E0%B8%AA%E0%B8%A7.-230x300.png"></a></span>
+                        <span class="mr-3"><a href="https://www.hsri.or.th/researcher" target="_blank" data-toggle="tooltip" data-placement="top" title="สถาบันวิจัยระบบสาธารณสุข"><img style="height: 45px;width: 45px;" src="https://www.hitap.net/wp-content/uploads/2019/11/%E0%B8%AA%E0%B8%A7%E0%B8%A3%E0%B8%AA_1-300x300.png"></a></span>
+                    </p>
+                    <div class="ms-spacer-30"></div>
+                    <h6 class="footer-nav-heading mb-3">ภาคีเครือข่าย</h6>
+                    <p>
+                        <span class="mr-3"><a href="https://www.oncb.go.th/Pages/main.aspx" target="_blank" data-toggle="tooltip" data-placement="top" title="ปปส "><img style="height: 45px;width: 45px;" src="https://upload.wikimedia.org/wikipedia/th/thumb/2/20/Office_of_the_Narcotics_Control_Board_Logo.png/220px-Office_of_the_Narcotics_Control_Board_Logo.png"></a></span>
+                        <span class="mr-3"><a href="https://www.nhso.go.th/" target="_blank" data-toggle="tooltip" data-placement="top" title="สปสช"><img style="height: 45px;width: 45px;" src="https://www.nhso.go.th/storage/uploads/news/20220517180205212.png"></a></span>
+                        <span class="mr-3"><a href="https://www.moj.go.th/index.php" target="_blank" data-toggle="tooltip" data-placement="top" title="กระทรวงยุติธรรม"><img style="height: 45px;width: 45px;" src="https://www.moj.go.th/img/all_logo/00.png"></a></span>
+                    </p>
 
-                        <div class="ms-spacer-30"></div>
-                        <h6 class="footer-nav-heading mb-3">Open data </h6>
-                        <p>
-                            <span class="mr-3"><a href="https://www.oncb.go.th/Pages/main.aspx"
-                             target="_blank" data-toggle="tooltip"
-                              data-placement="top" title="ปปส ">
-                              <img 
-                               src="{base_url}/assets/images/creative_common.png">
+                    <div class="ms-spacer-30"></div>
+                    <h6 class="footer-nav-heading mb-3">Open data </h6>
+                    <p>
+                        <span class="mr-3"><a href="https://www.oncb.go.th/Pages/main.aspx"
+                                target="_blank" data-toggle="tooltip"
+                                data-placement="top" title="ปปส ">
+                                <img
+                                    src="{base_url}/assets/images/creative_common.png">
                             </a></span>
-                            
-                        </p>
-                    </div>
+
+                    </p>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
     </div> <!-- Body Wrapper Ends -->
 
     <!-- Preloader -->

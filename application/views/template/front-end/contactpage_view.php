@@ -76,34 +76,34 @@
                             <div class="ms-spacer-40"> <?php echo validation_errors(); ?></div>
 
                             <form action="<?= base_url('contactus/save') ?>" method="POST">
-                            {csrf_protection_field}
+                                {csrf_protection_field}
                                 <div class="row">
                                     <div class="form-group col-12">
-                                        <input type="text"  id="contact_name" name="contact_name"  required="">
+                                        <input type="text" id="contact_name" name="contact_name" required="">
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <label>ชื่อ-นามสกุล</label>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <input type="tel"   id="phone" name="phone" required="">
+                                        <input type="tel" id="phone" name="phone" required="">
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <label>เบอร์โทร</label>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <input type="email"  id="email" name="email"  required="">
+                                        <input type="email" id="email" name="email" required="">
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <label>อีเมล</label>
                                     </div>
                                     <div class="form-group col-md-12">
-                                        <input type="text" id="subject" name="subject"  required="">
+                                        <input type="text" id="subject" name="subject" required="">
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <label>เรื่อง</label>
                                     </div>
                                     <div class="mt-2 form-group col-md-12 mb-4">
-                                        <textarea rows="4"  id="detail" name="detail" required="" ></textarea>
+                                        <textarea rows="4" id="detail" name="detail" required=""></textarea>
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <label>รายละเอียด</label>
@@ -123,12 +123,12 @@
         <section id="get-touch-sec">
             <div id="ms-touch-sec">
                 <div class="container">
-                     <div class="row">
+                    <div class="row">
                         <div class="col-lg-7">
                             <div class="map-section extra-space">
                                 <div class="container-fluid px-0">
                                     <!--<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15495.177481073566!2d100.5301222!3d13.8513783!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7e6f420f837a4751!2z4Liq4LiW4Liy4Lia4Lix4LiZ4LiB4Liy4Lij4LmB4Lie4LiX4Lii4LmM4LiJ4Li44LiB4LmA4LiJ4Li04LiZ4LmB4Lir4LmI4LiH4LiK4Liy4LiV4Li0!5e0!3m2!1sth!2sth!4v1650894156787!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.2393252979614!2d100.54192287595367!3d13.764436096999136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ebbbf378e13%3A0x140123209037e9d0!2z4Liq4Liz4LiZ4Lix4LiB4LiH4Liy4LiZ4LiE4LiT4Liw4LiB4Lij4Lij4Lih4LiB4Liy4Lij4Lib4LmJ4Lit4LiH4LiB4Lix4LiZ4LmB4Lil4Liw4Lib4Lij4Liy4Lia4Lib4Lij4Liy4Lih4Lii4Liy4LmA4Liq4Lie4LiV4Li04LiU!5e0!3m2!1sth!2sth!4v1683536703158!5m2!1sth!2sth" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.2393252979614!2d100.54192287595367!3d13.764436096999136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ebbbf378e13%3A0x140123209037e9d0!2z4Liq4Liz4LiZ4Lix4LiB4LiH4Liy4LiZ4LiE4LiT4Liw4LiB4Lij4Lij4Lih4LiB4Liy4Lij4Lib4LmJ4Lit4LiH4LiB4Lix4LiZ4LmB4Lil4Liw4Lib4Lij4Liy4Lia4Lib4Lij4Liy4Lih4Lii4Liy4LmA4Liq4Lie4LiV4Li04LiU!5e0!3m2!1sth!2sth!4v1683536703158!5m2!1sth!2sth" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -139,7 +139,7 @@
                                 <div class="col-md-6">
                                     <!-- <span class="heading">เบอร์โทร</span> -->
                                     <h4 class="font-weight-bold" style="color:#BEBEBE ;">เบอร์โทร</h4>
-                                    <h5 class="mb-3 mb-md-5">โทรศัพท์  02-247-0901-19</h5>
+                                    <h5 class="mb-3 mb-md-5">โทรศัพท์ 02-247-0901-19</h5>
                                 </div>
                                 <div class="col-md-6">
                                     <!-- <span class="heading">อีเมล</span> -->
@@ -152,7 +152,7 @@
                                     <!-- <span class="heading"></span> -->
                                     <h4 class="font-weight-bold" style="color:#BEBEBE ;">ที่ตั้ง</h4>
                                     <h5 class="mb-3">
-                                    เลขที่ 5 ถนนดินแดง แขวงสามเสนใน เขตพญาไท กรุงเทพมหานคร 10400</h5>
+                                        เลขที่ 5 ถนนดินแดง แขวงสามเสนใน เขตพญาไท กรุงเทพมหานคร 10400</h5>
                                 </div>
                             </div>
 
@@ -214,8 +214,8 @@
                         <h6 class="footer-nav-heading mb-3">โทรศัพท์ติดต่อ</h6>
                         <p><a href="tel:+12345671313">โทรศัพท์ 02-247-0901-19</a></p>
                         <h6 class="footer-nav-heading mb-3">นโยบายการใช้งาน</h6>
-                        <p><a  target="_blank" href="https://www.oncb.go.th/Documents/%E0%B8%99%E0%B9%82%E0%B8%A2%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A1%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%84%E0%B8%87%E0%B8%9B%E0%B8%A5%E0%B8%AD%E0%B8%94%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2%E0%B8%B5%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%A8%20(%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%9C%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%88%E0%B8%B2%E0%B8%81%20%E0%B8%84%E0%B8%98%E0%B8%AD).pdf">นโยบายการใช้งานเว็บไซต์</a></p>
-                        <p><a  target="_blank" href="https://www.oncb.go.th/Documents/%E0%B8%99%E0%B9%82%E0%B8%A2%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%B8%E0%B9%89%E0%B8%A1%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%84%E0%B8%84%E0%B8%A5.pdf">นโยบายการคุ้มครองข้อมูลส่วนบุคคล</a></p>
+                        <p><a target="_blank" href="https://www.oncb.go.th/Documents/%E0%B8%99%E0%B9%82%E0%B8%A2%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A1%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%84%E0%B8%87%E0%B8%9B%E0%B8%A5%E0%B8%AD%E0%B8%94%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2%E0%B8%B5%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%A8%20(%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%9C%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%88%E0%B8%B2%E0%B8%81%20%E0%B8%84%E0%B8%98%E0%B8%AD).pdf">นโยบายการใช้งานเว็บไซต์</a></p>
+                        <p><a target="_blank" href="https://www.oncb.go.th/Documents/%E0%B8%99%E0%B9%82%E0%B8%A2%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%B8%E0%B9%89%E0%B8%A1%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%84%E0%B8%84%E0%B8%A5.pdf">นโยบายการคุ้มครองข้อมูลส่วนบุคคล</a></p>
 
                     </div>
                     <div class="col-md-3 col-lg-3">
@@ -224,7 +224,7 @@
                         <h6 class="footer-nav-heading mb-3">แหล่งทุนวิจัย</h6>
                         <p>
 
-                            <span class="mr-3"><a href="https://www.nrct.go.th/" target="_blank" data-toggle="tooltip" data-placement="top" title="สำนักงานการวิจัยแห่งชาติ (วช.)"><img style="height: 45px;width: 45px;" src="https://www.job-108.com/icon/1575089961.jpg?v=1"></a></span>
+                            <span class="mr-3"><a href="https://www.nrct.go.th/" target="_blank" data-toggle="tooltip" data-placement="top" title="สำนักงานการวิจัยแห่งชาติ (วช.)"><img style="height: 45px;width: 45px;" src="{base_url}/assets/images/logo_วช_NRCT_re.png"></a></span>
                             <span class="mr-3"><a href="https://www.tsri.or.th/" target="_blank" data-toggle="tooltip" data-placement="top" title="สำนักงานคณะกรรมการส่งเสริมวิทยาศาสตร์ วิจัยและนวัตกรรม (สกสว.)"><img style="height: 45px;width: 45px;" src="https://riie.wu.ac.th/wp-content/uploads/2021/04/%E0%B8%81%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%99%E0%B8%AA%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C-%E0%B8%A7%E0%B8%B4%E0%B8%88%E0%B8%B1%E0%B8%A2-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%99%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1-%E0%B8%81%E0%B8%AA%E0%B8%A7.-230x300.png"></a></span>
                             <span class="mr-3"><a href="https://www.hsri.or.th/researcher" target="_blank" data-toggle="tooltip" data-placement="top" title="สถาบันวิจัยระบบสาธารณสุข"><img style="height: 45px;width: 45px;" src="https://www.hitap.net/wp-content/uploads/2019/11/%E0%B8%AA%E0%B8%A7%E0%B8%A3%E0%B8%AA_1-300x300.png"></a></span>
                         </p>
@@ -240,11 +240,11 @@
                         <h6 class="footer-nav-heading mb-3">Open data </h6>
                         <p>
                             <span class="mr-3"><a href="https://www.oncb.go.th/Pages/main.aspx"
-                             target="_blank" data-toggle="tooltip"
-                              data-placement="top" title="ปปส ">
-                              <img 
-                               src="{base_url}/assets/images/creative_common.png">
-                            </a></span>
+                                    target="_blank" data-toggle="tooltip"
+                                    data-placement="top" title="ปปส ">
+                                    <img
+                                        src="{base_url}/assets/images/creative_common.png">
+                                </a></span>
                         </p>
                     </div>
                 </div>
