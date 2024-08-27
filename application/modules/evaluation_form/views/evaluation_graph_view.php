@@ -1,13 +1,3 @@
-<!-- [ View File name : add_view.php ] -->
-<!-- <div class="card mt-3">
-	<div class="card-header bg-primarys text-dark">
-		<h3 class="card-title"><i class="fa fa-user"></i> <strong>แชร์ผลลัพธ์ของท่าน</strong></h3>
-	</div>
-	<div class="card-body">
-
-		<div id="chart"></div>
-	</div>
-</div> -->
 <style>
 	.label-graph {
 		width: 25px;
@@ -22,11 +12,12 @@
 
 	.container-content {
 		/* background: linear-gradient(360deg, rgb(163, 220, 255) 0%, rgb(207, 237, 255) 70%, rgb(252, 252, 252) 100%); */
-		background: linear-gradient(360deg, rgb(0 100 162) 0%, rgb(221 242 255) 70%, rgb(252, 252, 252) 100%);
+		/* background: linear-gradient(360deg, rgb(0 100 162) 0%, rgb(221 242 255) 70%, rgb(252, 252, 252) 100%); */
 	}
 
 	.container-main {
-		background: linear-gradient(360deg, #081e3e 0%, rgb(20 166 255) 70%, rgb(218, 240, 254) 100%);
+		background: linear-gradient(360deg, rgb(0 100 162) 0%, rgb(221 242 255) 70%, rgb(252, 252, 252) 100%);
+		/* background: linear-gradient(360deg, #081e3e 0%, rgb(20 166 255) 70%, rgb(218, 240, 254) 100%); */
 		/* background: linear-gradient(360deg, rgb(142, 210, 252) 0%, rgb(163, 220, 255) 70%, rgb(218, 240, 254) 100%); */
 	}
 
@@ -368,15 +359,11 @@
 		box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px 0px;
 	}
 </style>
+
 <?php
-$url = "https://example.com"; // Set your dynamic URL here
 // Get the protocol (http or https)
 $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
-
-// Get the host (e.g., www.example.com)
 $host = $_SERVER['HTTP_HOST'];
-
-// Get the current request URI (e.g., /path/to/page.php?query=param)
 $requestUri = $_SERVER['REQUEST_URI'];
 
 // Combine them to form the full URL
@@ -385,42 +372,22 @@ if ($protocol != 'https') {
 } else {
 	$currentUrl = $protocol . '://' . $host . $requestUri;
 }
-
-// echo $url;
-// echo '<br>';
-// echo $currentUrl;
 ?>
-<script async src="https://static.addtoany.com/menu/page.js"></script>
-<div class="container-main p-2 mt-2" style="position:relative;padding-bottom: 30px !important; overflow-y:auto">
-	<div class="share-icon" id="share-event">
-		<i class="fas fa-share-square" style="font-size:20px"></i>
-	</div>
-	<div class="share-list" id="share-list" style="display:none">
-		<!-- <div class="a2a_kit a2a_kit_size_32 a2a_default_style"> -->
-		<!-- <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="https://www.localhost.com/siamit-ctrlplus_oncb-backend-codeiniter/evaluation_form/evaluationExplanation/question_graph?web_id=669f6b09bf78e49542122ff19448042c39ab46ba6943cs"></div> -->
-		<div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="<?php echo htmlspecialchars($currentUrl); ?>">
-			<a class="a2a_button_facebook"></a>
-			<a class="a2a_button_line"></a>
-			<a class="a2a_button_pinterest"></a>
-			<a class="a2a_button_x"></a>
-			<a class="a2a_button_linkedin"></a>
-			<a class="a2a_button_whatsapp"></a>
-			<!-- Add more buttons as needed -->
-		</div>
-	</div>
-	<div id="name-graph"></div>
-	<div class="container-content w-full h-full flex flex-column justify-between" style="max-height: 700px;">
-		<div>
+
+<div class="container-main p-2" style="position:relative; overflow-y:auto;">
+	<div id="name-graph" class="py-2 mx-2" style="border: 3px solid #e0e0e0;"></div>
+
+	<div class="container-content flex flex-column justify-between" style="max-height: 700px;">
+		<div style="width: 100%;">
 			<div class="ml-10 mr-10 mt-20 ml-2 mr-2">
 				<div class="ml-0 mt-3">
 					<div class="text-center flex justify-between recommence-content-2 shadow-3">
 						<div class="flex">
-							<div class="ml-10 flex flex-column justify-center">
-								<div class="grapher" style="    background: #fff;
-		border-radius: 5px;">
+							<div id="refGraphContainer" class="ml-10 flex flex-column justify-center">
+								<div class="grapher" style="background: #fff;border-radius: 5px;">
 									<div id="chart"></div>
 								</div>
-								<input type="hidden" id="fetchGraph" data-type="web" value="<?php echo $_GET['web_id']; ?>">
+								<input type="hidden" id="fetchGraph" data-type="web" value="<?php echo isset($_GET['id']) ? $_GET['id'] : $_GET['web_id']; ?>">
 							</div>
 							<div class="ml-3 flex flex-column justify-start" id="title-graph"></div>
 						</div>
@@ -428,10 +395,11 @@ if ($protocol != 'https') {
 					</div>
 				</div>
 			</div>
+
 			<div style="height:70px" class="mb-0 ml-2 mr-2 pt-4">
-				<h4 class="m-0 space-white-box" style="width:40%">
-				</h4>
+				<h4 class="m-0 space-white-box" style="width:40%"></h4>
 			</div>
+
 			<div class="d-flex flex-start align-center ml-2 mr-2 mt-3">
 				<div class="d-flex flex-column align-center mt-10">
 					<div class="recommence-icon-2 shadow-3">
@@ -442,15 +410,18 @@ if ($protocol != 'https') {
 						<p class="text-blue-deep m-0" id="power-graph" style="font-size:1.5rem;font-weight:600">65%</p>
 					</div>
 				</div>
+
 				<div class="ml-3 mt-2">
 					<div class="text-center recommence-content shadow-3">
 						<p class="text-dark recommence-head m-0">คำแนะนำ</p>
-						<p class="text-dark recommence-body m-0">เสริมสร้างความรู้ความเข้าใจเกี่ยว
+						<p class="text-dark recommence-body m-0">
+							เสริมสร้างความรู้ความเข้าใจเกี่ยว
 							กับภัยสารเสพติดให้เพิ่มมากขึ้น
 							และหลีกเลี่ยงการนำตนเองเข้ายุ่ง
 							เกี่ยวข้องสารเสพติดรวมทั้งถ้ามี
 							ปัญหาอะไร อย่างไรต้องปรึกษาครู
-							ผู้ปกครองเพื่อแก้ปัญหาร่วมกัน</p>
+							ผู้ปกครองเพื่อแก้ปัญหาร่วมกัน
+						</p>
 					</div>
 				</div>
 			</div>
@@ -458,8 +429,7 @@ if ($protocol != 'https') {
 
 		<div style="width:100%">
 			<div class="d-flex flex-start justify-content-center ml-2 mr-2 mt-3 mb-3">
-				<div class="d-flex justify-between w-full align-center mt-10" style="row-gap: 10px;
-	column-gap: 10px;max-width:500px">
+				<div class="d-flex justify-between w-full align-center mt-10" style="row-gap: 10px;column-gap: 10px;max-width:500px">
 					<div class="answer-icon-1 pt-3 shadow-3d p-relative" id="immune_click">
 						<img src="../../assets/images/answer-2.png" style="object-fit: cover;" alt="">
 						<p class="p-absolute bottom-0 text-shadow-1" style="font-size:0.6rem">ภูมิคุ้มกัน</p>
@@ -479,6 +449,5 @@ if ($protocol != 'https') {
 				</div>
 			</div>
 		</div>
-
 	</div>
 </div>

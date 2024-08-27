@@ -421,16 +421,17 @@ window.onload = function () {
 };
 function getWithExpiry(key) {
 	const itemStr = localStorage.getItem(key);
-	if (!itemStr) {
+	if (!itemStr || itemStr == 'undefined') {
 		return null;
+	} else {
+		const item = JSON.parse(itemStr);
+		const now = new Date();
+		if (now.getTime() > item.expiry) {
+			localStorage.removeItem(key);
+			return null;
+		}
+		return item.value;
 	}
-	const item = JSON.parse(itemStr);
-	const now = new Date();
-	if (now.getTime() > item.expiry) {
-		localStorage.removeItem(key);
-		return null;
-	}
-	return item.value;
 }
 
 function setWithExpiry(key, value, expiryInSeconds) {
@@ -656,7 +657,7 @@ $(document).ready(async function () {
 
 		tableElement.innerHTML = tableHTML;
 		var heightG = 150;
-		if (windowWidth > 500) {
+		if (windowWidth > 992) {
 			tableGraph.style.backgroundColor = '#fff';
 			tableGraph.style.borderRadius = '5px';
 			tableGraph.style.marginLeft = '10px';
@@ -1011,7 +1012,7 @@ $(document).ready(async function () {
 		tableElement.innerHTML = tableHTML;
 
 		var heightG = 150;
-		if (windowWidth > 500) {
+		if (windowWidth > 992) {
 			tableGraph.style.backgroundColor = '#fff';
 			tableGraph.style.borderRadius = '5px';
 			tableGraph.style.marginLeft = '10px';
@@ -1071,7 +1072,7 @@ $(document).ready(async function () {
 							const tooltip = document.createElement('div');
 							tooltip.className = 'custom-tooltip-2';
 							tooltip.style.left = `${200}px`;
-							tooltip.style.top = `${500}px`;
+							tooltip.style.top = `${200}px`;
 
 							let tooltipContent = `
 							<div class="pt-10 pb-10 pl-10 pr-10" style="background:#EDEDED;padding:10px 10px 5px 10px">${header}</div>
@@ -1092,7 +1093,10 @@ $(document).ready(async function () {
 							}
 
 							tooltip.innerHTML = tooltipContent;
-							document.body.appendChild(tooltip);
+							const refGraphContainer = document.getElementById('refGraphContainer');
+							if (refGraphContainer) {
+								refGraphContainer.appendChild(tooltip);
+							}
 
 							// Store the current tooltip reference
 							currentTooltip = tooltip;
