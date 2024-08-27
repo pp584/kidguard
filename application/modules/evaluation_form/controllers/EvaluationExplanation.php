@@ -440,13 +440,13 @@ class EvaluationExplanation extends CRUD_Controller
 		$this->data['utilities_file_time'] = filemtime('assets/js/ci_utilities.js');
 		$this->data['js_util_url'] = $this->js_util_url;
 
-		// if ($_SERVER['REQUEST_URI'] === '/siamit-ctrlplus_oncb-backend-codeiniter/evaluation_form/evaluationExplanation/question_graph?id=' . (isset($_GET['id']) ? $_GET['id'] : '')) {
-		// 	$this->parser->parse('template/front-end-v2/evaluation_share_view', $this->data);
-		// } else {
-		// 	$this->parser->parse('template/front-end-v2/evaluation_view', $this->data);
-		// }
+		if ($path === "evaluation_form/evaluation_graph_view") {
+			$this->parser->parse('template/front-end-v2/evaluation_share_view', $this->data);
+		} else {
+			$this->parser->parse('template/front-end-v2/evaluation_view', $this->data);
+		}
 
-		$this->parser->parse('template/front-end-v2/evaluation_share_view', $this->data);
+		// $this->parser->parse('template/front-end-v2/evaluation_share_view', $this->data);
 	}
 
 
