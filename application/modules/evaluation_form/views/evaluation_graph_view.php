@@ -335,43 +335,68 @@
 		align-items: flex-start;
 	}
 
-	.share-icon {
-		position: absolute;
-		top: 0;
-		right: 0;
-		background: #E951C2;
-		color: #fff;
-		border-radius: 50%;
-		padding: 10px 9px 10px 10px;
-	}
+	.btn-float-container {
+		/* position: fixed; */
+		flex-direction: row;
+		align-items: center;
+		/* right: 1.5rem;
+		bottom: 1.5rem; */
+		width: 48px;
+		height: 48px;
+		/* z-index: 999; */
 
-	.share-icon:hover {
-		cursor: pointer;
-	}
+		.btn {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 3px solid white;
+			border-radius: 50%;
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+			z-index: 1;
+		}
 
-	.share-list {
-		position: absolute;
-		top: 45px;
-		right: 5px;
-		background: #fff;
-		border-radius: 5px;
-		padding: 10px 9px 10px 10px;
-		box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px 0px;
+		.float-content {
+			position: relative;
+			transition: all 0.3s;
+			z-index: 0;
+
+			.content {
+				position: absolute;
+				display: flex;
+				gap: 2px;
+				flex-direction: row;
+				align-items: center;
+				right: 20px;
+				padding: 5px;
+				padding-right: 30px;
+				height: 48px;
+				border-radius: 45px 0px 0px 45px;
+				justify-content: center;
+				background-color: #c5c5c5;
+
+				.btn {
+					height: 40px;
+					width: 40px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+
+			&.hide {
+				display: none;
+			}
+		}
 	}
 </style>
 
 <?php
-// Get the protocol (http or https)
 $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
 $host = $_SERVER['HTTP_HOST'];
 $requestUri = $_SERVER['REQUEST_URI'];
 
-// Combine them to form the full URL
-if ($protocol != 'https') {
-	$currentUrl = 'https' . '://' . $host . '.com' . $requestUri;
-} else {
-	$currentUrl = $protocol . '://' . $host . $requestUri;
-}
+$currentUrl = $protocol . '://' . $host . $requestUri;
 ?>
 
 <div class="container-main p-2" style="position:relative; overflow-y:auto;">
@@ -379,8 +404,42 @@ if ($protocol != 'https') {
 
 	<div class="container-content flex flex-column justify-between" style="max-height: 700px;">
 		<div style="width: 100%;">
+			<div class="d-flex px-1 py-2 justify-content-end align-items-center" style="gap: 3px">
+				<div class="btn-float-container">
+					<div id="floatingMenu" class="float-content hide">
+						<div class="card content py-2">
+							<a href="javascript:void()" class="btn btn-secondary" onclick="copyToClipboard()">
+								<i class="fas fa-link"></i>
+							</a>
+							<a href="https://www.facebook.com/sharer/sharer.php?u=<?= $currentUrl ?>" target="_blank" class="btn btn-primary">
+								<i class="fab fa-facebook-f"></i>
+							</a>
+							<a href="https://twitter.com/intent/tweet?url=<?= $currentUrl ?>" target="_blank" class="btn btn-info">
+								<i class="fab fa-twitter"></i>
+							</a>
+							<a href="https://social-plugins.line.me/lineit/share?url=<?= $currentUrl ?>" target="_blank" class="btn btn-success">
+								<i class="fab fa-line fa-lg"></i>
+							</a>
+							<a href="javascript:void()" class="btn btn-light" onclick="shareOther()">
+								<i class="fas fa-ellipsis-h"></i>
+							</a>
+						</div>
+					</div>
+
+					<button class="btn btn-dark w-100 h-100" onclick="toggleFloatingMenu()">
+						<i class="fas fa-share-square fa-lg"></i>
+					</button>
+				</div>
+
+				<div class="btn-float-container">
+					<a href="{base_url}" class="btn btn-dark w-100 h-100">
+						<i class="fas fa-home fa-lg"></i>
+					</a>
+				</div>
+			</div>
+
 			<div class="ml-10 mr-10 mt-20 ml-2 mr-2">
-				<div class="ml-0 mt-3">
+				<div class="ml-0">
 					<div class="text-center flex justify-between recommence-content-2 shadow-3">
 						<div class="flex">
 							<div id="refGraphContainer" class="ml-10 flex flex-column justify-center">
@@ -451,3 +510,25 @@ if ($protocol != 'https') {
 		</div>
 	</div>
 </div>
+
+<script>
+	function toggleFloatingMenu() {
+		const menu = $('#floatingMenu');
+		if (menu.hasClass("hide")) {
+			menu.removeClass("hide");
+		} else {
+			menu.addClass("hide");
+		}
+	}
+
+	function copyToClipboard() {
+		navigator.clipboard.writeText("<?= $currentUrl ?>")
+		alert("คัดลอก URL ไปยัง Clipboard แล้ว")
+	}
+
+	function shareOther() {
+		navigator.share({
+			url: "<?= $currentUrl ?>"
+		});
+	}
+</script>
