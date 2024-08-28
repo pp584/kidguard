@@ -523,7 +523,7 @@ function ajaxErrorMessage(jqXHR, exception, elem) {
 
 	//alert(message + "\n\n" + detail);
 	console.error("[ajaxErrorMessage]: message ==> ", message);
-	console.error("[ajaxErrorMessage]: responseText ==> ", responseText);
+	console.error("[ajaxErrorMessage]: response ==> ", { status: jqXHR.status, responseText: jqXHR.responseText });
 
 	if (elem) {
 		elem.html(message + '(' + jqXHR.status + ')' + "\n\n" + jqXHR.responseText + "\n\n");
