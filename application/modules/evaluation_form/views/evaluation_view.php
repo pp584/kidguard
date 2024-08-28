@@ -41,18 +41,18 @@
 				<div class="col-md-12">
 					<div align="center" style="margin-top: 20px;">
 						<input type="hidden" id="add_encrypt_id" />
-						<button type="button" id="btnConfirmEvaluate" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addModal">
+						<button type="button" id="btnConfirmEvaluate" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#evaluationConsentModal">
 							&nbsp;&nbsp;ทำแบบสอบถาม &nbsp;&nbsp;
 						</button>
 					</div>
 				</div>
 			</div>
 		</form>
-		<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+		<div class="modal fade" id="evaluationConsentModal" tabindex="-1" role="dialog" aria-labelledby="evaluationConsentModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered" role="document">
 				<div class="modal-content">
 					<div class="modal-header bg-success">
-						<h4 class="modal-title text-white" id="addModalLabel">ยืนยันเริ่มทำแบบสอบถาม</h4>
+						<h4 class="modal-title text-white" id="evaluationConsentModalLabel">ยืนยันเริ่มทำแบบสอบถาม</h4>
 						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
 					</div>
 					<div class="modal-body">

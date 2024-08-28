@@ -683,8 +683,7 @@
 																														} ?> onchange="toggleTextInput(this, 'other_drug_input')">
 									<span class="checkmark-cb"></span>
 								</label>
-								<input type="text" id="other_drug_input" value="<?php echo $this->user_info['other_drugs']; ?>" name="other_drugs" class="form-control" style="display: none;max-width: 200px;
-    margin-top: 40px;margin-left: 50px;">
+								<input type="text" id="other_drug_input" value="<?php echo $this->user_info['other_drugs']; ?>" name="other_drugs" class="form-control" style="display: none;max-width: 200px;margin-top: 40px;margin-left: 50px;">
 							</div>
 						</div>
 					</div>
@@ -693,7 +692,7 @@
 			<div class="form-group mt-3">
 				<div class="col-sm-offset-2 ">
 					<input type="hidden" id="add_encrypt_id" />
-					<button type="button" id="btnConfirmSave" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addModal2">
+					<button type="button" id="btnConfirmSave" class="btn btn-primary btn-lg">
 						&nbsp;&nbsp;<i class="fa fa-save"></i> บันทึก &nbsp;&nbsp;
 					</button>
 				</div>
@@ -721,3 +720,9 @@
 		</div>
 	</div>
 </div>
+
+<script>
+	$('#btnConfirmSave').click(function() {
+		$("#addModal2").modal('show');
+	})
+</script>

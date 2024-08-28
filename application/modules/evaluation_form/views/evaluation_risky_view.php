@@ -79,7 +79,7 @@
 				<div class="col-sm-offset-2 ">
 					<input type="hidden" id="add_encrypt_id" />
 					<input type="hidden" id="countRisky" value="<?php echo $totalQt; ?>" data-count="<?php echo $totalQt; ?>">
-					<button type="button" id="btnConfirmSave" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addModal">
+					<button type="button" id="btnConfirmSave" class="btn btn-primary btn-lg">
 						&nbsp;&nbsp;<i class="fa fa-save"></i> บันทึก &nbsp;&nbsp;
 					</button>
 				</div>
@@ -128,3 +128,9 @@
 		</div>
 	</div>
 </div>
+
+<script>
+	$('#btnConfirmSave').click(function() {
+		$("#addModal").modal('show');
+	})
+</script>
