@@ -63,10 +63,10 @@
 			<i class="fas fa-fw fa-chart-bar"></i>
 			ปรับปรุงข้อมูลกราฟ
 		</a>
-		<a class="dropdown-item <?php if ($this->uri->segment(3) == "import_excel") echo 'active'; ?>" href="{site_url}report/assessmentV2/import_excel">
+		<!-- <a class="dropdown-item <?php if ($this->uri->segment(3) == "import_excel") echo 'active'; ?>" href="{site_url}report/assessmentV2/import_excel">
 			<i class="fas fa-fw fa-file-import"></i>
 			นำเข้าข้อมูลแบบประเมิน
-		</a>
+		</a> -->
 		<a class="dropdown-item <?php if ($this->uri->segment(3) == "report_raw") echo 'active'; ?>" href="{site_url}report/assessmentV2/report_raw">
 			<i class="fas fa-fw fa-file-alt"></i>
 			ออกรายงาน (แบบประเมิน)
