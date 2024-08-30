@@ -12,9 +12,9 @@
 				รับ Template
 			</a>
 		</div>
-		<form method="post" action="?read" class="mt-2" accept-charset="utf-8" enctype="multipart/form-data">
-			<div class="input-group">
-				<div class="custom-file" style="max-width:450px">
+		<form method="post" action="" class="mt-2" accept-charset="utf-8" enctype="multipart/form-data">
+			<div class="input-group" style="max-width:450px">
+				<div class="custom-file">
 					<input id="uploadFile" type="file" name="uploadFile" class="custom-file-input" accept=".xls, .xlsx, .csv" onchange="updateFileInputName()" required>
 					<label id="uploadFileName" class="custom-file-label" for="uploadFile">เลือกไฟล์...</label>
 				</div>
@@ -24,56 +24,84 @@
 			</div>
 		</form>
 
-		<form class="mt-3 mb-2">
+		<form id="importForm" action="{formEndpoint}" method="post" class="my-2">
 			<?php if (count($importData) > 0): ?>
-				<button class="btn btn-primary" type="submit">
-					นำเข้าข้อมูล <?= count($importData) ?> รายการ
-				</button>
-			<?php endif ?>
-		</form>
+				<div class="input-group mb-2" style="max-width:450px">
+					<input type="date" class="form-control" name="import_date" value="<?= date('Y-m-d') ?>" min="2024-01-01 00:00" max="<?= date('Y-m-d') ?>" required>
+				</div>
 
-		<div class="table-responsive">
-			<table class="table table-bordered table-striped table-hover text-nowrap">
-				<thead>
-					<tr style="background-color: #dddddd">
-						<td class="text-center"><b>#</b></td>
-						<td class="text-center"><b>จังหวัด</b></td>
-						<td class="text-center"><b>อำเภอ</b></td>
-						<td class="text-center"><b>เพศ</b></td>
-						<td class="text-center"><b>อายุ</b></td>
-						<td class="text-center"><b>สถานภาพทางการศึกษา</b></td>
-						<td class="text-center"><b>จำนวนพี่น้อง</b></td>
-						<td class="text-center"><b>สถานภาพทางครอบครัว</b></td>
-						<td class="text-center"><b>อาชีพของบิดา</b></td>
-						<td class="text-center"><b>อาชีพของมารดา</b></td>
-						<td class="text-center"><b>รายได้ของครอบครัว (เฉลี่ยต่อเดือน)</b></td>
-						<td class="text-center"><b>เมื่อท่านมีปัญหาท่านปรึกษาใครบ้าง</b></td>
-						<td class="text-center"><b>ท่านเคยถูกให้ลองเสพสารเสพติดหรือไม่</b></td>
-						<td class="text-center"><b>ท่านเคยลองใช้สารเสพติดใดบ้าง</b></td>
-						<?php $tableColumnCount = 15; ?>
-						<?php foreach ($questionList as $index => $question) : $tableColumnCount++; ?>
-							<td class="text-center"><b>ข้อที่ <?= $index + 1; ?></b></td>
-						<?php endforeach; ?>
-					</tr>
-				</thead>
-				<tbody>
-					<?php if (count($importData) > 0) : ?>
-						<?php foreach ($importData as $record => $data) : ?>
-							<tr>
-								<td><?= $record + 1 ?></td>
-								<?php foreach ($data as $key => $value) : $index = 1 ?>
-									<td><?= $value ?></td>
-								<?php endforeach; ?>
-							</tr>
-						<?php endforeach; ?>
-					<?php else : ?>
-						<tr>
-							<td class="text-center" colspan="<?= $tableColumnCount ?>"> ----- ไม่พบข้อมูลสำหรับแสดงผล ----- </td>
+				<button id="submitImportBtn" class="btn btn-primary" type="submit">
+					นำเข้า <?= min(count($importData), $importRowLimit) ?> รายการ
+				</button>
+
+				<?php if (count($importData) > $importRowLimit): ?>
+					<div class="text-danger my-2 small">
+						* สามารถนำเข้าข้อมูลได้สูงสุดครั้งละ <?= $importRowLimit ?> รายการ
+					</div>
+				<?php endif ?>
+			<?php endif ?>
+
+			<div class="table-responsive mt-2">
+				<table class="table table-bordered table-striped table-hover text-nowrap">
+					<thead>
+						<tr style="background-color: #dddddd">
+							<td class="text-center"><b>#</b></td>
+							<td class="text-center"><b>จังหวัด</b></td>
+							<td class="text-center"><b>อำเภอ</b></td>
+							<td class="text-center"><b>เพศ</b></td>
+							<td class="text-center"><b>อายุ</b></td>
+							<td class="text-center"><b>สถานภาพทางการศึกษา</b></td>
+							<td class="text-center"><b>จำนวนพี่น้อง</b></td>
+							<td class="text-center"><b>สถานภาพทางครอบครัว</b></td>
+							<td class="text-center"><b>อาชีพของบิดา</b></td>
+							<td class="text-center"><b>อาชีพของมารดา</b></td>
+							<td class="text-center"><b>รายได้ของครอบครัว (เฉลี่ยต่อเดือน)</b></td>
+							<td class="text-center"><b>เมื่อท่านมีปัญหาท่านปรึกษาใครบ้าง</b></td>
+							<td class="text-center"><b>ท่านเคยถูกให้ลองเสพสารเสพติดหรือไม่</b></td>
+							<td class="text-center"><b>ท่านเคยลองใช้สารเสพติดใดบ้าง</b></td>
+							<?php $tableColumnCount = 15; ?>
+							<?php foreach ($questionList as $index => $question) : $tableColumnCount++; ?>
+								<td class="text-center"><b>ข้อที่ <?= $index + 1; ?></b></td>
+							<?php endforeach; ?>
 						</tr>
-					<?php endif ?>
-				</tbody>
-			</table>
-		</div>
+					</thead>
+					<tbody>
+						<?php if (count($importData) > 0) : ?>
+							<?php foreach ($importData as $recordIndex => $record) : ?>
+								<tr>
+									<td><?= $recordIndex + 1 ?></td>
+
+									<!-- START: user_info -->
+									<?php foreach ($record['user_info'] as $key => $value): ?>
+										<td>
+											<?= $value ?>
+											<input type="hidden" name="import_data[<?= $recordIndex ?>][user_info][<?= $key ?>]" value="<?= $value ?>">
+										</td>
+									<?php endforeach; ?>
+									<!-- END: user_info -->
+
+									<!-- START: answer -->
+									<?php foreach ($record['answers'] as $index => $answer): ?>
+										<td>
+											<?= $answer['choice'] ?>
+											<input type="hidden" name="import_data[<?= $recordIndex ?>][answers][<?= $index ?>][question_id]" value="<?= $answer['question_id'] ?>">
+											<input type="hidden" name="import_data[<?= $recordIndex ?>][answers][<?= $index ?>][choice_id]" value="<?= $answer['choice_id'] ?>">
+											<input type="hidden" name="import_data[<?= $recordIndex ?>][answers][<?= $index ?>][graph_bar_id]" value="<?= $answer['graph_bar_id'] ?>">
+											<input type="hidden" name="import_data[<?= $recordIndex ?>][answers][<?= $index ?>][score]" value="<?= $answer['score'] ?>">
+										</td>
+									<?php endforeach; ?>
+									<!-- END: answer -->
+								</tr>
+							<?php endforeach; ?>
+						<?php else : ?>
+							<tr>
+								<td class="text-center" colspan="<?= $tableColumnCount ?>"> ----- ไม่พบข้อมูลสำหรับแสดงผล ----- </td>
+							</tr>
+						<?php endif ?>
+					</tbody>
+				</table>
+			</div>
+		</form>
 	</div>
 </div>
 
@@ -87,4 +115,34 @@
 			fileName.textContent = "เลือกไฟล์...";
 		}
 	}
+
+	document.getElementById("importForm").addEventListener("submit", function(event) {
+		event.preventDefault();
+		const formData = new FormData(this);
+
+		const loadingTarget = $('#submitImportBtn');
+		$.ajax({
+			method: this.method,
+			url: this.action,
+			dataType: 'json',
+			data: formData,
+			processData: false,
+			contentType: false,
+			success: function(results) {
+				console.log("Response => ", results);
+				if (results.status) {
+					alert_type = 'success';
+				} else {
+					alert_type = 'danger';
+				}
+				notify('เพิ่มข้อมูล', results.message, alert_type, 'center');
+				loading_on_remove(loadingTarget);
+			},
+			error: function(jqXHR, exception) {
+				ajaxErrorMessage(jqXHR, exception);
+				notify('บันทึกข้อมูล', 'เกิดข้อผิดพลาดในการบันทึกข้อมูล', 'danger', 'center');
+				loading_on_remove(loadingTarget);
+			}
+		});
+	});
 </script>

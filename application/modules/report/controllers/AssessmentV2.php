@@ -63,10 +63,18 @@ class AssessmentV2 extends MEMBER_Controller
 		return $this->pagination->create_links();
 	}
 
-	// ------------------------------------------------------------------------
-	public function index()
+	public function read_excel($file)
 	{
+		$inputFileType = PHPExcel_IOFactory::identify($file);
+		$objReader = PHPExcel_IOFactory::createReader($inputFileType);
+		$objPHPExcel = $objReader->load($file);
+
+		$data = $objPHPExcel->getActiveSheet()->toArray(null, true, true, true);
+		return $data;
 	}
+
+	// ------------------------------------------------------------------------
+	public function index() {}
 
 	public function import_excel()
 	{
@@ -74,31 +82,66 @@ class AssessmentV2 extends MEMBER_Controller
 			array('title' => 'นำเข้าข้อมูลแบบประเมิน', 'class' => 'active', 'url' => '#'),
 		);
 
+		date_default_timezone_set('Asia/Bangkok');
+
+		$this->data['importRowLimit'] = 500;
+		$this->data['basicInfoFieldCount'] = 13;
+		$this->data['templateFilePath'] = base_url('/assets/uploads/excel_template/template-import-2024.xlsx');
+		$this->data['formEndpoint'] = site_url('api/import');
+
 		$this->data['importData'] = [];
+		$this->data['questionList'] = $this->AssessmentV2->getQuestionList();
+
 		if (isset($_FILES['uploadFile'])) {
 			require_once APPPATH . "/third_party/PHPExcel.php";
-
 			$file = $_FILES['uploadFile']['tmp_name'];
+			$rawData = $this->read_excel($file);
 
-			$inputFileType = PHPExcel_IOFactory::identify($file);
-			$objReader = PHPExcel_IOFactory::createReader($inputFileType);
-			$objPHPExcel = $objReader->load($file);
-
-			$rawData = $objPHPExcel->getActiveSheet()->toArray(null, true, true, true);
+			//Get key name (First record)
 			$keyData = array_shift($rawData);
 
+			//Split key to basicInfo and answer
+			$basicInfo = array_slice($keyData, 0, $this->data['basicInfoFieldCount'], true);
+			$answers = array_slice($keyData, $this->data['basicInfoFieldCount'], null, true);
+
+			//Limit importing data
+			$recordList = array_slice($rawData, 0, $this->data['importRowLimit'], true);
+
 			$formatData = [];
-			foreach ($rawData as $record => $data) {
-				foreach ($keyData as $cell => $keyName) {
-					$formatData[$record][$keyName] = $data[$cell];
+			foreach ($recordList as $recordIndex => $record) {
+				$formatRecord = [
+					'user_info' => [],
+					'answers' => []
+				];
+
+				//Map user info
+				foreach ($basicInfo as $cellIndex => $keyName) {
+					$formatRecord['user_info'][$keyName] = $record[$cellIndex];
 				}
+
+				//Prepare answer request for formating request
+				$questionIndex = 0;
+				$answerList = [];
+				foreach ($answers as $cellIndex => $keyName) {
+					$answerList[$questionIndex]['question'] = $questionIndex + 1;
+					$answerList[$questionIndex]['choice'] = $record[$cellIndex];
+					$questionIndex++;
+				}
+
+				//Get formated answers
+				$formatRecord['answers'] = $this->AssessmentV2->previewImport($answerList);
+
+				//Map answers
+				foreach ($formatRecord['answers'] as $index => &$item) {
+					$item['choice'] = $answerList[$index]['choice'];
+				}
+
+				//Set record
+				$formatData[$recordIndex] = $formatRecord;
 			}
 
 			$this->data['importData'] = $formatData;
 		}
-
-		$this->data['templateFilePath'] = base_url('/assets/uploads/excel_template/template-import-2024.xlsx');
-		$this->data['questionList'] = $this->AssessmentV2->getQuestionList();
 
 		$this->render_view('report/assessment_v2/import_excel_view');
 	}

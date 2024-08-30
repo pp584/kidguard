@@ -1375,6 +1375,115 @@ class ApiController extends CI_Controller
 		}
 	}
 
+	public function importSubmitQuestion()
+	{
+		try {
+			$this->db->trans_start();
+			$request = $this->input->post();
+
+			foreach ($request['import_data'] as $record) {
+				$requestData = $record;
+				$requestData['user_info']['postal_code'] = "";
+
+				//Perform normal submit operation
+				$currentDate = (new DateTime($request['import_date']))->format('Y-m-d H:i:s');
+
+				//* QUERY GRAPH BAR DATA
+				$this->db->select('id, graph_id');
+				$this->db->from('graph_bar');
+				$query = $this->db->get();
+				$graph_bar = $query->result_array();
+
+				//* INSERT USER
+				$user_id = $this->uuid();
+				$userData = $requestData['user_info'];
+
+				$provinceName = $userData['province'];
+				$ticketId = $this->getTicket($provinceName, $currentDate);
+
+				$submitUserData = array(
+					'id' => $user_id,
+					'ticket' => $ticketId,
+					'province' => $userData['province'],
+					'district' => $userData['district'],
+					'postal_code' => $userData['postal_code'],
+					'gender' => $userData['gender'],
+					'age' => $userData['age'],
+					'education_status' => $userData['education_status'],
+					'num_siblings' => $userData['num_siblings'],
+					'family_status' => $userData['family_status'],
+					'father_occupation' => $userData['father_occupation'],
+					'mother_occupation' => $userData['mother_occupation'],
+					'family_income' => $userData['family_income'],
+					'consult_people' => $userData['consult_people'],
+					'drug_history' => $userData['drug_history'],
+					'type_of_drugs' => $userData['type_of_drugs'],
+					'submit_date' => $currentDate,
+				);
+				$this->db->insert('submit_user', $submitUserData);
+
+				//* INSERT SUBMIT_ANSWER_AVERAGE
+				foreach ($graph_bar as $bar) {
+					$submit_id = $this->uuid();
+					$data = array(
+						'id' => $submit_id,
+						'user_id' => $user_id,
+						'average_score' => 0,
+						'graph_bar_id' => $bar['id'],
+						'submit_date' => $currentDate
+					);
+					$this->db->insert('submit_answer_average', $data);
+				}
+
+				//* MAP GRAPH BAR TO GET ONLY GRAPH_BAR_ID
+				$barList = array_map(function ($bar) {
+					return $bar['id'];
+				}, $graph_bar);
+
+				//* INSERT SUBMIT_ANSWER AND ADD TEMP_SCORE
+				$tempScore = [];
+				foreach ($requestData['answers'] as $answer) {
+					$answer_id = $this->uuid();
+					$submitAnswerData = array(
+						'id' => $answer_id,
+						'score' => $answer['score'],
+						'submit_user_id' => $user_id,
+						'question_id' => $answer['question_id'],
+						'choice_id' => $answer['choice_id']
+					);
+					$this->db->insert('submit_answer', $submitAnswerData);
+
+					if (in_array($answer['graph_bar_id'], $barList)) {
+						if (!isset($tempScore[$answer['graph_bar_id']])) {
+							$tempScore[$answer['graph_bar_id']] = [];
+						}
+						$tempScore[$answer['graph_bar_id']][] = $answer['score'];
+					}
+				}
+
+				//* AVERAGE TEMP_SCORE AND UPDATE SUBMIT_ANSWER_AVERAGE
+				foreach ($tempScore as $id => $scores) {
+					$average = number_format(array_sum($scores) / count($scores), 2);
+
+					$submitAnswerAverageData = array(
+						'average_score' => $average
+					);
+					$this->db->where('user_id', $user_id);
+					$this->db->where('graph_bar_id', $id);
+					$this->db->update('submit_answer_average', $submitAnswerAverageData);
+				}
+			}
+
+			$this->db->trans_complete();
+
+			$res = array('status' => true, 'message' => "", 'data' => null);
+			$this->output->set_content_type('application/json')->set_output(json_encode($res));
+		} catch (Exception $e) {
+			$res = array('status' => false, 'message' => $e->getMessage(), 'data' => null,);
+			$this->output->set_content_type('application/json')->set_output(json_encode($res));
+		}
+	}
+
 	//! ดึงข้อมูลการตั้งค่า ค่า Norm ของกราฟทั้งหมด
 	public function getGraphbarSetting()
 	{

@@ -525,5 +525,89 @@ class Assessment_v2_model extends MY_Model
 			$this->output->set_content_type('application/json')->set_output(json_encode($data));
 		}
 	}
+
+	public function previewImport($data)
+	{
+		try {
+			$answers = $data;
+
+			$this->db->select(
+				'question.id AS question_id, 
+                question.type AS question_type,
+                choice.id AS choice_id,
+                choice.score AS choice_score,
+                graph_bar.id AS graph_bar_id,
+                '
+			);
+			$this->db->from('question');
+			$this->db->join('question_group', 'question.question_group_id = question_group.id', 'left');
+			$this->db->join('question_sub_group', 'question.question_sub_group_id = question_sub_group.id', 'left');
+			$this->db->join('question_img', 'question.question_img_id = question_img.id', 'left');
+			$this->db->join('choice_group', 'question_group.choice_group_id = choice_group.id', 'left');
+			$this->db->join('choice', 'choice_group.id = choice.choice_group_id', 'left');
+			$this->db->join('section', 'question_group.section_id = section.id', 'left');
+			$this->db->join('graph_bar_question', 'question.id = graph_bar_question.question_id', 'left');
+			$this->db->join('graph_bar', 'graph_bar_question.graph_bar_id = graph_bar.id', 'left');
+			$this->db->join('graph', 'graph_bar.graph_id = graph.id', 'left');
+			$this->db->order_by('section.index', 'ASC');
+			$this->db->order_by('question_group.index', 'ASC');
+			$this->db->order_by('question_sub_group.index', 'ASC');
+			$this->db->order_by('question.index', 'ASC');
+			$this->db->order_by('choice.score', 'ASC');
+			$query = $this->db->get();
+			$resData = $query->result_array();
+
+			$formattedData = array();
+			foreach ($resData as $row) {
+				$questionIndex = null;
+				foreach ($formattedData as $index => $question) {
+					if ($question['question_id'] === $row['question_id']) {
+						$questionIndex = $index;
+						break;
+					}
+				}
+				if ($questionIndex === null) {
+					$questionIndex = count($formattedData);
+					$formattedData[] = array(
+						'question_id' => $row['question_id'],
+						'graph_bar_id' => $row['graph_bar_id'],
+						'index' => (int)$questionIndex + 1,
+						'choices' => array()
+					);
+				}
+
+				$choice_score = (int)$row['choice_score'];
+				if (!$row['question_type']) {
+					$choice_score = (5 - $choice_score);
+				}
+				$formattedData[$questionIndex]['choices'][] = array(
+					'choice_id' => $row['choice_id'],
+					'choice_score' => $choice_score,
+				);
+			}
+
+			$tempData = array();
+			foreach ($answers as $answer) {
+				$questionKey = (int)$answer['question'] - 1;
+				$choiceKey = (int)$answer['choice'] - 1;
+
+				$question_id = $formattedData[$questionKey]['question_id'];
+				$graph_bar_id = $formattedData[$questionKey]['graph_bar_id'];
+				$choice_id = $formattedData[$questionKey]['choices'][$choiceKey]['choice_id'];
+				$score = $formattedData[$questionKey]['choices'][$choiceKey]['choice_score'];
+
+				$tempData[] = array(
+					'question_id' => $question_id,
+					'choice_id' => $choice_id,
+					'graph_bar_id' => $graph_bar_id,
+					'score' => $score,
+				);
+			}
+
+			return $tempData;
+		} catch (Exception $e) {
+			throw $e;
+		}
+	}
 }
 /*---------------------------- END Model Class --------------------------------*/

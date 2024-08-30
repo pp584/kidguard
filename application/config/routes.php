@@ -81,6 +81,5 @@ $route['api/summary/getSubmit'] = 'ApiController/getScore';
 $route['api/summary/getStats/(:num)'] = 'ApiController/getStats/$1';
 $route['api/summary/getStats'] = 'ApiController/getStats';
 
-$route['api/preview/import'] = 'ApiController/previewImport';
-
-$route['api/test/test'] = 'ApiController/getStats';
+$route['api/import/preview'] = 'ApiController/previewImport';
+$route['api/import'] = 'ApiController/importSubmitQuestion';
