@@ -1476,7 +1476,7 @@ class ApiController extends CI_Controller
 
 			$this->db->trans_complete();
 
-			$res = array('status' => true, 'message' => "", 'data' => null);
+			$res = array('status' => true, 'message' => "นำเข้าข้อมูลสำเร็จ " . count($request['import_data']) . " รายการ", 'data' => null);
 			$this->output->set_content_type('application/json')->set_output(json_encode($res));
 		} catch (Exception $e) {
 			$res = array('status' => false, 'message' => $e->getMessage(), 'data' => null,);
