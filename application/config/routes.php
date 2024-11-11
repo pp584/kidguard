@@ -72,6 +72,9 @@ $route['api/graph/getYearSummarySection'] = 'ApiController/getYearSummarySection
 $route['api/graph/getGraphbar'] = 'ApiController/getGraphbarSetting';
 $route['api/graph/updateNorm'] = 'ApiController/updateGraphbarNorm';
 
+$route['api/advice/getAllText'] = 'ApiController/getAllAdviceText';
+$route['api/advice/getText/(:any)'] = 'ApiController/getAdviceText/$1';
+
 $route['api/sync/syncYear/(:any)'] = 'ApiController/syncYearData/$1';
 
 $route['api/sync/syncOldData'] = 'ApiController/insertOldData';

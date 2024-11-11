@@ -323,6 +323,12 @@ class ApiController extends CI_Controller
 				$graphDetails = $graphBarDetails[$graph['graph_id']];
 				$total_percent = 0;
 
+				$adviceTitle = null;
+				$adviceShowTitle = 0;
+				$adviceList = [];
+				$foundFirstScaleCondition = false;
+				$adviceFromStatus = false;
+
 				foreach ($graph['bars'] as $index => &$bar) {
 					$total_score = 0;
 					$answer_count = count($bar['answers']);
@@ -337,7 +343,66 @@ class ApiController extends CI_Controller
 					$bar['norm_drug'] = $graphDetails[$index]['graph_bar_norm_drug'];
 					unset($bar['answers']);
 					$total_percent += $bar['bar_percent'];
+
+
+					// GET ADVICE
+					$this->db->select('
+						advice.id AS advice_id,
+						advice.title AS advice_title,
+						advice.is_show_title AS is_show_title,
+						advice.condition_type AS condition_type,
+						advice_condition.id AS condition_id,
+						advice_condition.name AS condition_name,
+						advice_condition.condition_check AS condition_check,
+						advice_condition.condition_check_from AS condition_check_from,
+						advice_condition.index AS condition_index,
+						advice_condition.condition_value AS condition_value
+					');
+					$this->db->from('advice');
+					$this->db->where('graph_bar_id', $bar['graph_bar_id']);
+					$this->db->join('advice_condition', 'advice.id = advice_condition.advice_id', 'left');
+					$this->db->order_by('advice.index', 'ASC');
+					$this->db->order_by('advice_condition.index', 'ASC');
+
+					$query = $this->db->get();
+
+					foreach ($query->result_array() as $row) {
+						$conditionStatus = false;
+
+						if ($row['condition_check_from'] == 'norm_drug' || $row['condition_check_from'] == 'norm_non_drug') {
+							$conditionStatus = $bar['bar_value'] >= $bar[$row['condition_check_from']];
+						} elseif ($row['condition_check_from'] == 'value') {
+							$conditionStatus = $bar['bar_value'] >= $row['condition_value'];
+						}
+						if ($row['condition_check'] == 'less_than') {
+							$conditionStatus = !$conditionStatus;
+						}
+
+						if ($row['condition_type'] == 'scale') {
+							$adviceFromStatus = true;
+							if (!$foundFirstScaleCondition) {
+								$foundFirstScaleCondition = $conditionStatus;
+							} else {
+								$conditionStatus = false;
+							}
+						}
+
+						if ($row['condition_id'] !== null) {
+							$adviceList[] = [
+								'id' => $row['condition_id'],
+								'condition_name' => $row['condition_name'],
+								'index' => $row['condition_index'],
+								'status' => $conditionStatus
+							];
+						}
+						$adviceTitle = $row['advice_title'];
+						$adviceShowTitle = $row['is_show_title'];
+					}
 				}
+				$graph['advice_title'] = $adviceTitle;
+				$graph['advice_show_title'] = $adviceShowTitle ? true : false;
+				$graph['advice_send_type'] = $adviceFromStatus ? 'send_true' : 'send_false';
+				$graph['advice_list'] = $adviceList;
 
 				$graph['graph_name'] = $graphDetails[0]['graph_name'];
 				$graph['graph_show_compare_norm'] = $graphDetails[0]['graph_show_compare_norm'];
@@ -421,6 +486,7 @@ class ApiController extends CI_Controller
 				$graph_bar_percent = number_format(($graph_bar['submit_answer_average_score'] * 100) / 4, 2);
 				$barIndex = count($formattedData[$graphIndex]['bars']);
 				$formattedData[$graphIndex]['bars'][] = array(
+					'bar_id' => $graph_bar['graph_bar_id'],
 					'bar_name' => $graph_bar['graph_bar_name'],
 					'bar_value' => number_format($graph_bar['submit_answer_average_score'], 2),
 					'bar_percent' => $graph_bar_percent,
@@ -451,9 +517,74 @@ class ApiController extends CI_Controller
 			foreach ($formattedData as &$graph) {
 				$total_percent = 0;
 				$bar_count = count($graph['bars']);
-				foreach ($graph['bars'] as $bar) {
+
+				$adviceTitle = null;
+				$adviceShowTitle = 0;
+				$foundFirstScaleCondition = false;
+				$adviceFromStatus = false;
+				$adviceList = [];
+
+				foreach ($graph['bars'] as &$bar) {
 					$total_percent += $bar['bar_percent'];
+
+					// GET ADVICE
+					$this->db->select('
+						advice.id AS advice_id,
+						advice.title AS advice_title,
+						advice.is_show_title AS is_show_title,
+						advice.condition_type AS condition_type,
+						advice_condition.id AS condition_id,
+						advice_condition.name AS condition_name,
+						advice_condition.condition_check AS condition_check,
+						advice_condition.condition_check_from AS condition_check_from,
+						advice_condition.index AS condition_index,
+						advice_condition.condition_value AS condition_value
+					');
+					$this->db->from('advice');
+					$this->db->where('graph_bar_id', $bar['bar_id']);
+					$this->db->join('advice_condition', 'advice.id = advice_condition.advice_id', 'left');
+					$this->db->order_by('advice.index', 'ASC');
+					$this->db->order_by('advice_condition.index', 'ASC');
+
+					$query = $this->db->get();
+
+					foreach ($query->result_array() as $row) {
+						$conditionStatus = false;
+
+						if ($row['condition_check_from'] == 'norm_drug' || $row['condition_check_from'] == 'norm_non_drug') {
+							$conditionStatus = $bar['bar_value'] >= $bar[$row['condition_check_from']];
+						} elseif ($row['condition_check_from'] == 'value') {
+							$conditionStatus = $bar['bar_value'] >= $row['condition_value'];
+						}
+						if ($row['condition_check'] == 'less_than') {
+							$conditionStatus = !$conditionStatus;
+						}
+
+						if ($row['condition_type'] == 'scale') {
+							$adviceFromStatus = true;
+							if (!$foundFirstScaleCondition) {
+								$foundFirstScaleCondition = $conditionStatus;
+							} else {
+								$conditionStatus = false;
+							}
+						}
+
+						if ($row['condition_id'] !== null) {
+							$adviceList[] = [
+								'id' => $row['condition_id'],
+								'condition_name' => $row['condition_name'],
+								'index' => $row['condition_index'],
+								'status' => $conditionStatus
+							];
+						}
+					}
+					$adviceTitle = $row['advice_title'];
+					$adviceShowTitle = $row['is_show_title'];
 				}
+				$graph['advice_title'] = $adviceTitle;
+				$graph['advice_show_title'] = $adviceShowTitle ? true : false;
+				$graph['advice_send_type'] = $adviceFromStatus ? 'send_true' : 'send_false';
+				$graph['advice_list'] = $adviceList;
 				$graph['graph_power'] = number_format($total_percent / $bar_count, 2);
 			}
 
@@ -1570,6 +1701,75 @@ class ApiController extends CI_Controller
 			$this->output->set_content_type('application/json')->set_output(json_encode($data));
 		}
 	}
+
+	//! แสดงคำแนะนำทั้งหมด
+	public function getAllAdviceText($id = null)
+	{
+		try {
+			$requestData = $this->input->post();
+			$conditionIds = $requestData['condition_id'] ?? [$id];
+	
+			$result = [];
+	
+			if (!empty($conditionIds) && is_array($conditionIds)) {
+				$this->db->select('
+				advice_text.*,
+				advice.id AS advice_id,
+				advice.title AS advice_title,
+				advice.index AS advice_index,
+				advice_condition.id AS advice_condition_id
+				');
+				$this->db->from('advice_text');
+				$this->db->where_in('advice_condition_id', $conditionIds);
+				$this->db->join('advice_condition', 'advice_condition.id = advice_text.advice_condition_id', 'left');
+				$this->db->join('advice', 'advice_condition.advice_id = advice.id', 'left');
+				$this->db->order_by('advice_text.advice_condition_id', 'ASC');
+				$this->db->order_by('advice_text.index', 'ASC');
+	
+				$query = $this->db->get();
+				$result = $query->result_array();
+			}
+	
+			$formattedData = [];
+	
+			foreach ($result as $row) {
+				$conditionId = $row['advice_condition_id'];
+	
+				if (!isset($formattedData[$conditionId])) {
+					$formattedData[$conditionId] = [
+						'advice_id' => $row['advice_id'],
+						'advice_title' => $row['advice_title'],
+						'advice_index' => $row['advice_index'],
+						'advice_detail' => []
+					];
+				}
+	
+				$formattedData[$conditionId]['advice_detail'][] = [
+					'id' => $row['id'],
+					'title' => $row['title'],
+					'text' => $row['text'],
+					'index' => $row['index'],
+					'advice_condition_id' => $row['advice_condition_id']
+				];
+			}
+
+			$formattedData = array_values($formattedData);
+	
+			$data = array('status' => "true", 'message' => null, 'data' => $id ? $formattedData[0] : $formattedData);
+			$this->output->set_content_type('application/json')->set_output(json_encode($data));
+		} catch (Exception $e) {
+			$data = array('status' => "false", 'message' => $e->getMessage(), 'data' => null);
+			$this->output->set_content_type('application/json')->set_output(json_encode($data));
+		}
+	}
+	
+
+	//! แสดงคำแนะนำ
+	public function getAdviceText($id)
+	{
+		$this->getAllAdviceText($id);
+	}
+
 
 	//! gen uuidv4
 	public function uuid()
