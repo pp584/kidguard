@@ -1717,7 +1717,8 @@ class ApiController extends CI_Controller
 				advice.id AS advice_id,
 				advice.title AS advice_title,
 				advice.index AS advice_index,
-				advice_condition.id AS advice_condition_id
+				advice_condition.id AS advice_condition_id,
+				advice_condition.name AS advice_condition_name
 				');
 				$this->db->from('advice_text');
 				$this->db->where_in('advice_condition_id', $conditionIds);
@@ -1739,6 +1740,7 @@ class ApiController extends CI_Controller
 					$formattedData[$conditionId] = [
 						'advice_id' => $row['advice_id'],
 						'advice_title' => $row['advice_title'],
+						'advice_condition_name' => $row['advice_condition_name'],
 						'advice_index' => $row['advice_index'],
 						'advice_detail' => []
 					];
