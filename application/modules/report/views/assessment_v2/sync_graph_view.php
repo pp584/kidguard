@@ -216,19 +216,8 @@
 								// parseFloat(bar.bar_value)
 							});
 
-							// const colors = ['#484e60', '#9499b7', '#fef8ca', '#fef8ca', '#d7cbe4', '#5c99c4', '#3b5b8b'];
-							var colors = [];
-							if (index == 2) {
-								colors = ['#484e60', '#9499b7', '#fef8ca', '#d7cbe4', '#5c99c4', '#3b5b8b'];
-							}
+							var colors = getGraphBarColor();
 
-							if (index == 3) {
-								colors = ['#484e60', '#fef8ca', '#3b5b8b'];
-							}
-
-							if (index !== 2 && index !== 3) {
-								colors = ['#484e60', '#9499b7', '#fef8ca', '#5c99c4'];
-							}
 							var options = {
 								chart: {
 									type: 'bar',

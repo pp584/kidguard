@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-2 col-md-2 col-xl-3">
-			<a class="navbar-brand" href="{site_url}home"><img src="{base_url}assets/images/logo.png" alt="Logo" /></a>
+			<a class="navbar-brand" href="{site_url}"><img src="{base_url}assets/images/logo.png" alt="Logo" /></a>
 		</div>
 		<div class="col-sm-8 col-md-8 col-xl-7 d-flex ms-header-bg">
 			<nav class="navbar navbar-expand-lg">

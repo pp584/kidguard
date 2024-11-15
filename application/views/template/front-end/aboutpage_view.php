@@ -51,13 +51,13 @@
 		</header>
 
 		<!-- Banner Section -->
-		<section class="inner-bnr">
-			<div class="container">
+		<section class="inner-bnr d-flex align-items-end pb-5" style="min-height: 550px;padding: unset; background: url({base_url}/assets/images/banner/1.jpg) no-repeat center; background-size: cover">
+			<div class="container pb-5">
 				<div class="row">
-					<div class="col-12" class="text">
-						<span class="text">About</span>
-						<h3 class="hero-text">เกี่ยวกับเรา</h3>
-						<h5><a href="index.html" class="text">Home</a> - About</h5>
+					<div class="col-12" class="text" style="text-shadow: 1px 3px 8px rgba(0, 0, 0, 1);">
+						<span class="text text-white">About</span>
+						<h3 class="hero-text text-white my-2">เกี่ยวกับเรา</h3>
+						<h5 class="text-white"><a href="./" class="text text-white"><u>Home</u></a> - About</h5>
 					</div>
 				</div>
 			</div>
@@ -67,7 +67,7 @@
 		<section id="ms-disease-sec">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-6">
+					<div class="col-lg-7">
 						<?php $i = 0;
 						foreach ($cms_about_us as $row) {
 							$i = $i + 1; ?>
@@ -77,13 +77,12 @@
 						<?php } ?>
 
 					</div>
-					<div class="col-lg-6">
+					<div class="col-lg-5">
 						<?php $i = 0;
 						foreach ($cms_about_us as $row) {
 							$i = $i + 1; ?>
-							<div class="floating-img d-none d-md-block">
-								<img style=" width:300px;  margin-top: 100px;
-                                    height:450px; background-position:center;" src="{base_url}<?php echo $row->image; ?>" class="img-fluid" alt="Image">
+							<div class="floating-img d-none d-lg-flex justify-content-center" style="bottom: 5rem; left: unset; margin:unset;">
+								<img style="height: 450px;border: 10px solid #ffffff;background-position: center;border-radius: 1.5rem;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;" src="{base_url}<?php echo $row->image; ?>" class="img-fluid" alt="Image">
 							</div>
 						<?php } ?>
 					</div>
@@ -100,17 +99,10 @@
 
 							<h5 class="font-weight-bold mt-3 ms-news-title"> <?php echo $row->detail; ?></h5>
 						<?php } ?>
-
-
-
 					</div>
 				</div>
 			</div>
 		</section>
-
-
-
-
 	</div>
 
 

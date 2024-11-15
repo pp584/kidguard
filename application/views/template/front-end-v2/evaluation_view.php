@@ -18,13 +18,14 @@
 		<header class="position-absolute">
 			{top_navbar}
 		</header>
-		<section class="inner-bnr ">
-			<div class="container">
+		<!-- Banner Section -->
+		<section class="inner-bnr d-flex align-items-end pb-5" style="min-height: 550px;padding: unset; background: url({base_url}/assets/images/banner/2.jpg) no-repeat center; background-size: cover">
+			<div class="container pb-5">
 				<div class="row">
-					<div class="col-12" class="text">
-						<span class="text">Evaluation</span>
-						<h3 class="hero-text">แบบประเมิน</h3>
-						<h5><a href="index.html" class="text">Home</a> - Evaluation</h5>
+					<div class="col-12" class="text" style="text-shadow: 1px 3px 8px rgba(0, 0, 0, 1);">
+						<span class="text text-white">Evaluation</span>
+						<h3 class="hero-text text-white my-2">แบบประเมิน</h3>
+						<h5 class="text-white"><a href="{base_url}" class="text text-white"><u>Home</u></a> - Evaluation</h5>
 					</div>
 				</div>
 			</div>

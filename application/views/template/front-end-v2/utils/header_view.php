@@ -190,39 +190,8 @@
 			font-family: 'Kanit' !important;
 		}
 	</style>
-	<!-- Bootstrap core JavaScript-->
-	<script src="{base_url}assets/themes/sb-admin-bs4/vendor/jquery/jquery.min.js"></script>
-	<script src="{base_url}assets/themes/sb-admin-bs4/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-	<!-- jQuery and Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-	<!-- General Js -->
 	<script src="{base_url}assets/themes/front-end/js/jquery-3.2.1.min.js"></script>
-	<!-- Bootstrap Js -->
-	<script src="{base_url}assets/themes/front-end/vendor/bootstrap/js/bootstrap.min.js"></script>
-	<!-- Font Awesome Js -->
-	<script src="{base_url}assets/themes/front-end/vendor/fontawesome/js/all.min.js"></script>
-	<!-- Elegant Icons Css -->
-	<script src="{base_url}assets/themes/front-end/vendor/elegant/js/lte-ie7.js"></script>
-	<!-- Owl Carousel Js -->
-	<script src="{base_url}assets/themes/front-end/vendor/owl_carousel/js/owl.carousel.min.js"></script>
-	<!-- Themes's Custom Js -->
-	<script src="{base_url}assets/themes/front-end/js/theme.js"></script>
-
-	<!-- Require -->
-	<script src="{base_url}assets/js/jquery-ui.min.js"></script>
-	<script src="{base_url}assets/bootstrap_extras/sweetalert/dist/sweetalert.min.js"></script>
-	<script src="{base_url}assets/bootstrap_extras/bootstrap-notify.min.js"></script>
-	<script src="{base_url}assets/bootstrap_extras/select2/select2.min.js"></script>
-	<script src="{base_url}assets/js/jquery.cookie.min.js"></script>
-	<script src="{base_url}assets/js/ci_utilities.js?ver=1541805506"></script>
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 	<script>
 		var baseURL = '{base_url}';
 		var siteURL = '{site_url}';

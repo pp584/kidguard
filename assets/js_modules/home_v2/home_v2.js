@@ -147,19 +147,8 @@ var home_v2 = {
 							// parseFloat(bar.bar_value)
 						});
 
-						// const colors = ['#3b5b8b', '#5c99c4', '#d7cbe4', '#fef8ca', '#9499b7', '#484e60'];
-						var colors = [];
-						if (index == 2) {
-							colors = ['#484e60', '#9499b7', '#fef8ca', '#d7cbe4', '#5c99c4', '#3b5b8b'];
-						}
-
-						if (index == 3) {
-							colors = ['#484e60', '#fef8ca', '#3b5b8b'];
-						}
-
-						if (index !== 2 && index !== 3) {
-							colors = ['#484e60', '#9499b7', '#fef8ca', '#5c99c4'];
-						}
+						
+						var colors = getGraphBarColor();
 
 						var options = {
 							chart: {

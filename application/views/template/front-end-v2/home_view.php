@@ -36,7 +36,7 @@
 			font-size: 12px;
 			height: 100px;
 			overflow: hidden;
-			width: 256px;
+			/* width: 256px; */
 			white-space: wrap;
 			text-overflow: ellipsis;
 		}
@@ -70,7 +70,6 @@
 </head>
 
 <body>
-
 	<script>
 		var baseURL = '{base_url}/';
 		var siteURL = '{site_url}';
@@ -80,121 +79,10 @@
 
 	<!-- Body Wrapper -->
 	<div id="homepage-three" class="overflow-hidden">
-		<!-- Header Section -->
-		<!-- <header class="position-absolute">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-2 col-md-2 col-xl-3">
-						<a class="navbar-brand" class="img-fluid" style="width:100px;height: auto; " href="{site_url}home">
-							<img src="{base_url}assets/images/icon/logo7.png" style="width:270px;height: auto; " alt="Logo" />
-						</a>
-					</div>
-					<div class="col-sm-8 col-md-8 col-xl-7 d-flex ms-header-bg">
-						<nav class="navbar navbar-expand-lg">
-							<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#hamburgernavmenucontent" aria-controls="hamburgernavmenucontent" aria-expanded="false" aria-label="Toggle navigation">
-								<span class="menu_toggle">
-									<span class="hamburger">
-										<span></span>
-										<span></span>
-										<span></span>
-									</span>
-									<span class="hamburger-cross">
-										<span></span>
-										<span></span>
-									</span>
-								</span>
-							</button>
-							<div class="collapse navbar-collapse justify-content-center" id="hamburgernavmenucontent">
-								<ul class="navbar-nav align-items-lg-center">
-									<li class="nav-item"><a href="{site_url}home">หน้าหลัก</a></li>
-									<li class="nav-item"><a href="{site_url}about">เกี่ยวกับเรา</a></li>
-									<li class="dropdown nav-item">
-                                        <a data-toggle="dropdown" href="#." role="button" aria-haspopup="true" aria-expanded="false">เกี่ยวกับเรา</a>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="about">โครงการวิจัย</a>
-                                        </div>
-                                    </li>
-
-									<li class="dropdown nav-item">
-										<a data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ข่าวสาร</a>
-										<div class="dropdown-menu">
-											<a class="dropdown-item" href="{site_url}announcement">ข่าวสาร</a>
-											<a class="dropdown-item" href="{site_url}postnews">ประชาสัมพันธ์</a>
-											<a class="dropdown-item" href="{site_url}activities">กิจกรรม</a>
-										</div>
-									</li>
-
-									<li class="dropdown nav-item">
-										<a data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ป้องกันสารเสพติด</a>
-										<div class="dropdown-menu">
-											<a class="dropdown-item" href="{site_url}news_basic_info">ข้อมูลพื้นฐาน</a>
-											<a class="dropdown-item" href="{site_url}news_research_info">ข้อมูลงานวิจัย</a>
-										</div>
-									</li>
-
-
-									<li class="nav-item"><a href="{site_url}asked_questions">FAQ</a></li>
-									<li class="nav-item"><a href="{site_url}contactus">ติดต่อเรา</a></li>
-									<li class="dropdown nav-item">
-										<a data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">แบบประเมิน</a>
-										<div class="dropdown-menu">
-											<a class="dropdown-item" href="{site_url}evaluation_form/evaluationExplanation">แบบประเมิน</a>
-											<a class="dropdown-item" target="_blank" href="{site_url}/assets/uploads/pdf/คู่มือการใช้งานนักเรียน.pdf">PDF คู่มือนักเรียน</a>
-											<a class="dropdown-item" target="_blank" href="{site_url}/assets/uploads/vdo/VDO คู่มือการใช้งานของนักเรียน.mp4">VDO คู่มือนักเรียน</a>
-
-										</div>
-									</li>
-									<li class="dropdown nav-item">
-										<a data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">สืบค้นข้อมูล</a>
-									</li>
-								</ul>
-							</div>
-						</nav>
-					</div>
-
-					<div class="col-sm-2 col-md-2 col-xl-2">
-						<?php
-						$level_user =  $this->session->userdata("user_level");
-						$user_firstname = $this->session->userdata('user_firstname');
-						$user_lastname  = $this->session->userdata('user_lastname');
-
-						$redirect_url = '';
-						if ($level_user == 1) {
-							$redirect_url = base_url() . 'dashboard/DashboardHistorical';
-						} else if ($level_user == 2) {
-							$redirect_url = base_url() . 'dashboard/DashboardHistorical';
-						} else if ($level_user == 3) {
-							$redirect_url = base_url() . 'dashboard/DashboardHistorical';
-						} else if ($level_user == 4) {
-							$redirect_url = base_url() . 'dashboard/DashboardHistorical';
-						} else if ($level_user == 9) {
-							$redirect_url = base_url() . 'website/slides';
-						}
-
-						if ($this->session->userdata('login_validated') == false) {
-
-						?>
-							<a href="{site_url}member/login">
-								<button class="btnlogin bg-info" value="Sign in"> <i class="fa fa-lock"></i> Login</button>
-							</a>
-						<?php
-						} else {
-						?>
-							<a href="<?= $redirect_url ?>">
-								<button class="btnlogin bg-info" value="Sign in"> <i class="fa fa-user"></i> <?php echo $user_firstname  . ' ' . $user_lastname  ?></button>
-							</a>
-						<?php  }
-						?>
-					</div>
-				</div>
-			</div>
-		</header> -->
-
 		<header class="position-absolute">
 			<!-- Navbar -->
 			{top_navbar}
 		</header>
-
 
 		<!-- Slider Section -->
 		<section id="home-three-bnr" class="position-relative">
@@ -206,13 +94,14 @@
 						$i = $i + 1;
 					?>
 						<?php if ($i == 1) { ?>
-							<li data-target="#ms-hero-slider" data-slide-to="<?php echo $i ?>" class="active"><?php echo $i ?></li>
-
+							<li data-target="#ms-hero-slider" data-slide-to="<?php echo $i ?>" class="active">
+								<?php echo $i ?>
+							</li>
 						<?php } else { ?>
-							<li data-target="#ms-hero-slider" data-slide-to="<?php echo $i ?>"><?php echo $i ?></li>
-
+							<li data-target="#ms-hero-slider" data-slide-to="<?php echo $i ?>">
+								<?php echo $i ?>
+							</li>
 						<?php } ?>
-
 					<?php } ?>
 				</ol>
 				<div class="carousel-inner">
@@ -238,15 +127,10 @@
 			</div>
 		</section>
 
-
-
 		<!-- Blue Section -->
 		<section id="home-three-blue-sec">
 			<div class="container">
 				<div class="row">
-					<!-- <div class="col-12">
-						<h1>{site_url}about</h1>
-					</div> -->
 					<div class="col-lg-6">
 						<span class="three-subheading">Anti Narcoticst</span>
 						<h2 class="font-weight-bold text-white mb-4">ต่อต้านสารเสพติด</h2>
@@ -262,10 +146,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6">
-						<!-- <h5 class="mb-5 pr-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua.</h5> -->
 						<div class="row">
-
 							<?php $i = 0;
 							foreach ($list_data_cardiac_arrest as $row) {
 								$i++;
@@ -280,9 +161,7 @@
 									</div>
 								</div>
 							<?php } ?>
-
 						</div>
-						<!-- <a href="#." class="btn ms-gradient-btn mt-4">LEARN MORE</a> -->
 					</div>
 					<div class="col-lg-6">
 						<div id="home-3-blue-carousel" class="carousel slide" data-ride="carousel">
@@ -304,7 +183,6 @@
 									<?php } ?>
 								<?php } ?>
 							</div>
-
 
 							<a class="carousel-control-prev" href="#home-3-blue-carousel" role="button" data-slide="prev">
 								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -350,21 +228,21 @@
 			</div>
 		</section>
 
-		<section id="home-four-spread-sec" class="pad-100">
+		<section id="home-four-spread-sec" class="py-5">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 col-md-2">
 						<div class="flex-1">
-							<h2 class="text-warning" style="font-size:60px;">
-								<span class="me-3 align-items-center d-flex flex-row justify-content-center">
-									<img src="{base_url}assets/themes/front-end/images/checkmark.png" alt="checkmark" style="width: 45px; height:45px; margin-right:10px" />
+							<h2 class="text-warning">
+								<span class="me-3 align-items-center d-flex flex-column justify-content-center" style="font-size:3rem;">
+									<img src="{base_url}assets/themes/front-end/images/checkmark.png" alt="checkmark" class="mb-2" style="width: 45px; height:45px;" />
 									สถิตินักเรียน
 								</span>
-								<span class="text-white justify-content-center d-flex" style="font-size:35px;">
+								<span class="text-white justify-content-center text-center d-flex" style="font-size:1.8rem;">
 									ที่เข้าประเมินสมรรถนะประจำปี <?= date('Y') + 543; ?>
 								</span>
 							</h2>
-							<div class="row mt-4 pe-lg-10 justify-content-center">
+							<div class="row mt-3 pe-lg-10 justify-content-center">
 								<?php if (isset($stats) && isset($stats['submit_count'])) : ?>
 									<div class="overflow-hidden col-12 col-lg-2" data-zanim-timeline="{}" data-zanim-trigger="scroll">
 										<div class="fs-3 fs-lg-4 mb-0 fw-bold text-white mt-3 text-center" style="font-size: 28px;" data-zanim-xs='{"delay":0.1}' data-countup='{"endValue":52}'>
@@ -516,32 +394,6 @@
 		</div>
 	</div>
 
-	<!-- Bootstrap core JavaScript-->
-	<script src="{base_url}assets/themes/sb-admin-bs4/vendor/jquery/jquery.min.js"></script>
-	<script src="{base_url}assets/themes/sb-admin-bs4/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-	<!-- General Js -->
-	<script src="{base_url}assets/themes/front-end/js/jquery-3.2.1.min.js"></script>
-	<!-- Bootstrap Js -->
-	<script src="{base_url}assets/themes/front-end/vendor/bootstrap/js/bootstrap.min.js"></script>
-	<!-- Font Awesome Js -->
-	<script src="{base_url}assets/themes/front-end/vendor/fontawesome/js/all.min.js"></script>
-	<!-- Elegant Icons Css -->
-	<script src="{base_url}assets/themes/front-end/vendor/elegant/js/lte-ie7.js"></script>
-	<!-- Owl Carousel Js -->
-	<script src="{base_url}assets/themes/front-end/vendor/owl_carousel/js/owl.carousel.min.js"></script>
-	<!-- Themes's Custom Js -->
-	<script src="{base_url}assets/themes/front-end/js/theme.js"></script>
-
-	<!-- Bootstrap core JavaScript-->
-	<script src="{base_url}assets/themes/sb-admin-bs4/vendor/jquery/jquery.min.js"></script>
-	<script src="{base_url}assets/themes/sb-admin-bs4/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-	<!-- jQuery and Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 	<!-- General Js -->
 	<script src="{base_url}assets/themes/front-end/js/jquery-3.2.1.min.js"></script>
 	<!-- Bootstrap Js -->
@@ -562,11 +414,9 @@
 	<script src="{base_url}assets/bootstrap_extras/select2/select2.min.js"></script>
 	<script src="{base_url}assets/js/jquery.cookie.min.js"></script>
 	<script src="{base_url}assets/js/ci_utilities.js?ver=1541805506"></script>
+
+	<!-- {another_js} -->
 	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-
-
-
 </body>
-
 
 </html>
