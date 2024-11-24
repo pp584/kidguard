@@ -21,7 +21,6 @@ class About extends CRUD_Controller
 		$this->load->model('cadiac_arrest/Cms_ca_basic_info_model', 'Cms_ca_basic_info');
 
 		$this->load->model('Globalmodel', 'modeldb');
-
 	}
 
 	// ------------------------------------------------------------------------
@@ -52,17 +51,16 @@ class About extends CRUD_Controller
 		$this->data['another_js'] = $this->another_js;
 		$this->data['cms_about_us']	=  $this->cms_about_us();
 		$this->data['cms_about_teams']	=  $this->cms_about_teams();
-		
+
 		// $this->data['list_data_cms_slide']	= $this->cms_slide();
 		// $this->data['list_data_cms_ca_symptoms']	= $this->cms_ca_symptoms();
 		// $this->data['cms_cardiac_arrest_slide']	= $this->cms_cardiac_arrest_slide();
 		// $this->data['cms_ca_resuscitation']	= $this->cms_ca_resuscitation();
 		// print_r($this->data);
 		$this->parser->parse('template/front-end/aboutpage_view', $this->data);
-
 	}
 
-	
+
 
 	public function cms_about_us()
 	{
@@ -75,6 +73,15 @@ class About extends CRUD_Controller
 	{
 		$cms_about_us = $this->modeldb->get_list("cms_teams");
 		return $cms_about_us;
+	}
+
+	public function policy()
+	{
+		$this->data['top_navbar'] = $this->parser->parse('template/front-end/top_navbar_view', $this->top_navbar_data, TRUE);
+		$this->data['another_css'] = $this->another_css;
+		$this->data['another_js'] = $this->another_js;
+
+		$this->parser->parse('template/front-end/policypage_view', $this->data);
 	}
 
 
