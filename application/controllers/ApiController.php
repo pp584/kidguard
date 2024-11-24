@@ -497,6 +497,7 @@ class ApiController extends CI_Controller
 				if ($formattedData[$graphIndex]['graph_show_compare_norm'] == true) {
 					$formattedData[$graphIndex]['bars'][$barIndex]['bar_name'] = "ของตน";
 					$formattedData[$graphIndex]['bars'][] = array(
+						'bar_id' => null,
 						'bar_name' => "กลุ่มเคยลอง",
 						'bar_value' => number_format($graph_bar['graph_bar_norm_drug'], 2),
 						'bar_percent' => $graph_bar_percent,
@@ -504,6 +505,7 @@ class ApiController extends CI_Controller
 						'norm_drug' => $graph_bar['graph_bar_norm_drug'],
 					);
 					$formattedData[$graphIndex]['bars'][] = array(
+						'bar_id' => null,
 						'bar_name' => "กลุ่มไม่เคยลอง",
 						'bar_value' => number_format($graph_bar['graph_bar_norm_none_drug'], 2),
 						'bar_percent' => $graph_bar_percent,
@@ -1708,9 +1710,9 @@ class ApiController extends CI_Controller
 		try {
 			$requestData = $this->input->post();
 			$conditionIds = $requestData['condition_id'] ?? [$id];
-	
+
 			$result = [];
-	
+
 			if (!empty($conditionIds) && is_array($conditionIds)) {
 				$this->db->select('
 				advice_text.*,
@@ -1726,16 +1728,16 @@ class ApiController extends CI_Controller
 				$this->db->join('advice', 'advice_condition.advice_id = advice.id', 'left');
 				$this->db->order_by('advice_text.advice_condition_id', 'ASC');
 				$this->db->order_by('advice_text.index', 'ASC');
-	
+
 				$query = $this->db->get();
 				$result = $query->result_array();
 			}
-	
+
 			$formattedData = [];
-	
+
 			foreach ($result as $row) {
 				$conditionId = $row['advice_condition_id'];
-	
+
 				if (!isset($formattedData[$conditionId])) {
 					$formattedData[$conditionId] = [
 						'advice_id' => $row['advice_id'],
@@ -1745,7 +1747,7 @@ class ApiController extends CI_Controller
 						'advice_detail' => []
 					];
 				}
-	
+
 				$formattedData[$conditionId]['advice_detail'][] = [
 					'id' => $row['id'],
 					'title' => $row['title'],
@@ -1756,7 +1758,7 @@ class ApiController extends CI_Controller
 			}
 
 			$formattedData = array_values($formattedData);
-	
+
 			$data = array('status' => "true", 'message' => null, 'data' => $id ? $formattedData[0] : $formattedData);
 			$this->output->set_content_type('application/json')->set_output(json_encode($data));
 		} catch (Exception $e) {
@@ -1764,7 +1766,7 @@ class ApiController extends CI_Controller
 			$this->output->set_content_type('application/json')->set_output(json_encode($data));
 		}
 	}
-	
+
 
 	//! แสดงคำแนะนำ
 	public function getAdviceText($id)

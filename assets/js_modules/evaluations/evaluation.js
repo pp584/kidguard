@@ -252,7 +252,7 @@ var evaluation_form = {
 
 					if (results.is_successful) {
 						console.log('results', results.data);
-						window.location.href = 'question_graph?web_id=' + results.data;
+						window.location.href = 'question_graph?id=' + results.data;
 						// await self.getGraph(results.data)
 						// return true;
 					}

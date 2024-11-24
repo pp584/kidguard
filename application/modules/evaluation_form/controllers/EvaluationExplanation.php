@@ -424,10 +424,6 @@ class EvaluationExplanation extends CRUD_Controller
 	*/
 	protected function render_view($path)
 	{
-		// $this->load->library('parser');
-		// $this->data['left_sidebar'] = $this->parser->parse('template/sb-admin-bs4/left_sidebar_view', $this->left_sidebar_data, TRUE);
-		// $this->data['breadcrumb_list'] = $this->parser->parse('template/sb-admin-bs4/breadcrumb_view', $this->breadcrumb_data, TRUE);
-		// ๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘๘
 		$this->data['top_navbar'] = $this->parser->parse('template/front-end/top_navbar_view', $this->top_navbar_data, TRUE);
 		$this->data['page_content'] = $this->parser->parse_repeat($path, $this->data, TRUE);
 		$this->data['another_css'] = $this->another_css;
@@ -441,12 +437,15 @@ class EvaluationExplanation extends CRUD_Controller
 		$this->data['js_util_url'] = $this->js_util_url;
 
 		if ($path === "evaluation_form/evaluation_graph_view") {
+			//Override js module for result page
+			$js_module = "assets/js_modules/evaluations/result.js";
+			$this->data['another_js'] = '<script src="' . base_url($js_module) . "?ft=" . filemtime($js_module) . '"></script>';
+
+			//Parse layout share for result page
 			$this->parser->parse('template/front-end-v2/evaluation_share_view', $this->data);
 		} else {
 			$this->parser->parse('template/front-end-v2/evaluation_view', $this->data);
 		}
-
-		// $this->parser->parse('template/front-end-v2/evaluation_share_view', $this->data);
 	}
 
 
@@ -623,6 +622,7 @@ class EvaluationExplanation extends CRUD_Controller
 			));
 
 			$user_id = $res;
+			$this->clear();
 		} else {
 			$success = FALSE;
 			$json = json_encode(array(
@@ -632,11 +632,6 @@ class EvaluationExplanation extends CRUD_Controller
 			));
 		}
 
-		$this->complete_qt_basic = false;
-		$this->complete_qt_immune = false;
-		$this->complete_qt_contextual = false;
-		$this->complete_qt_risky = false;
-		// $this->session->sess_destroy();
 		echo $json;
 	}
 
@@ -830,10 +825,11 @@ class EvaluationExplanation extends CRUD_Controller
 
 	public function clear()
 	{
-		$this->complete_qt_basic = false;
-		$this->complete_qt_immune = false;
-		$this->complete_qt_contextual = false;
-		$this->complete_qt_risky = false;
+		$this->session->set_userdata('complete_qt_basic', false);
+		$this->session->set_userdata('complete_qt_immune', false);
+		$this->session->set_userdata('complete_qt_contextual', false);
+		$this->session->set_userdata('complete_qt_risky', false);
+
 		$this->session->sess_destroy();
 	}
 }

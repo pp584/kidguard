@@ -1,31 +1,14 @@
 <html>
-<?php
-@include('utils/header_view.php');
-
-?>
+<?php @include('utils/header_view.php'); ?>
 <style>
-	.apexcharts-tooltip {
-		/* top: -80px !important; */
-	}
-
 	body {
 		font-family: 'Kanit' !important;
-		background: linear-gradient(360deg, #081e3e 0%, rgb(20 166 255) 70%, rgb(218, 240, 254) 100%);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.container.section {
-		border: 5px solid white;
-		border-radius: 10px;
-		padding: 5px;
 	}
 </style>
 
 <body>
-	<div id="homepage-three" class="overflow-hidden" style="width: 100%;">
-		<section class="container section">
+	<div id="homepage-three" style="width: 100%;">
+		<section>
 			{page_content}
 		</section>
 		<input type="hidden" id="complete_qt_basic" value="{complete_qt_basic}">
@@ -57,6 +40,9 @@
 <script src="{base_url}assets/js/ci_utilities.js?ver=1541805506"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
+<script>
+	const _endpoint = "{base_url}";
+</script>
 {another_js}
 <!-- {js_util_url} -->
 
