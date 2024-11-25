@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{base_url}/assets/css/result-page.css">
 
-<div class="cs-bg-img-wrapper h-100">
+<div class="cs-bg-img-wrapper">
 	<img src="{base_url}/assets/images/background/bg1.webp" alt="" class="cs-bg-img">
 
 	<div class="container cs-bg-image-content">
