@@ -238,10 +238,28 @@
 									<img src="{base_url}assets/themes/front-end/images/checkmark.png" alt="checkmark" class="mb-2" style="width: 45px; height:45px;" />
 									สถิตินักเรียน
 								</span>
-								<span class="text-white justify-content-center text-center d-flex" style="font-size:1.8rem;">
-									ที่เข้าประเมินสมรรถนะประจำปี <?= date('Y') + 543; ?>
+								<span class="text-white justify-content-center text-center d-flex align-items-center" style="font-size:clamp(0.9rem, 2.5vw, 1.8rem); gap: 1rem;">
+									<div>ที่เข้าประเมินสมรรถนะประจำปี <?= date('Y') + 543; ?></div>
+									<div><small>จำนวน &nbsp; <?= $count_stats['currentYearData']['count'] ?> &nbsp; คน</small></div>
 								</span>
+								<hr style="border: 2.8px solid #ffc107; max-width:350px; border-radius:10px;">
 							</h2>
+							<div class="container d-flex justify-content-center align-items-center vh-100">
+								<div class="stats-container text-white" style="font-size:clamp(0.9rem, 2.5vw, 1.4rem);">
+									<?php
+									foreach ($count_stats['lastYearData'] as $yearData):
+									?>
+										<div class="stats-item">
+											<span>ที่เข้าประเมินสมรรถนะประจำปี <?= $yearData['year'] + 543 ?></span>
+											&nbsp;&nbsp;&nbsp;
+											<span><small>จำนวน &nbsp;<?= number_format($yearData['count']) ?>&nbsp; คน</small></span>
+										</div>
+									<?php
+									endforeach;
+									?>
+								</div>
+							</div>
+
 							<div class="row mt-3 pe-lg-10 justify-content-center">
 								<?php if (isset($stats) && isset($stats['submit_count'])) : ?>
 									<div class="overflow-hidden col-12 col-lg-2" data-zanim-timeline="{}" data-zanim-trigger="scroll">

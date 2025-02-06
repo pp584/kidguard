@@ -93,6 +93,8 @@ class AssessmentV2 extends MEMBER_Controller
 		$this->data['questionList'] = $this->AssessmentV2->getQuestionList();
 
 		if (isset($_FILES['uploadFile'])) {
+			ini_set('memory_limit', '1024M');
+
 			require_once APPPATH . "/third_party/PHPExcel.php";
 			$file = $_FILES['uploadFile']['tmp_name'];
 			$rawData = $this->read_excel($file);

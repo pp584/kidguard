@@ -6,6 +6,69 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class ApiController extends CI_Controller
 {
+	//! gen uuidv4
+	public function uuid()
+	{
+		$uuid = uniqid() . md5(uniqid('', true));
+		return $uuid;
+	}
+
+	//! gen ticket
+	public function getTicket($provinceName, $currentDate)
+	{
+		try {
+			$this->db->select('code, section');
+			$this->db->from('province');
+			$this->db->where('name', $provinceName);
+			$query = $this->db->get();
+			$provinceData = $query->row_array();
+
+			$currentDate = date('Y-m-d', strtotime($currentDate));
+
+			$gregorianYear = date('Y', strtotime($currentDate));
+			$thaiYear = $gregorianYear + 543;
+			$shortThaiYear = substr($thaiYear, -2);
+
+			$month = date('m', strtotime($currentDate));
+			$day = date('d', strtotime($currentDate));
+
+			$this->db->select('id, no');
+			$this->db->from('ticket');
+			$this->db->where('DATE(date) =', $currentDate);
+			$this->db->order_by('id', 'DESC');
+			$this->db->limit(1);
+			$query = $this->db->get();
+			$lastTicket = $query->row_array();
+
+			$ticketNo = isset($lastTicket['no']) ? $lastTicket['no'] + 1 : 1;
+
+			$provinceCode = str_pad($provinceData['code'], 2, '0', STR_PAD_LEFT);
+			$provinceSection = str_pad($provinceData['section'], 2, '0', STR_PAD_LEFT);
+			$ticketData = $provinceCode . $provinceSection . $shortThaiYear . $month . $day . str_pad($ticketNo, 5, '0', STR_PAD_LEFT);
+
+			if (isset($lastTicket) && !empty($lastTicket)) {
+				$updateTicketData = array(
+					'no' => $ticketNo,
+					'date' => $currentDate,
+				);
+				$this->db->where('id', $lastTicket['id']);
+				$this->db->update('ticket', $updateTicketData);
+			} else {
+				$ticketId = $this->uuid();
+				$insertTicketData = array(
+					'id' => $ticketId,
+					'date' => $currentDate,
+					'no' => $ticketNo,
+				);
+				$this->db->insert('ticket', $insertTicketData);
+			}
+
+			return $ticketData;
+		} catch (Exception $e) {
+			throw new Exception('ไม่สามารถสร้าง Ticket ได้: ' . $e->getMessage());
+		}
+	}
+
 	//! ดึงคำถามทั้งหมด
 	public function getAllQuestion()
 	{
@@ -412,7 +475,7 @@ class ApiController extends CI_Controller
 				$graph['bar_count'] = $bar_count;
 
 				if ($graph['graph_show_compare_norm']) {
-					$graph['bars'][0]['bar_name'] = "ของตน";
+					$graph['bars'][0]['bar_name'] = "รายบุคคล";
 					$graph['bars'][] = array(
 						'bar_name' => "กลุ่มเคยลอง",
 						'bar_value' => number_format($graph['bars'][0]['norm_drug'], 2),
@@ -495,7 +558,7 @@ class ApiController extends CI_Controller
 				);
 
 				if ($formattedData[$graphIndex]['graph_show_compare_norm'] == true) {
-					$formattedData[$graphIndex]['bars'][$barIndex]['bar_name'] = "ของตน";
+					$formattedData[$graphIndex]['bars'][$barIndex]['bar_name'] = "รายบุคคล";
 					$formattedData[$graphIndex]['bars'][] = array(
 						'bar_id' => null,
 						'bar_name' => "กลุ่มเคยลอง",
@@ -697,7 +760,7 @@ class ApiController extends CI_Controller
 				foreach ($tempScore as $item) {
 					$graphBarId = $item['graph_bar_id'];
 					$section = $item['section'];
-					$score = (int)$item['scores'];
+					$score = $item['scores'];
 
 					$key = $graphBarId . '-' . $section;
 
@@ -707,7 +770,7 @@ class ApiController extends CI_Controller
 
 					$groupedData[$key]['total'] += $score;
 					$groupedData[$key]['count']++;
-					$groupedData[$key]['average_score'] =  $groupedData[$key]['total'] / $groupedData[$key]['count'];
+					$groupedData[$key]['average_score'] =  number_format($groupedData[$key]['total'] / $groupedData[$key]['count'], 2);
 				}
 
 				foreach ($groupedData as $group) {
@@ -735,6 +798,8 @@ class ApiController extends CI_Controller
 		} catch (Exception $e) {
 			$data = array('status' => false, 'message' => $e->getMessage(), 'data' => null,);
 			$this->output->set_content_type('application/json')->set_output(json_encode($data));
+		} finally {
+			restore_error_handler();
 		}
 	}
 
@@ -809,7 +874,7 @@ class ApiController extends CI_Controller
 				);
 
 				if ($formattedData[$graphIndex]['graph_show_compare_norm'] == true) {
-					$formattedData[$graphIndex]['bars'][$barIndex]['bar_name'] = "ของตน";
+					$formattedData[$graphIndex]['bars'][$barIndex]['bar_name'] = "รายบุคคล";
 					$formattedData[$graphIndex]['bars'][] = array(
 						'bar_name' => "กลุ่มเคยลอง",
 						'bar_value' => number_format($graph_bar['graph_bar_norm_drug'], 2),
@@ -1508,111 +1573,258 @@ class ApiController extends CI_Controller
 		}
 	}
 
+	// public function importSubmitQuestion()
+	// {
+	// 	try {
+	// 		$this->db->trans_start();
+	// 		$request = $this->input->post();
+
+	// 		foreach ($request['import_data'] as $record) {
+	// 			$requestData = $record;
+	// 			$requestData['user_info']['postal_code'] = "";
+
+	// 			//Perform normal submit operation
+	// 			$currentDate = (new DateTime($request['import_date']))->format('Y-m-d H:i:s');
+
+	// 			//* QUERY GRAPH BAR DATA
+	// 			$this->db->select('id, graph_id');
+	// 			$this->db->from('graph_bar');
+	// 			$query = $this->db->get();
+	// 			$graph_bar = $query->result_array();
+
+	// 			//* INSERT USER
+	// 			$user_id = $this->uuid();
+	// 			$userData = $requestData['user_info'];
+
+	// 			$provinceName = $userData['province'];
+	// 			$ticketId = $this->getTicket($provinceName, $currentDate);
+
+	// 			$submitUserData = array(
+	// 				'id' => $user_id,
+	// 				'ticket' => $ticketId,
+	// 				'province' => $userData['province'],
+	// 				'district' => $userData['district'],
+	// 				'postal_code' => $userData['postal_code'],
+	// 				'gender' => $userData['gender'],
+	// 				'age' => $userData['age'],
+	// 				'education_status' => $userData['education_status'],
+	// 				'num_siblings' => $userData['num_siblings'],
+	// 				'family_status' => $userData['family_status'],
+	// 				'father_occupation' => $userData['father_occupation'],
+	// 				'mother_occupation' => $userData['mother_occupation'],
+	// 				'family_income' => $userData['family_income'],
+	// 				'consult_people' => $userData['consult_people'],
+	// 				'drug_history' => $userData['drug_history'],
+	// 				'type_of_drugs' => $userData['type_of_drugs'],
+	// 				'submit_date' => $currentDate,
+	// 			);
+	// 			$this->db->insert('submit_user', $submitUserData);
+
+	// 			//* INSERT SUBMIT_ANSWER_AVERAGE
+	// 			foreach ($graph_bar as $bar) {
+	// 				$submit_id = $this->uuid();
+	// 				$data = array(
+	// 					'id' => $submit_id,
+	// 					'user_id' => $user_id,
+	// 					'average_score' => 0,
+	// 					'graph_bar_id' => $bar['id'],
+	// 					'submit_date' => $currentDate
+	// 				);
+	// 				$this->db->insert('submit_answer_average', $data);
+	// 			}
+
+	// 			//* MAP GRAPH BAR TO GET ONLY GRAPH_BAR_ID
+	// 			$barList = array_map(function ($bar) {
+	// 				return $bar['id'];
+	// 			}, $graph_bar);
+
+	// 			//* INSERT SUBMIT_ANSWER AND ADD TEMP_SCORE
+	// 			$tempScore = [];
+	// 			foreach ($requestData['answers'] as $answer) {
+	// 				$answer_id = $this->uuid();
+	// 				$submitAnswerData = array(
+	// 					'id' => $answer_id,
+	// 					'score' => $answer['score'],
+	// 					'submit_user_id' => $user_id,
+	// 					'question_id' => $answer['question_id'],
+	// 					'choice_id' => $answer['choice_id']
+	// 				);
+	// 				$this->db->insert('submit_answer', $submitAnswerData);
+
+	// 				if (in_array($answer['graph_bar_id'], $barList)) {
+	// 					if (!isset($tempScore[$answer['graph_bar_id']])) {
+	// 						$tempScore[$answer['graph_bar_id']] = [];
+	// 					}
+	// 					$tempScore[$answer['graph_bar_id']][] = $answer['score'];
+	// 				}
+	// 			}
+
+	// 			//* AVERAGE TEMP_SCORE AND UPDATE SUBMIT_ANSWER_AVERAGE
+	// 			foreach ($tempScore as $id => $scores) {
+	// 				$average = number_format(array_sum($scores) / count($scores), 2);
+
+	// 				$submitAnswerAverageData = array(
+	// 					'average_score' => $average
+	// 				);
+	// 				$this->db->where('user_id', $user_id);
+	// 				$this->db->where('graph_bar_id', $id);
+	// 				$this->db->update('submit_answer_average', $submitAnswerAverageData);
+	// 			}
+	// 		}
+
+	// 		$this->db->trans_complete();
+
+	// 		$res = array('status' => true, 'message' => "นำเข้าข้อมูลสำเร็จ " . count($request['import_data']) . " รายการ", 'data' => null);
+	// 		$this->output->set_content_type('application/json')->set_output(json_encode($res));
+	// 	} catch (Exception $e) {
+	// 		$res = array('status' => false, 'message' => $e->getMessage(), 'data' => null,);
+	// 		$this->output->set_content_type('application/json')->set_output(json_encode($res));
+	// 	}
+	// }
+
+	//! Import คำตอบครั้งละหลายรายการแบบ Batch
 	public function importSubmitQuestion()
 	{
 		try {
-			$this->db->trans_start();
+			// Increase memory for processing large import
+			ini_set('memory_limit', '1024M');
+
+			// Set handler throw as exception
+			set_error_handler(function ($severity, $message, $file, $line) {
+				throw new ErrorException($message, 0, $severity, $file, $line);
+			});
+
 			$request = $this->input->post();
+			$countSuccessImport = 0;
+			$countCreatedTicket = 0;
 
+			// Fetch required data once
+			$graph_bar = $this->db->select('id, graph_id')->from('graph_bar')->get()->result_array();
+			$barList = array_column($graph_bar, 'id');
+
+			$provinceData = $this->db->select('name, code, section')->from('province')->get()->result_array();
+			$provinceMap = array_column($provinceData, null, 'name');
+
+			// Fetch the latest ticket number
+			$currentDate = (new DateTime($request['import_date']))->format('Y-m-d');
+			$lastTicket = $this->db->select('id, no')
+				->from('ticket')
+				->where('DATE(date)', $currentDate)
+				->order_by('id', 'DESC')
+				->limit(1)
+				->get()
+				->row_array();
+			$ticketNo = isset($lastTicket['no']) ? $lastTicket['no'] + 1 : 1;
+
+			// Prepare batch arrays
+			$submitUserBatch = [];
+			$submitAnswerAverageBatch = [];
+			$submitAnswerBatch = [];
+
+			// Start transaction
+			$this->db->trans_start();
 			foreach ($request['import_data'] as $record) {
-				$requestData = $record;
-				$requestData['user_info']['postal_code'] = "";
-
-				//Perform normal submit operation
-				$currentDate = (new DateTime($request['import_date']))->format('Y-m-d H:i:s');
-
-				//* QUERY GRAPH BAR DATA
-				$this->db->select('id, graph_id');
-				$this->db->from('graph_bar');
-				$query = $this->db->get();
-				$graph_bar = $query->result_array();
-
-				//* INSERT USER
 				$user_id = $this->uuid();
-				$userData = $requestData['user_info'];
+				$userData = $record['user_info'];
+				$userData['postal_code'] = "";
 
 				$provinceName = $userData['province'];
-				$ticketId = $this->getTicket($provinceName, $currentDate);
-
-				$submitUserData = array(
-					'id' => $user_id,
-					'ticket' => $ticketId,
-					'province' => $userData['province'],
-					'district' => $userData['district'],
-					'postal_code' => $userData['postal_code'],
-					'gender' => $userData['gender'],
-					'age' => $userData['age'],
-					'education_status' => $userData['education_status'],
-					'num_siblings' => $userData['num_siblings'],
-					'family_status' => $userData['family_status'],
-					'father_occupation' => $userData['father_occupation'],
-					'mother_occupation' => $userData['mother_occupation'],
-					'family_income' => $userData['family_income'],
-					'consult_people' => $userData['consult_people'],
-					'drug_history' => $userData['drug_history'],
-					'type_of_drugs' => $userData['type_of_drugs'],
-					'submit_date' => $currentDate,
-				);
-				$this->db->insert('submit_user', $submitUserData);
-
-				//* INSERT SUBMIT_ANSWER_AVERAGE
-				foreach ($graph_bar as $bar) {
-					$submit_id = $this->uuid();
-					$data = array(
-						'id' => $submit_id,
-						'user_id' => $user_id,
-						'average_score' => 0,
-						'graph_bar_id' => $bar['id'],
-						'submit_date' => $currentDate
+				$ticketData = '';
+				if (isset($provinceMap[$provinceName])) {
+					$provinceInfo = $provinceMap[$provinceName];
+					$ticketData = sprintf(
+						'%02d%02d%s%s%s%05d',
+						$provinceInfo['code'],
+						$provinceInfo['section'],
+						substr((date('Y', strtotime($currentDate)) + 543), -2),
+						date('m', strtotime($currentDate)),
+						date('d', strtotime($currentDate)),
+						$ticketNo
 					);
-					$this->db->insert('submit_answer_average', $data);
+
+					$ticketNo++;
+					$countCreatedTicket++;
 				}
 
-				//* MAP GRAPH BAR TO GET ONLY GRAPH_BAR_ID
-				$barList = array_map(function ($bar) {
-					return $bar['id'];
-				}, $graph_bar);
+				$submitUserBatch[] = array_merge($userData, [
+					'id' => $user_id,
+					'ticket' => $ticketData,
+					'submit_date' => $currentDate,
+				]);
 
-				//* INSERT SUBMIT_ANSWER AND ADD TEMP_SCORE
+				// Prepare average and answer data
 				$tempScore = [];
-				foreach ($requestData['answers'] as $answer) {
-					$answer_id = $this->uuid();
-					$submitAnswerData = array(
-						'id' => $answer_id,
+				foreach ($record['answers'] as $answer) {
+					$submitAnswerBatch[] = [
+						'id' => $this->uuid(),
 						'score' => $answer['score'],
 						'submit_user_id' => $user_id,
 						'question_id' => $answer['question_id'],
 						'choice_id' => $answer['choice_id']
-					);
-					$this->db->insert('submit_answer', $submitAnswerData);
+					];
 
 					if (in_array($answer['graph_bar_id'], $barList)) {
-						if (!isset($tempScore[$answer['graph_bar_id']])) {
-							$tempScore[$answer['graph_bar_id']] = [];
-						}
 						$tempScore[$answer['graph_bar_id']][] = $answer['score'];
 					}
 				}
 
-				//* AVERAGE TEMP_SCORE AND UPDATE SUBMIT_ANSWER_AVERAGE
-				foreach ($tempScore as $id => $scores) {
-					$average = number_format(array_sum($scores) / count($scores), 2);
-
-					$submitAnswerAverageData = array(
-						'average_score' => $average
-					);
-					$this->db->where('user_id', $user_id);
-					$this->db->where('graph_bar_id', $id);
-					$this->db->update('submit_answer_average', $submitAnswerAverageData);
+				foreach ($barList as $bar_id) {
+					$average = isset($tempScore[$bar_id])
+						? number_format(array_sum($tempScore[$bar_id]) / count($tempScore[$bar_id]), 2)
+						: 0;
+					$submitAnswerAverageBatch[] = [
+						'id' => $this->uuid(),
+						'user_id' => $user_id,
+						'average_score' => $average,
+						'graph_bar_id' => $bar_id,
+						'submit_date' => $currentDate
+					];
 				}
+
+				$countSuccessImport++;
 			}
 
-			$this->db->trans_complete();
+			// Batch insert data
+			if (!empty($submitUserBatch)) {
+				$this->db->insert_batch('submit_user', $submitUserBatch);
+			}
+			if (!empty($submitAnswerAverageBatch)) {
+				$this->db->insert_batch('submit_answer_average', $submitAnswerAverageBatch);
+			}
+			if (!empty($submitAnswerBatch)) {
+				$this->db->insert_batch('submit_answer', $submitAnswerBatch);
+			}
+			if (!empty($ticketBatch)) {
+				$this->db->insert_batch('ticket', $ticketBatch);
+			}
 
-			$res = array('status' => true, 'message' => "นำเข้าข้อมูลสำเร็จ " . count($request['import_data']) . " รายการ", 'data' => null);
+			// Create or update ticket
+			if (isset($lastTicket['id']) && isset($lastTicket['no'])) {
+				$updateTicketData = array(
+					'no' => $lastTicket['no'] + $countCreatedTicket,
+				);
+				$this->db->where('id', $lastTicket['id']);
+				$this->db->update('ticket', $updateTicketData);
+			} else {
+				$ticketId = $this->uuid();
+				$insertTicketData = array(
+					'id' => $ticketId,
+					'date' => $currentDate,
+					'no' => $countCreatedTicket,
+				);
+				$this->db->insert('ticket', $insertTicketData);
+			}
+
+			// Commit transaction
+			$this->db->trans_complete();
+			if ($this->db->trans_status() === FALSE) {
+				throw new Exception("Database transaction failed");
+			}
+
+			$res = ['status' => true, 'message' => "นำเข้าข้อมูลสำเร็จ {$countSuccessImport} รายการ", 'data' => null];
 			$this->output->set_content_type('application/json')->set_output(json_encode($res));
 		} catch (Exception $e) {
-			$res = array('status' => false, 'message' => $e->getMessage(), 'data' => null,);
+			$res = ['status' => false, 'message' => $e->getMessage(), 'data' => null];
 			$this->output->set_content_type('application/json')->set_output(json_encode($res));
 		}
 	}
@@ -1772,69 +1984,5 @@ class ApiController extends CI_Controller
 	public function getAdviceText($id)
 	{
 		$this->getAllAdviceText($id);
-	}
-
-
-	//! gen uuidv4
-	public function uuid()
-	{
-		$uuid = uniqid() . md5(uniqid('', true));
-		return $uuid;
-	}
-
-	//! gen ticket
-	public function getTicket($provinceName, $currentDate)
-	{
-		try {
-			$this->db->select('code, section');
-			$this->db->from('province');
-			$this->db->where('name', $provinceName);
-			$query = $this->db->get();
-			$provinceData = $query->row_array();
-
-			$currentDate = date('Y-m-d', strtotime($currentDate));
-
-			$gregorianYear = date('Y', strtotime($currentDate));
-			$thaiYear = $gregorianYear + 543;
-			$shortThaiYear = substr($thaiYear, -2);
-
-			$month = date('m', strtotime($currentDate));
-			$day = date('d', strtotime($currentDate));
-
-			$this->db->select('id, no');
-			$this->db->from('ticket');
-			$this->db->where('DATE(date) =', $currentDate);
-			$this->db->order_by('id', 'DESC');
-			$this->db->limit(1);
-			$query = $this->db->get();
-			$lastTicket = $query->row_array();
-
-			$ticketNo = isset($lastTicket['no']) ? $lastTicket['no'] + 1 : 1;
-
-			$provinceCode = str_pad($provinceData['code'], 2, '0', STR_PAD_LEFT);
-			$provinceSection = str_pad($provinceData['section'], 2, '0', STR_PAD_LEFT);
-			$ticketData = $provinceCode . $provinceSection . $shortThaiYear . $month . $day . str_pad($ticketNo, 5, '0', STR_PAD_LEFT);
-
-			if (isset($lastTicket) && !empty($lastTicket)) {
-				$updateTicketData = array(
-					'no' => $ticketNo,
-					'date' => $currentDate,
-				);
-				$this->db->where('id', $lastTicket['id']);
-				$this->db->update('ticket', $updateTicketData);
-			} else {
-				$ticketId = $this->uuid();
-				$insertTicketData = array(
-					'id' => $ticketId,
-					'date' => $currentDate,
-					'no' => $ticketNo,
-				);
-				$this->db->insert('ticket', $insertTicketData);
-			}
-
-			return $ticketData;
-		} catch (Exception $e) {
-			throw new Exception('ไม่สามารถสร้าง Ticket ได้: ' . $e->getMessage());
-		}
 	}
 }

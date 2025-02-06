@@ -34,32 +34,32 @@
 	shop_quantity();
 
 	// Owl Carousel
-    function ms_three_blog_carousel() {
+	function ms_three_blog_carousel() {
 		$('#ms_three_blog').owlCarousel({
 			navText: [
 				"<div class='nav-btn prev-slide'></div>",
 				"<div class='nav-btn next-slide'></div>",
 			],
-			loop:true,
-			margin:30,
-			dots:false,
-			nav:true,
+			loop: true,
+			margin: 30,
+			dots: false,
+			nav: true,
 			autoplay: 500,
 			smartSpeed: 1000,
-			responsive:{
-				0:{
-					items:1
+			responsive: {
+				0: {
+					items: 1
 				},
-				600:{
-					items:2
+				600: {
+					items: 2
 				},
-				1000:{
-					items:2
+				1000: {
+					items: 2
 				}
 			}
 		});
-	 }
-	 ms_three_blog_carousel();
+	}
+	ms_three_blog_carousel();
 
 	// Testimonial Accordions
 	function testimonial_carousel() {
@@ -86,42 +86,4 @@
 		});
 	}
 	testimonial_carousel();
-
-	// Counters
-	function counter() {
-		var a = 0;
-		$(window).scroll(function () {
-			var oTop = $("#counter").offset().top - window.innerHeight;
-			if (a == 0 && $(window).scrollTop() > oTop) {
-				$(".counter-value").each(function () {
-					var $this = $(this),
-						countTo = $this.attr("data-count");
-					$({
-						countNum: $this.text(),
-					}).animate(
-						{
-							countNum: countTo,
-						},
-
-						{
-							duration: 2000,
-							easing: "swing",
-							step: function () {
-								$this.text(Math.floor(this.countNum));
-							},
-							complete: function () {
-								$this.text(this.countNum);
-								//alert('finished');
-							},
-						}
-					);
-				});
-				a = 1;
-			}
-		});
-	}
-	counter();
-
-	
-
 })(jQuery);

@@ -173,7 +173,13 @@ class HomeV2 extends CRUD_Controller
 		$this->data['another_js'] = $this->another_js;
 		$this->data['another_js_v2'] = $this->another_js_v2;
 
-		$this->data['stats'] = $this->HomeV2->getStats();
+		// $this->data['stats'] = $this->HomeV2->getStats();
+		$this->data['count_stats'] = $this->HomeV2->getCountStats();
+
+		// echo '<pre>';
+		// print_r($this->HomeV2->getCountStats());
+		// echo '</pre>';
+		// die();
 
 		echo ($this->data['another_js_v2']);
 		// $this->parser->parse('template/front-end/homepage_view', $this->data);

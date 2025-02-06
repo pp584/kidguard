@@ -20,7 +20,7 @@
 					<?php endif ?>
 				</select>
 				<input type="hidden" hidden name="submitSyncYear">
-				<button class="btn btn-info ml-2" type="button" data-toggle="modal" data-target="#confirmSaveModal" <?php if (!(count($selectYears) > 0)) echo 'disabled' ?>>
+				<button id="saveBtn" class="btn btn-info ml-2" type="button" data-toggle="modal" data-target="#confirmSaveModal" <?php if (!(count($selectYears) > 0)) echo 'disabled' ?>>
 					ยืนยัน
 				</button>
 			</div>
@@ -57,12 +57,15 @@
 		const year = formElement.year.value;
 		console.log(year);
 
+		const loadingTarget = $('#saveBtn');
+		loading_on(loadingTarget);
 		$.ajax({
 			method: formElement.method,
 			url: formElement.action + `/${year}`,
 			contentType: false,
 			processData: false,
 			success: function(results) {
+				loading_on_remove(loadingTarget);
 				$('#confirmSaveModal').modal('hide');
 
 				const alertType = results.status ? 'success' : 'warning';
@@ -73,6 +76,7 @@
 				}, 2000);
 			},
 			error: function(jqXHR, exception) {
+				loading_on_remove(loadingTarget);
 				ajaxErrorMessage(jqXHR, exception);
 			}
 		});

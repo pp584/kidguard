@@ -13,19 +13,21 @@
 			</a>
 		</div>
 		<form method="post" action="" class="mt-2" accept-charset="utf-8" enctype="multipart/form-data">
+			เลือกไฟล์สำหรับอ่านข้อมูล <small class="text-danger" style="font-size: 0.8rem;">(*นำเข้าได้สูงสุดครั้งละ <?= $importRowLimit ?> รายการ)</small>
 			<div class="input-group" style="max-width:450px">
 				<div class="custom-file">
 					<input id="uploadFile" type="file" name="uploadFile" class="custom-file-input" accept=".xls, .xlsx, .csv" onchange="updateFileInputName()" required>
 					<label id="uploadFileName" class="custom-file-label" for="uploadFile">เลือกไฟล์...</label>
 				</div>
 				<div class="input-group-append">
-					<button class="btn btn-info" type="submit">อ่านไฟล์</button>
+					<button id="readFileBtn" class="btn btn-info" type="submit">อ่านไฟล์</button>
 				</div>
 			</div>
 		</form>
 
 		<form id="importForm" action="{formEndpoint}" method="post" class="my-2">
 			<?php if (count($importData) > 0): ?>
+				เลือกวันที่สำหรับข้อมูล
 				<div class="input-group mb-2" style="max-width:450px">
 					<input type="date" class="form-control" name="import_date" value="<?= date('Y-m-d') ?>" min="2024-01-01 00:00" max="<?= date('Y-m-d') ?>" required>
 				</div>
@@ -116,11 +118,18 @@
 		}
 	}
 
+	document.getElementById("readFileBtn").addEventListener("click", function(event) {
+		const loadingTarget = $('#readFileBtn');
+		loading_on(loadingTarget);
+		console.log('Reading file...')
+	})
+
 	document.getElementById("importForm").addEventListener("submit", function(event) {
 		event.preventDefault();
 		const formData = new FormData(this);
 
 		const loadingTarget = $('#submitImportBtn');
+		loading_on(loadingTarget);
 		$.ajax({
 			method: this.method,
 			url: this.action,

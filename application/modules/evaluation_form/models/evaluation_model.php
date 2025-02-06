@@ -313,7 +313,7 @@ class Evaluation_model extends MY_Model
 				);
 
 				if ($formattedData[$graphIndex]['graph_show_compare_norm'] == true) {
-					$formattedData[$graphIndex]['bars'][$barIndex]['bar_name'] = "ของตน";
+					$formattedData[$graphIndex]['bars'][$barIndex]['bar_name'] = "รายบุคคล";
 					$formattedData[$graphIndex]['bars'][] = array(
 						'bar_name' => "กลุ่มเคยลอง",
 						'bar_value' => number_format($graph_bar['graph_bar_norm_drug'], 2),
@@ -517,7 +517,7 @@ class Evaluation_model extends MY_Model
 				);
 
 				if ($formattedData[$graphIndex]['graph_show_compare_norm'] == true) {
-					$formattedData[$graphIndex]['bars'][$barIndex]['bar_name'] = "ของตน";
+					$formattedData[$graphIndex]['bars'][$barIndex]['bar_name'] = "รายบุคคล";
 					$formattedData[$graphIndex]['bars'][] = array(
 						'bar_name' => "กลุ่มเคยลอง",
 						'bar_value' => number_format($graph_bar['graph_bar_norm_drug'], 2),
@@ -652,7 +652,7 @@ class Evaluation_model extends MY_Model
 			$query = $this->db->get();
 			$provinceData = $query->row_array();
 
-			
+
 			$currentDate = date('Y-m-d', strtotime($currentDate));
 
 			$gregorianYear = date('Y', strtotime($currentDate));

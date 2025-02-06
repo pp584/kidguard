@@ -574,7 +574,7 @@ $(document).ready(async function () {
 			titleGraph.innerHTML = `
 			<div class="flex flex-start mt-2">
                 <div class="label-graph mr-2 shadow-2" style="min-width: 25px;background:#19d1ff"></div>
-                <span class="ml-0 text-left text-shadow-1" style="${windowWidth < 500 ? 'font-size:10px' : ''}">ของตน</span>
+                <span class="ml-0 text-left text-shadow-1" style="${windowWidth < 500 ? 'font-size:10px' : ''}">รายบุคคล</span>
               </div>
               <div class="flex flex-start mt-2">
                 <div class="label-graph mr-2 shadow-2" style="min-width: 25px;background:#FFD65F"></div>
@@ -929,7 +929,7 @@ $(document).ready(async function () {
 			titleGraph.innerHTML = `
 			<div class="flex flex-start mt-2">
                 <div class="label-graph mr-2 shadow-2" style="min-width: 25px;background:#19d1ff"></div>
-                <span class="ml-0 text-left text-shadow-1" style="${windowWidth < 500 ? 'font-size:10px' : ''}">ของตน</span>
+                <span class="ml-0 text-left text-shadow-1" style="${windowWidth < 500 ? 'font-size:10px' : ''}">รายบุคคล</span>
               </div>
               <div class="flex flex-start mt-2">
                 <div class="label-graph mr-2 shadow-2" style="min-width: 25px;background:#FFD65F"></div>
